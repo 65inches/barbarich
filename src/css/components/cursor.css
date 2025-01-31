@@ -1,0 +1,23 @@
+@layer base {
+  .cursor {
+    width: 156px;
+    height: 156px;
+    background: #fff;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    filter: blur(72px);
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.8;
+
+    &.over-gradient {
+      position: absolute;
+      z-index: 0;
+      filter: blur(0px);
+      background: #8c6bd4;
+    }
+  }
+}

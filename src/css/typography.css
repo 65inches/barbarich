@@ -1,0 +1,25 @@
+@layer base {
+  .title-1 {
+    @apply mb-4 block text-[72px] leading-none;
+  }
+
+  .title-2 {
+    @apply mb-4 block text-[64px] leading-none;
+  }
+
+  .title-3 {
+    @apply text-2xl font-normal leading-[28.80px];
+  }
+
+  .title-4 {
+    @apply text-[26px] leading-9;
+  }
+
+  .title-5 {
+    @apply text-lg font-bold leading-7;
+  }
+
+  .lead {
+    @apply text-xl leading-9;
+  }
+}

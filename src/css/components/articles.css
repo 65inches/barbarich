@@ -1,0 +1,35 @@
+@layer base {
+  .article-item:hover header {
+    position: relative;
+  }
+  .article-item header::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(8, 5, 46, 0) 29.13%, #08052e 66%);
+    opacity: 0;
+    transition: opacity 350ms ease-in-out;
+  }
+  .article-item:hover header::after {
+    opacity: 1;
+  }
+
+  .article-item--inverse header::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 29.13%,
+      #fff 66%
+    );
+    opacity: 0;
+    transition: opacity 350ms ease-in-out;
+  }
+
+  .article-item--inverse:hover header::after {
+    opacity: 1;
+  }
+}

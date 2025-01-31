@@ -1,0 +1,25 @@
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition-property: transform, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.clip-in .clip-wrapper {
+  transition-property: clip-path, opacity;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-out;
+  opacity: 0;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.clip-in.active .clip-wrapper {
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  opacity: 1;
+}

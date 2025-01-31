@@ -1,0 +1,159 @@
+@property --color-origin {
+  syntax: '<color>';
+  initial-value: #8e92ff;
+  inherits: false;
+}
+
+@property --color-end {
+  syntax: '<color>';
+  initial-value: #8e92ff;
+  inherits: false;
+}
+
+@layer components {
+  .btn-primary {
+    @apply block text-center text-sm font-medium py-3 px-6 rounded-lg lg:inline-block;
+    background: linear-gradient(
+      to right,
+      var(--color-origin),
+      var(--color-end)
+    );
+    transition: --color-origin 300ms, --color-end 300ms, all 500ms ease-in-out;
+
+    &:hover {
+      --color-origin: #293273;
+      --color-end: #7277ff;
+      color: var(--color-white);
+    }
+
+    &[data-variant='one'] {
+      --color-origin: #8e92ff;
+      --color-end: #b5b7ff;
+      color: var(--color-white);
+
+      &:hover {
+        --color-origin: #8e92ff;
+        --color-end: #ffffff;
+        color: var(--color-midnight-400);
+      }
+    }
+    &[data-variant='two'] {
+      --color-origin: #ffffff;
+      --color-end: #d678f0;
+      background-image: linear-gradient(
+        85deg,
+        var(--color-origin) -56%,
+        var(--color-end) 100%
+      );
+
+      &:hover {
+        --color-origin: rgb(231, 192, 241);
+        --color-end: #ffffff;
+
+        color: var(--text-mignight-400);
+      }
+    }
+    &[data-variant='three'] {
+      --color-origin: #be95f8;
+      --color-end: rgb(214, 120, 240);
+      background-image: linear-gradient(
+        85deg,
+        var(--color-origin) -56%,
+        var(--color-end) 100%
+      );
+      color: var(--color-white);
+
+      &:hover {
+        --color-origin: rgb(214, 120, 240);
+        --color-end: #be95f8;
+      }
+    }
+  }
+
+  .btn-secondary {
+    --color-origin: rgba(142, 146, 255, 0);
+    --color-end: rgba(227, 228, 255, 0);
+    @apply block lg:inline-block text-sm font-medium py-3 px-6 border border-indigo-400 text-indigo-400 rounded-lg hover:text-white;
+    transition: all 300ms ease-in-out;
+    background: linear-gradient(
+      84deg,
+      var(--color-origin) 44.87%,
+      var(--color-end) 199.64%
+    );
+
+    &:hover {
+      --color-origin: #8e92ff;
+      --color-end: #e3e4ff;
+    }
+
+    &[data-variant='one'] {
+      --color-origin: rgba(142, 146, 255, 0);
+      --color-end: rgba(181, 183, 255, 0);
+      background: linear-gradient(
+        86deg,
+        var(--color-origin) 0%,
+        var(--color-end) 100%
+      );
+      &:hover {
+        --color-origin: #8e92ff;
+        --color-end: #b5b7ff;
+      }
+    }
+
+    &[data-variant='two'] {
+      --color-origin: rgba(214, 120, 240, 0);
+      --color-end: rgba(255, 255, 255, 0);
+      background-image: linear-gradient(
+        81deg,
+        var(--color-origin) -134.24%,
+        var(--color-end) 37.62%
+      );
+
+      border-color: var(--color-white);
+      color: var(--color-white);
+
+      &:hover {
+        --color-origin: #d678f0;
+        --color-end: #ffffff;
+
+        border-color: transparent;
+        color: var(--color-pink-400);
+      }
+    }
+  }
+
+  .btn-circle {
+    position: relative;
+    cursor: pointer;
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &[data-variant='one']::after {
+      background: var(--color-midnight-400);
+    }
+  }
+
+  .btn-circle.swiper-button-disabled {
+    cursor: not-allowed;
+  }
+
+  .btn-circle::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: white;
+    pointer-events: none;
+    z-index: 0;
+    transition: clip-path 200ms;
+    /* clip-path: circle(50% at 50% 50%); */
+    clip-path: circle(0% at 50% 50%);
+  }
+
+  .btn-circle.active::after,
+  .btn-circle:hover::after {
+    clip-path: circle(50% at 50% 50%);
+  }
+}

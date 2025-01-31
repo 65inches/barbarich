@@ -1,0 +1,162 @@
+.select {
+  --select-padding-y: 20px;
+  --select-padding-x: 24px;
+  --select-rounded: 24px;
+  --select-color: var(--color-indigo-dark-600);
+  --select-bg: var(--color-indigo-200);
+  --select-option-color: var(--color-midnight-400);
+
+  border-radius: var(--select-rounded);
+  padding-block: var(--select-padding);
+  width: 100%;
+
+  position: relative;
+}
+
+.select input::placeholder {
+  color: currentColor;
+}
+
+.select::before {
+  content: '';
+  position: absolute;
+  right: 25px;
+  top: 24px;
+  z-index: 2;
+
+  width: 9px;
+  height: 6px;
+  border-style: solid;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 9 6'%3E%3Cpath stroke='%2308052E' stroke-linecap='round' stroke-width='2' d='m1 1.5 2.747 3.14a1 1 0 0 0 1.506 0L8 1.5'/%3E%3C/svg%3E");
+  pointer-events: none;
+  background-size: 9px 6px;
+  background-repeat: no-repeat;
+  transition: all 0.3s linear;
+}
+
+.select input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+
+  padding-inline: var(--select-padding-x);
+  padding-block: var(--select-padding-y);
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+  color: var(--select-color);
+  font-weight: 500;
+
+  letter-spacing: -0.36px;
+
+  user-select: none;
+
+  &:hover {
+    color: var(--select-color);
+  }
+}
+
+.select .options {
+  width: 100%;
+  padding: 0;
+
+  list-style: none;
+  cursor: pointer;
+  background: var(--select-bg);
+  outline: none;
+
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  transition: all 0.3s;
+  z-index: 3;
+
+  opacity: 0;
+
+  visibility: hidden;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  pointer-events: none;
+
+  max-height: 300px;
+  overflow: auto;
+
+  border-bottom-left-radius: var(--select-rounded);
+  border-bottom-right-radius: var(--select-rounded);
+}
+
+.select .options .option {
+  padding: 10px 25px;
+
+  transition: all 0.25s ease-in-out;
+  color: var(--color-indigo-dark-300);
+
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.select .options .option.selected,
+.select .options .option:hover {
+  color: var(--color-midnight-400);
+}
+
+.select.opened {
+  background: var(--select-bg);
+}
+
+.select.opened input {
+  color: var(--color-midnight-400);
+}
+
+.select.opened,
+.select.opened input {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.select.opened .options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.select.opened::before {
+  transform: rotate(-180deg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 9 6'%3E%3Cpath stroke='%23004C47' stroke-linecap='round' stroke-width='2' d='m1 1.5 2.747 3.14a1 1 0 0 0 1.506 0L8 1.5'/%3E%3C/svg%3E");
+}
+
+/* Select-form */
+
+.select.select-form {
+  /* --select-padding-y: 20px; */
+  /* --select-padding-x: 24px; */
+  --select-rounded: 4px;
+  --select-bg: var(--color-white);
+  --select-color: var(--color-indigo-600);
+  height: 48px;
+  background: var(--select-bg);
+}
+
+.select.select-form input::placeholder {
+  color: color-mix(in oklab, currentColor 50%, transparent);
+}
+
+.select.select-form::before {
+  top: 22px;
+}
+
+.select.select-form .options {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.select.select-form .options .option.selected,
+.select.select-form .options .option:hover {
+  color: var(--color-white);
+  background: var(--color-indigo-600);
+}

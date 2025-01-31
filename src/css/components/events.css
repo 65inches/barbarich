@@ -1,0 +1,23 @@
+@layer base {
+  .events-listing .container {
+    position: relative;
+  }
+
+  .events-listing .container::after {
+    content: '';
+    width: 1138px;
+    height: 1138px;
+    z-index: 0;
+    pointer-events: none;
+    top: -5%;
+    left: -25%;
+    mix-blend-mode: exclusion;
+    position: absolute;
+    background: url('/img/events-bg.png') no-repeat;
+  }
+}
+
+.swiper-summit .swiper-pagination-bullet {
+  @apply w-auto h-auto text-white bg-transparent transition duration-300 text-[11px] font-bold [.swiper-pagination-bullet-active]:opacity-100 hover:opacity-100 [.swiper-pagination-bullet-active]:underline hover:underline uppercase leading-none;
+  margin: 0 !important;
+}

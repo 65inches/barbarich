@@ -1,0 +1,58 @@
+<details class="group/collapse border-b border-indigo-400 py-10">
+  <summary>
+    <div
+      class="flex justify-between items-center my-10 group-open/collapse:my-15"
+    >
+      <h2 class="text-midnight-400 text-[64px] font-normal leading-none">
+        Technology Committee
+      </h2>
+      <svg
+        viewBox="0 0 28 18"
+        class="w-7 fill-current transition duration-300 group-open/collapse:rotate-180"
+      >
+        <path
+          d="M14.1227 15.7228L14.7369 12.9237C14.9416 11.9905 15.4095 11.1354 16.0851 10.4598L25.6661 0.878784L28 3.21265L14.1227 17.0899L0.245421 3.21265L2.57928 0.878785L12.1603 10.4598C12.8359 11.1354 13.3038 11.9905 13.5086 12.9237L14.1227 15.7228Z"
+        />
+      </svg>
+    </div>
+  </summary>
+  <p
+    class="text-indigo-dark-20 text-xl lg:text-2xl font-normal leading-none mb-15"
+  >
+    ZEP gathers technical experts to discuss the latest innovation and
+    developments in carbon management projects, sharing useful information and
+    ensuring alignment between policies and on the ground developments.
+  </p>
+
+  <div class="swiper swiper-posts">
+    <div class="swiper-wrapper mb-20">
+      <div class="swiper-slide">{{> components/post-item }}</div>
+      <div class="swiper-slide">{{> components/post-item }}</div>
+      <div class="swiper-slide">{{> components/post-item }}</div>
+      <div class="swiper-slide">{{> components/post-item }}</div>
+      <div class="swiper-slide">{{> components/post-item }}</div>
+    </div>
+
+    <div class="swiper-actions">
+      <button class="swiper-button-prev">
+        <svg width="15" height="15" viewBox="0 0 15 15">
+          <path
+            d="M1.50895 7.71263L2.24125 7.87331C3.17453 8.07808 4.02959 8.54598 4.70521 9.2216L9.0974 13.6138L7.9043 14.8069L0.810044 7.71263L7.9043 0.618381L9.0974 1.81148L4.70521 6.20367C4.02959 6.87929 3.17453 7.34718 2.24125 7.55196L1.50895 7.71263Z"
+            fill="#08052E"
+          />
+        </svg>
+        <span class="sr-only">Previous article</span>
+      </button>
+      <div class="swiper-pagination"></div>
+      <button class="swiper-button-next">
+        <svg width="15" height="15" viewBox="0 0 15 15">
+          <path
+            d="M13.4891 7.71263L12.7568 7.87331C11.8235 8.07808 10.9685 8.54598 10.2928 9.2216L5.90065 13.6138L7.09375 14.8069L14.188 7.71263L7.09375 0.618381L5.90065 1.81148L10.2928 6.20367C10.9685 6.87929 11.8235 7.34718 12.7568 7.55196L13.4891 7.71263Z"
+            fill="#08052E"
+          />
+        </svg>
+        <span class="sr-only">Next article</span>
+      </button>
+    </div>
+  </div>
+</details>

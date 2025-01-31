@@ -1,0 +1,14 @@
+@layer base {
+  details > summary {
+    list-style: none;
+  }
+
+  details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+  details > summary::-webkit-details-marker /* Safari */ {
+    display: none;
+  }
+
+  .mask {
+    mask: linear-gradient(to top, #000000 0%, transparent);
+  }
+}
