@@ -1,17 +1,31 @@
 import Swiper from 'swiper/bundle';
-import Select from './select';
-import Video from './video';
-
-import { initSocialButtons } from './social';
-import { initOnScrollAnimate } from './animate';
-import { initEventsPage } from './pages/events';
-import { initAboutPage } from './pages/about';
-import { initHubPage } from './pages/hub.js';
-import { initHomePage } from './pages/home.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const swipers = document.querySelectorAll('.slider');
+
+  if (swipers) {
+    swipers.forEach((el) => {
+      const swiper = el.querySelector('.swiper');
+      const pagination = el.querySelector('.swiper-pagination');
+      const btnPrev = el.querySelector('.swiper-button-prev');
+      const btnNext = el.querySelector('.swiper-button-next');
+
+      new Swiper(swiper, {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        pagination: {
+          el: pagination,
+        },
+
+        navigation: {
+          nextEl: btnNext,
+          prevEl: btnPrev,
+        },
+      });
+    });
+  }
+
   // initOnScrollAnimate();
-  // const swipers = document.querySelectorAll('.swiper');
   // if (swipers) {
   //   swipers.forEach((el) => {
   //     const pagination = el.querySelector('.swiper-pagination');
@@ -47,3 +61,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // });
   // initSocialButtons();
 });
+
+// function decrement(e) {
+//   const btn = e.target.parentNode.parentElement.querySelector(
+//     'button[data-action="decrement"]'
+//   );
+//   const target = btn.nextElementSibling;
+//   let value = Number(target.value);
+//   value--;
+//   target.value = value;
+// }
+
+// function increment(e) {
+//   const btn = e.target.parentNode.parentElement.querySelector(
+//     'button[data-action="decrement"]'
+//   );
+//   const target = btn.nextElementSibling;
+//   let value = Number(target.value);
+//   value++;
+//   target.value = value;
+// }
+
+// const decrementButtons = document.querySelectorAll(
+//   `button[data-action="decrement"]`
+// );
+
+// const incrementButtons = document.querySelectorAll(
+//   `button[data-action="increment"]`
+// );
+
+// decrementButtons.forEach(btn => {
+//   btn.addEventListener("click", decrement);
+// });
+
+// incrementButtons.forEach(btn => {
+//   btn.addEventListener("click", increment);
+// });

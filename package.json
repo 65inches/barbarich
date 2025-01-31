@@ -6,10 +6,11 @@
   "scripts": {
     "development:tailwind:frontend": "npx @tailwindcss/cli -i ./src/css/tailwind.css -o ./theme/style.css --content './theme/**/*.html'",
     "development:esbuild": "npx esbuild ./src/js/main.js --target=esnext --bundle --outdir=./theme/js --out-extension:.js=.min.js",
-    "watch:esbuild": "npm run development:esbuild -- --watch",
-    "watch:tailwind:frontend": "npm run development:tailwind:frontend -- --watch",
+    "watch:esbuild": "bun run development:esbuild -- --watch",
+    "watch:tailwind:frontend": "bun run development:tailwind:frontend -- --watch",
     "watch:vite": "vite",
-    "watch": "run-p \"watch:**\"",
+    "OLDwatch": "run-p \"watch:**\"",
+    "watch": "bun run watch.js",
     "build": "vite build"
   },
   "devDependencies": {

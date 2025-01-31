@@ -1,4 +1,251 @@
-<footer class="site-footer lg:px-10 relative pb-5 pt-25 lg:pt-40"></footer>
+<footer class="pt-15 rounded-tl-[30px] rounded-tr-[30px] bg-blue-800 pb-5">
+  <div class="container">
+    <div>
+      <div class="gap-7.5 mb-7.5 grid grid-cols-12">
+        <div class="col-span-4">
+          <h4
+            class="text-aquamarine-400 mb-2.5 text-xs font-bold uppercase leading-none tracking-wide"
+          >
+            newsletter
+          </h4>
+          <p class="mb-5 text-3xl font-medium leading-9 text-white">
+            Inscrivez-vous et recevez les nouveautés et offres exclusives en
+            avant-première !
+          </p>
+
+          <form action="">
+            <div class="relative mb-5">
+              <input
+                class="h-14.5 w-full rounded-[40px] bg-white py-[5px] pl-[25px] pr-[140px] text-base font-normal leading-none text-blue-500 focus:outline-2 focus:outline-red-500"
+                placeholder="E-mail"
+              />
+              <button class="btn-primary top-1.25 right-1.25 absolute z-[1]">
+                M’inscrire
+
+                <svg
+                  width="10"
+                  height="12"
+                  viewBox="0 0 10 12"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 3.00293H9M9 3.00293V11.0029M9 3.00293L1 11.0029"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="flex items-center">
+              <input
+                checked
+                id="checked-checkbox"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded-sm bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+              />
+              <label
+                for="checked-checkbox"
+                class="ms-2 text-sm font-normal leading-tight text-white"
+                >J'ai lu et j'accepte la
+                <a class="underline">politique de confidentialité</a>
+              </label>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-span-7 col-start-6 flex justify-between">
+          <ul
+            class="flex flex-col items-start justify-start gap-2.5 text-base font-medium leading-none text-white"
+          >
+            <li>
+              <a> Accueil </a>
+            </li>
+            <li>
+              <a> Boutique </a>
+            </li>
+            <li>
+              <a> Achat rapide </a>
+            </li>
+            <li>
+              <a> Promotions </a>
+            </li>
+            <li>
+              <a> Opportunités </a>
+            </li>
+            <li>
+              <a> Mes favoris </a>
+            </li>
+            <li>
+              <a> Mes documents </a>
+            </li>
+            <li>
+              <a> Contact </a>
+            </li>
+          </ul>
+          <ul
+            class="flex flex-col items-start justify-start gap-2.5 text-base font-medium leading-none text-white"
+          >
+            <li>
+              <span
+                class="text-xs font-bold uppercase tracking-wide text-gray-500"
+              >
+                Infos pratiques
+              </span>
+            </li>
+            <li>
+              <a> A propos de nous </a>
+            </li>
+            <li>
+              <a> Aide et FAQs </a>
+            </li>
+            <li>
+              <a> Retours et échanges </a>
+            </li>
+            <li>
+              <a> Réglementations </a>
+            </li>
+            <li>
+              <a> Conditions générales </a>
+            </li>
+            <li>
+              <a> Droit de rétractation </a>
+            </li>
+          </ul>
+          <div>
+            <span
+              class="mb-2.5 block text-xs font-bold uppercase leading-none tracking-wide text-gray-500"
+            >
+              Contact
+            </span>
+            <address
+              class="mb-7.5 flex flex-col gap-2.5 text-base font-normal not-italic leading-none text-white"
+            >
+              <span class="block font-semibold">Barbarich srl</span>
+              <span class="block">Cour Lemaire 4 </span>
+              <span class="block">B-4651 Battice</span>
+              <a class="block hover:underline" href="tel:+3287336045"
+                >+32 87 33 60 45</a
+              >
+              <a
+                class="block underline hover:underline"
+                href="mailto:info@barbarich.be"
+                >info@barbarich.be
+              </a>
+              <span class="block">BE 0880.203.536 </span>
+            </address>
+
+            <div class="flex gap-2.5">
+              <a
+                href="#"
+                class="size-12 flex items-center justify-center rounded-full border border-current text-white"
+              >
+                <svg
+                  viewBox="0 0 19 18"
+                  class="w-[19px] fill-current"
+                  aria-label="Logo Instagram"
+                >
+                  <path
+                    d="M9.33337 1.62293C11.7334 1.62293 12.0184 1.63043 12.9709 1.67543C15.4084 1.78793 16.5484 2.94293 16.6609 5.36543C16.7059 6.31793 16.7134 6.60293 16.7134 9.00293C16.7134 11.4029 16.7059 11.6879 16.6609 12.6404C16.5484 15.0629 15.4159 16.2179 12.9709 16.3304C12.0184 16.3754 11.7409 16.3829 9.33337 16.3829C6.92587 16.3829 6.64837 16.3754 5.69587 16.3304C3.25087 16.2179 2.11837 15.0554 2.00587 12.6404C1.96087 11.6879 1.95337 11.4104 1.95337 9.00293C1.95337 6.59543 1.96087 6.31793 2.00587 5.36543C2.11837 2.94293 3.25087 1.78793 5.69587 1.67543C6.64837 1.63043 6.92587 1.62293 9.33337 1.62293ZM9.33337 0.00292969C6.88837 0.00292969 6.58087 0.0104297 5.62087 0.0554297C2.35837 0.20543 0.535874 2.02043 0.385874 5.29043C0.340874 6.25043 0.333374 6.55793 0.333374 9.00293C0.333374 11.4479 0.340874 11.7554 0.385874 12.7154C0.535874 15.9854 2.35087 17.8004 5.62087 17.9504C6.58087 17.9954 6.88837 18.0029 9.33337 18.0029C11.7784 18.0029 12.0859 17.9954 13.0459 17.9504C16.3084 17.8004 18.1309 15.9854 18.2809 12.7154C18.3259 11.7554 18.3334 11.4479 18.3334 9.00293C18.3334 6.55793 18.3259 6.25043 18.2809 5.29043C18.1309 2.02793 16.3159 0.20543 13.0459 0.0554297C12.0859 0.0104297 11.7784 0.00292969 9.33337 0.00292969ZM9.33337 4.38293C6.78337 4.38293 4.71337 6.45293 4.71337 9.00293C4.71337 11.5529 6.78337 13.6229 9.33337 13.6229C11.8834 13.6229 13.9534 11.5529 13.9534 9.00293C13.9534 6.45293 11.8834 4.38293 9.33337 4.38293ZM9.33337 12.0029C7.67587 12.0029 6.33337 10.6604 6.33337 9.00293C6.33337 7.34543 7.67587 6.00293 9.33337 6.00293C10.9909 6.00293 12.3334 7.34543 12.3334 9.00293C12.3334 10.6604 10.9909 12.0029 9.33337 12.0029ZM14.1409 3.11543C13.5409 3.11543 13.0609 3.59543 13.0609 4.19543C13.0609 4.79543 13.5484 5.27543 14.1409 5.27543C14.7334 5.27543 15.2209 4.79543 15.2209 4.19543C15.2209 3.59543 14.7409 3.11543 14.1409 3.11543Z"
+                  />
+                </svg>
+                <div class="sr-only">Instagram</div>
+              </a>
+              <a
+                href="#"
+                class="size-12 flex items-center justify-center rounded-full border border-current text-white"
+              >
+                <svg
+                  width="8"
+                  height="15"
+                  viewBox="0 0 8 15"
+                  class="fill-current"
+                  aria-label="Logo Facebook"
+                >
+                  <path
+                    d="M2.08337 5.04502H0.333374V7.37107H2.08337V14.3667H4.99713V7.37107H7.12337L7.33337 5.04502H4.99713V4.06563C4.99713 3.50598 5.11087 3.28737 5.64462 3.28737H7.33337V0.366699H5.11087C3.01087 0.366699 2.08337 1.29362 2.08337 3.06002V5.04502Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="size-12 flex items-center justify-center rounded-full border border-current text-white"
+              >
+                <svg
+                  width="15"
+                  height="14"
+                  viewBox="0 0 15 14"
+                  class="fill-current"
+                  aria-label="Logo Linkedin"
+                >
+                  <path
+                    d="M3.24868 1.52043C3.25852 1.80513 3.18194 2.08625 3.02878 2.32774C2.87562 2.56922 2.65285 2.76007 2.38902 2.87582C2.12519 2.99157 1.83234 3.02693 1.54801 2.97738C1.26367 2.92784 1.00082 2.79564 0.793141 2.59773C0.585465 2.39982 0.44243 2.14522 0.382382 1.86658C0.322333 1.58794 0.348007 1.29796 0.456107 1.03381C0.564206 0.769658 0.749802 0.543379 0.989109 0.383986C1.22842 0.224594 1.51052 0.139352 1.79926 0.139187C2.17587 0.136912 2.53844 0.280187 2.80933 0.538338C3.08022 0.79649 3.23792 1.149 3.24868 1.52043ZM3.24868 4.06356H0.333374V13.1392H3.24868V4.06356ZM7.90985 4.06356H5.01103V13.1392H7.90985V8.39417C7.90985 5.75355 11.4263 5.5423 11.4263 8.39417V13.1392H14.3334V7.45167C14.3334 2.99106 9.12868 3.15356 7.90985 5.3473V4.06356Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-center gap-[5px] border-b border-t border-white/20 py-5"
+      >
+        <a href="" class="overflow-hidden rounded-[10px]">
+          <img src="https://placehold.co/80x55/jpg" alt="" />
+        </a>
+        <a href="" class="overflow-hidden rounded-[10px]">
+          <img src="https://placehold.co/80x55/jpg" alt="" />
+        </a>
+        <a href="" class="overflow-hidden rounded-[10px]">
+          <img src="https://placehold.co/80x55/jpg" alt="" />
+        </a>
+        <a href="" class="overflow-hidden rounded-[10px]">
+          <img src="https://placehold.co/80x55/jpg" alt="" />
+        </a>
+      </div>
+
+      <div class="gap-7.5 grid grid-cols-12 items-center py-5">
+        <div class="col-span-2">
+          <div class="flex gap-2.5">
+            <img
+              class="rounded-full"
+              src="https://placehold.co/70x70/jpg"
+              alt=""
+            />
+            <img
+              class="rounded-full"
+              src="https://placehold.co/70x70/jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div
+          class="col-span-4 col-start-5 flex flex-col items-center justify-start gap-2.5"
+        >
+          <div
+            class="flex items-center justify-start gap-2.5 text-[10px] font-bold uppercase leading-[14px] tracking-wide text-white"
+          >
+            <a class="hover:underline" href="#"> Confidentialité et cookies </a>
+            <div class="h-[0px] w-2.5 border border-gray-500"></div>
+            <a class="hover:underline" href="#"> RGPD </a>
+            <div class="h-[0px] w-2.5 border border-gray-500"></div>
+            <a class="hover:underline" href="#"> Mentions légales </a>
+          </div>
+
+          <span
+            class="text-[10px] font-bold uppercase leading-[14px] tracking-wide text-gray-400"
+          >
+            © 2009-2024 Daniel Pire Informatique srl. Tous droits réservés.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <!-- {{> grid}} -->
 

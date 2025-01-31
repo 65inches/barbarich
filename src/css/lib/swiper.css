@@ -18,10 +18,11 @@
   --swiper-wrapper-transition-timing-function: initial;
   */
 
-    --swiper-pagination-bullet-size: 15px;
-    --swiper-pagination-bullet-inactive-color: var(--color-indigo-200);
-    --swiper-pagination-color: var(--color-indigo-dark-200);
-    --swiper-pagination-bullet-horizontal-gap: 8px;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-active-size: 20px;
+    --swiper-pagination-bullet-inactive-color: var(--color-gray-500);
+    --swiper-pagination-color: var(--color-red-400);
+    --swiper-pagination-bullet-horizontal-gap: 6px;
     --swiper-pagination-bullet-inactive-opacity: 1;
     /*
   --swiper-pagination-left: auto;
@@ -173,6 +174,7 @@
 
   .swiper-pagination {
     text-align: center;
+
     transition: 300ms opacity;
   }
   .swiper-pagination.swiper-pagination-hidden {
@@ -203,6 +205,8 @@
     border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
     background: var(--swiper-pagination-bullet-inactive-color, #000);
     opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+
+    transition: all 250ms ease-in-out;
   }
   button.swiper-pagination-bullet {
     border: none;
@@ -221,6 +225,8 @@
   .swiper-pagination-bullet-active {
     opacity: var(--swiper-pagination-bullet-opacity, 1);
     background: var(--swiper-pagination-color, var(--swiper-theme-color));
+    width: var(--swiper-pagination-bullet-active-size);
+    border-radius: 30px;
   }
   .swiper-vertical > .swiper-pagination-bullets,
   .swiper-pagination-vertical.swiper-pagination-bullets {
@@ -329,12 +335,12 @@
 
   .swiper-button-prev,
   .swiper-button-next {
-    width: var(--swiper-navigation-size);
-    height: var(--swiper-navigation-size);
+    /* width: var(--swiper-navigation-size);
+    height: var(--swiper-navigation-size); */
     cursor: pointer;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     color: var(--swiper-navigation-color, var(--swiper-theme-color));
   }
   .swiper-button-prev.swiper-button-disabled,
@@ -362,45 +368,6 @@
   }
 
   .swiper-button-lock {
-    display: none;
-  }
-
-  /* scrollbar */
-
-  .swiper-scrollbar {
-    border-radius: var(--swiper-scrollbar-border-radius, 10px);
-    position: relative;
-    touch-action: none;
-    background: var(--swiper-scrollbar-bg-color, rgba(0, 0, 0, 0.1));
-  }
-  .swiper-scrollbar-disabled > .swiper-scrollbar,
-  .swiper-scrollbar.swiper-scrollbar-disabled {
-    display: none !important;
-  }
-  .swiper-horizontal > .swiper-scrollbar,
-  .swiper-scrollbar.swiper-scrollbar-horizontal {
-    /* position: absolute;
-  left: var(--swiper-scrollbar-sides-offset, 1%);
-  bottom: var(--swiper-scrollbar-bottom, 4px);
-  top: var(--swiper-scrollbar-top, auto); */
-    z-index: 50;
-    height: var(--swiper-scrollbar-size, 4px);
-    width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
-  }
-
-  .swiper-scrollbar-drag {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    background: var(--swiper-scrollbar-drag-bg-color, rgba(0, 0, 0, 0.5));
-    border-radius: var(--swiper-scrollbar-border-radius, 10px);
-    left: 0;
-    top: 0;
-  }
-  .swiper-scrollbar-cursor-drag {
-    cursor: move;
-  }
-  .swiper-scrollbar-lock {
     display: none;
   }
 }

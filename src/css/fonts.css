@@ -1,37 +1,37 @@
 @layer base {
   @font-face {
-    font-family: 'Founders Grotesk';
+    font-family: 'Outfit';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(fonts/founders-grotesk-regular.woff2) format('woff2');
+    src: url(fonts/Outfit-Regular.ttf) format('ttf');
   }
   @font-face {
-    font-family: 'Founders Grotesk';
+    font-family: 'Outfit';
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(fonts/founders-grotesk-light.woff2) format('woff2');
+    src: url(fonts/Outfit-Light.ttf) format('ttf');
   }
   @font-face {
-    font-family: 'Founders Grotesk';
+    font-family: 'Outfit';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url(fonts/founders-grotesk-medium.woff2) format('woff2');
+    src: url(fonts/Outfit-Medium.ttf) format('ttf');
   }
   @font-face {
-    font-family: 'Founders Grotesk';
+    font-family: 'Outfit';
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url(fonts/founders-grotesk-semibold.woff2) format('woff2');
+    src: url(fonts/Outfit-Semibold.ttf) format('ttf');
   }
   @font-face {
-    font-family: 'Founders Grotesk';
+    font-family: 'Outfit';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(fonts/founders-grotesk-bold.woff2) format('woff2');
+    src: url(fonts/Outfit-Bold.ttf) format('ttf');
   }
 }

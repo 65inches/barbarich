@@ -23,3 +23,7 @@
     @apply text-xl leading-9;
   }
 }
+
+.prose p {
+  margin-bottom: 1em;
+}
