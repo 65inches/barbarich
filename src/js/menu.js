@@ -1,108 +1,83 @@
-class MenuDesktop {
-  constructor(delay) {
-    this.header = document.querySelector('.site-header');
+class MenuMobile {
+  constructor(selector) {
+    this.el = document.querySelector(selector);
+    this.btn = document.querySelector('.menu-mobile-button');
 
-    this.menuLinks = document.querySelectorAll(
-      '.header__nav-link[data-target]'
-    );
+    this.btn.addEventListener('click', this.handleButtonClick.bind(this));
 
-    this.subMenus = new Map();
+    // this.opened = false;
+    this.panels = this.el.querySelectorAll('.menu-panel');
+    this.buttons = this.el.querySelectorAll('.menu-listitem__btn');
 
-    this.activeLink = null;
-    this.activeSubmenu = null;
+    this.navBar = this.el.querySelector('.menu-navbar');
+    this.prevButtons = this.el.querySelectorAll('.menu-btn--prev');
+    this.prevButtons.forEach((btn) => {
+      btn.addEventListener('click', (event) => {
+        this.handlePrevButtonClick(event);
+      });
+    });
 
-    this.submenuTimeout = null;
-    this.delay = delay || 300;
+    this.currentPanels = [];
 
-    this.searchCloseButton = document.querySelector('.search__close');
-
-    this.initialize();
+    this._initAnchors();
   }
 
-  initialize() {
-    const subMenus = Array.from(document.querySelectorAll('.submenu'));
-    subMenus.forEach((submenu) => {
-      const submenuId = submenu.dataset.id;
-      this.subMenus.set(submenuId, submenu);
-    });
+  handleButtonClick() {
+    this.el.classList.toggle('menu--open');
+    document.body.classList.toggle('menu-opened');
 
-    this.menuLinks.forEach((menuLink) => {
-      const targetId = menuLink.getAttribute('data-target');
-      const targetSubmenu = this.subMenus.get(targetId);
-
-      if (targetSubmenu && targetId !== 'search') {
-        menuLink.addEventListener('mouseenter', () => {
-          this.showSubmenu(menuLink, targetSubmenu);
-        });
-
-        targetSubmenu.addEventListener('mouseenter', () => {
-          this.showSubmenu(menuLink, targetSubmenu);
-        });
-
-        menuLink.addEventListener('mouseleave', () => {
-          this.hideSubMenu(menuLink, targetSubmenu);
-        });
-
-        targetSubmenu.addEventListener('mouseleave', () => {
-          this.hideSubMenu(menuLink, targetSubmenu);
-        });
-      }
-
-      if (targetId === 'search') {
-        menuLink.addEventListener('click', (event) => {
-          event.preventDefault();
-          this.toggleSearchMenu(menuLink, targetSubmenu);
-        });
-
-        this.searchCloseButton.addEventListener('click', (event) => {
-          event.preventDefault();
-          this.hideSubMenu(menuLink, targetSubmenu, false);
-        });
-      }
-    });
-
-    this.header.addEventListener('mouseleave', () => {
-      this.hideSubMenu(this.activeLink, this.activeSubmenu);
-    });
+    setTimeout(() => {
+      this.closePanel(this.currentPanels);
+    }, 300);
   }
 
-  showSubmenu(link, submenu) {
-    clearTimeout(this.submenuTimeout);
-
-    if (this.activeSubmenu) {
-      this.activeSubmenu.classList.remove('show');
-      this.activeSubmenu.setAttribute('aria-hidden', 'true');
+  openPanel(target) {
+    console.log(target);
+    const submenu = this.el.querySelector(`${target}`);
+    console.log(submenu);
+    if (submenu) {
+      submenu.classList.add('menu-panel--opened');
+      this.currentPanels.push(submenu);
+      this.currentPanels.at(-1).setAttribute('aria-hidden', 'false');
     }
-
-    if (this.activeLink) {
-      this.activeLink.classList.remove('active');
-    }
-
-    this.activeSubmenu = submenu;
-    this.activeLink = link;
-
-    submenu.classList.add('show');
-    submenu.setAttribute('aria-hidden', 'false');
-    link.classList.add('active');
   }
 
-  hideSubMenu(link, submenu, timeout = true) {
-    if (submenu === null) return;
+  closePanel(submenu) {
+    if (!submenu) return;
 
-    const delay = timeout ? this.delay : 0;
-
-    this.submenuTimeout = setTimeout(() => {
-      submenu.classList.remove('show');
-      submenu.setAttribute('aria-hidden', 'true');
-      link.classList.remove('active');
-    }, delay);
-  }
-
-  toggleSearchMenu(link, submenu) {
-    if (submenu.classList.contains('show')) {
-      this.hideSubMenu(link, submenu, false);
+    if (Array.isArray(submenu)) {
+      // Close each panel in the array
+      submenu.forEach((panel) => {
+        panel.classList.remove('menu-panel--opened');
+        panel.setAttribute('aria-hidden', 'true');
+      });
+      // Clear all closed panels from currentPanels
+      this.currentPanels = [];
     } else {
-      this.showSubmenu(link, submenu);
+      // Single panel case
+      submenu.classList.remove('menu-panel--opened');
+      this.currentPanels.at(-1)?.setAttribute('aria-hidden', 'true');
+      this.currentPanels.pop();
     }
+  }
+
+  _initAnchors() {
+    console.log(this.buttons);
+    this.buttons.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const target = event.target.getAttribute('href');
+        if (target) {
+          this.openPanel(target);
+        }
+      });
+    });
+  }
+
+  handlePrevButtonClick(event) {
+    event.preventDefault();
+    this.closePanel(this.currentPanels.at(-1));
   }
 }
+
+export default MenuMobile;

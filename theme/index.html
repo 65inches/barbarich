@@ -4,7 +4,7 @@
   <body class="page-home">
     {{> header}}
     <header class="mb-7.5">
-      <div class="bg-blue-800 py-3">
+      <div class="hidden bg-blue-800 py-3 lg:block">
         <div class="container">
           <div class="flex w-full items-center justify-between">
             <span
@@ -77,12 +77,16 @@
         <div class="container">
           <div class="flex justify-between">
             <a href="/" class="py-3.75">
-              <img src="img/barbarich-logo.png" alt="Logo Barbarich" />
+              <img
+                class="max-lg:w-[114px]"
+                src="img/barbarich-logo.png"
+                alt="Logo Barbarich"
+              />
             </a>
             <div
               class="flex items-center justify-start divide-x divide-white/20"
             >
-              <div class="h-full place-content-center pr-5">
+              <div class="hidden h-full place-content-center pr-5 lg:block">
                 <div class="relative">
                   <label for="search" class="sr-only"> Recherche </label>
 
@@ -112,32 +116,73 @@
                 </div>
               </div>
 
-              <div class="grid h-full place-content-center">
-                {{> components/dropdown-account }}
-                <!-- {{> components/dropdown-account-signed }} -->
+              <div
+                class="grid h-full place-content-center border-white/20 max-lg:border-l"
+              >
+                <!-- {{> components/dropdown-account }} -->
+                {{> components/dropdown-account-signed }}
               </div>
-              <div class="flex h-full items-center justify-start gap-2.5 pl-5">
-                <svg viewBox="0 0 18 19" class="w-[18px]" aria-hidden="true">
-                  <path
-                    d="M13.4046 18.503C12.6284 18.503 11.9984 17.873 11.9984 17.0968C11.9984 16.3205 12.6284 15.6905 13.4046 15.6905C14.1809 15.6905 14.8109 16.3205 14.8109 17.0968C14.8109 17.873 14.1809 18.503 13.4046 18.503ZM6.99211 18.503C6.21586 18.503 5.58586 17.873 5.58586 17.0968C5.58586 16.3205 6.21586 15.6905 6.99211 15.6905C7.76836 15.6905 8.39836 16.3205 8.39836 17.0968C8.39836 17.873 7.76836 18.503 6.99211 18.503ZM13.3934 14.7905H7.03711C5.36086 14.7905 3.92086 13.598 3.60586 11.9443L3.38086 10.7293L1.85086 3.13554C1.80586 2.91054 1.62586 2.75304 1.40086 2.75304H1.13086C0.512109 2.75304 0.00585938 2.24679 0.00585938 1.62804C0.00585938 1.00929 0.523359 0.503036 1.14211 0.503036H1.41211C2.70586 0.503036 3.83086 1.42554 4.06711 2.70804L5.59711 10.2905C5.59711 10.2905 5.59711 10.2905 5.59711 10.3018L5.82211 11.5168C5.93461 12.1018 6.44086 12.5293 7.03711 12.5293H13.3934C13.9334 12.5293 14.4059 12.1243 14.4846 11.5843L15.5534 5.44179H7.64461C7.02586 5.44179 6.51961 4.93554 6.51961 4.31679C6.51961 3.69804 7.02586 3.19179 7.64461 3.19179H16.8809C17.2071 3.19179 17.5334 3.33804 17.7359 3.59679C17.9496 3.85554 18.0396 4.18179 17.9834 4.50804L16.6896 11.9443C16.4421 13.5755 15.0471 14.7793 13.3709 14.7793L13.3934 14.7905Z"
-                    fill="#25E9B2"
-                  />
-                </svg>
+              <div
+                class="flex h-full items-center justify-start gap-2.5 px-5 lg:border-none lg:pl-5"
+              >
+                <a href="#" class="flex gap-2.5">
+                  <svg viewBox="0 0 18 19" class="w-[18px]" aria-hidden="true">
+                    <path
+                      d="M13.4046 18.503C12.6284 18.503 11.9984 17.873 11.9984 17.0968C11.9984 16.3205 12.6284 15.6905 13.4046 15.6905C14.1809 15.6905 14.8109 16.3205 14.8109 17.0968C14.8109 17.873 14.1809 18.503 13.4046 18.503ZM6.99211 18.503C6.21586 18.503 5.58586 17.873 5.58586 17.0968C5.58586 16.3205 6.21586 15.6905 6.99211 15.6905C7.76836 15.6905 8.39836 16.3205 8.39836 17.0968C8.39836 17.873 7.76836 18.503 6.99211 18.503ZM13.3934 14.7905H7.03711C5.36086 14.7905 3.92086 13.598 3.60586 11.9443L3.38086 10.7293L1.85086 3.13554C1.80586 2.91054 1.62586 2.75304 1.40086 2.75304H1.13086C0.512109 2.75304 0.00585938 2.24679 0.00585938 1.62804C0.00585938 1.00929 0.523359 0.503036 1.14211 0.503036H1.41211C2.70586 0.503036 3.83086 1.42554 4.06711 2.70804L5.59711 10.2905C5.59711 10.2905 5.59711 10.2905 5.59711 10.3018L5.82211 11.5168C5.93461 12.1018 6.44086 12.5293 7.03711 12.5293H13.3934C13.9334 12.5293 14.4059 12.1243 14.4846 11.5843L15.5534 5.44179H7.64461C7.02586 5.44179 6.51961 4.93554 6.51961 4.31679C6.51961 3.69804 7.02586 3.19179 7.64461 3.19179H16.8809C17.2071 3.19179 17.5334 3.33804 17.7359 3.59679C17.9496 3.85554 18.0396 4.18179 17.9834 4.50804L16.6896 11.9443C16.4421 13.5755 15.0471 14.7793 13.3709 14.7793L13.3934 14.7905Z"
+                      fill="#25E9B2"
+                    />
+                  </svg>
 
-                <a href="#" class="flex flex-col gap-[5px]">
-                  <span class="text-base font-semibold leading-none text-white">
-                    2 Produit(s)
-                  </span>
-                  <span class="text-xs font-semibold leading-3 text-white">
-                    145,21 € HTVA
+                  <span class="flex flex-col gap-[5px]">
+                    <span
+                      class="text-base font-semibold leading-none text-white"
+                    >
+                      <span>2</span>
+                      <span class="hidden lg:inline">Produit(s)</span>
+                    </span>
+                    <span
+                      class="hidden text-xs font-semibold leading-3 text-white lg:block"
+                    >
+                      145,21 € HTVA
+                    </span>
                   </span>
                 </a>
+              </div>
+              <div class="hidden h-full items-center pl-5 max-lg:flex">
+                <button class="menu-mobile-button" aria-controls="nav-mobile">
+                  <svg class="w-[18px]" viewBox="0 0 18 14" aria-hidden="true">
+                    <path
+                      d="M1 1H17"
+                      stroke="#25E9B2"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1 7H17"
+                      stroke="#25E9B2"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1.125 13H9.125"
+                      stroke="#25E9B2"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M13.875 13L16.875 13"
+                      stroke="#25E9B2"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="bg-gray-300">
+      <div class="hidden bg-gray-300 lg:block">
         <div class="container">
           <nav class="main-nav divide-2 flex justify-between">
             <a href="#" class="nav-item flex h-14 items-center justify-center">
@@ -543,10 +588,265 @@
           </div>
         </div>
       </div>
+
+      <div id="nav-mobile" class="drawer">
+        <div class="menu-panels">
+          <div
+            class="menu-panel menu-panel--opened"
+            id="m-1"
+            aria-hidden="true"
+          >
+            <div class="relative w-full bg-white pl-[24px]">
+              <label for="search" class="sr-only"> Recherche </label>
+
+              <input
+                type="text"
+                id="search"
+                placeholder="Recherche"
+                class="pr-15 w-full bg-white py-4 text-lg font-medium text-blue-500"
+              />
+
+              <span class="absolute inset-y-0 end-5 grid place-content-center">
+                <button
+                  type="button"
+                  class="cursor-pointer text-blue-500 hover:text-gray-700"
+                >
+                  <span class="sr-only">Recherche</span>
+
+                  <svg class="w-5 fill-red-400" viewBox="0 0 20 21">
+                    <path
+                      d="M1.0025 20.503C0.7425 20.503 0.4925 20.403 0.2925 20.213C-0.0975 19.823 -0.0975 19.193 0.2925 18.803L3.9725 15.123C2.7425 13.583 2.0025 11.633 2.0025 9.50304C2.0025 4.54304 6.0425 0.503036 11.0025 0.503036C15.9625 0.503036 20.0025 4.54304 20.0025 9.50304C20.0025 14.463 15.9625 18.503 11.0025 18.503C8.8825 18.503 6.9325 17.763 5.3825 16.533L1.7025 20.213C1.5025 20.413 1.2525 20.503 0.9925 20.503H1.0025ZM11.0025 2.50304C7.1425 2.50304 4.0025 5.64304 4.0025 9.50304C4.0025 13.363 7.1425 16.503 11.0025 16.503C14.8625 16.503 18.0025 13.363 18.0025 9.50304C18.0025 5.64304 14.8625 2.50304 11.0025 2.50304Z"
+                    ></path>
+                  </svg>
+                </button>
+              </span>
+            </div>
+            <ul class="menu-listview">
+              <li class="menu-listitem">
+                <a href="" class="menu-listitem__text"> Fr </a>
+              </li>
+              <li class="menu-listitem">
+                <a href="" class="menu-listitem__text"> Accueil </a>
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="#m-nos-outils"
+                  class="menu-listitem__text menu-listitem__btn"
+                >
+                  Boutique
+                </a>
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="#m-nos-services"
+                  class="menu-listitem__text menu-listitem__btn"
+                >
+                  Opportunités
+                </a>
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="#m-nos-services"
+                  class="menu-listitem__text menu-listitem__btn"
+                >
+                  Mes favoris
+                </a>
+              </li>
+
+              <li class="menu-listitem">
+                <a href="about.html" class="menu-listitem__text"
+                  >Mes documents</a
+                >
+              </li>
+              <li class="menu-listitem">
+                <a href="contact.html" class="menu-listitem__text">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="menu-panel flex flex-col"
+            id="m-nos-outils"
+            aria-hidden="true"
+          >
+            <ul class="menu-listview">
+              <li class="menu-listitem menu-listitem--prev">
+                <a
+                  class="menu-listitem__text menu-btn--prev"
+                  href="#"
+                  aria-label="Close submenu"
+                >
+                  Boutique
+                </a>
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="#m-test"
+                  class="menu-listitem__text menu-listitem__btn"
+                >
+                  Test
+                </a>
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="https://muco.65dev.com/la-consultation/"
+                  class="menu-listitem__text subitem"
+                >
+                  La consultation
+                </a>
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="https://muco.65dev.com/hospitalisation/"
+                  class="menu-listitem__text subitem"
+                >
+                  Hospitalisation
+                </a>
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="https://muco.65dev.com/dates-a-retenir/"
+                  class="menu-listitem__text subitem"
+                >
+                  Dates à retenir
+                </a>
+              </li>
+              <li class="menu-listitem">
+                <span class="menu-listitem__text subitem">
+                  <a
+                    href=""
+                    class="inline-flex items-center gap-2.5 text-red-400"
+                  >
+                    <svg
+                      viewBox="0 0 11 10"
+                      fill="none"
+                      class="w-[11px] shrink-0"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4.43209 1.00305L8.5 5.00306M8.5 5.00306L4.43211 9.00305M8.5 5.00306H0.5"
+                        stroke="#D01B56"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+
+                    Voir toute la gamme
+                  </a>
+                </span>
+              </li>
+            </ul>
+
+            <div class="relative mx-[24px] mt-auto w-full overflow-hidden">
+              <div
+                class="p-7.5 gap-3.75 absolute top-0 flex flex-col items-start"
+              >
+                <h2
+                  class="mb-3.75 block text-3xl font-semibold leading-none text-white"
+                >
+                  Nos promotions<br />
+                  à la une
+                </h2>
+                <a class="btn-tertiary">
+                  Découvrir
+
+                  <svg
+                    width="10"
+                    height="12"
+                    viewBox="0 0 10 12"
+                    fill="none"
+                    aria-hidden="true"
+                    class="stroke-current"
+                  >
+                    <path
+                      d="M1 3.00293H9M9 3.00293V11.0029M9 3.00293L1 11.0029"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+
+              <img
+                class="overflow-hidden rounded-[20px] object-cover"
+                src="https://placehold.co/322x367/jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="menu-panel" id="m-nos-services" aria-hidden="true">
+            <ul class="menu-listview">
+              <li class="menu-listitem menu-listitem--prev">
+                <a
+                  class="menu-listitem__text menu-btn--prev"
+                  href="#"
+                  aria-label="Close submenu"
+                  >Retour</a
+                >
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="https://muco.65dev.com/liens-utiles/"
+                  class="menu-listitem__text subitem"
+                  >Liens utiles</a
+                >
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="https://muco.65dev.com/publication/"
+                  class="menu-listitem__text subitem"
+                  >Publications</a
+                >
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="https://muco.65dev.com/brochures/"
+                  class="menu-listitem__text subitem"
+                  >Brochures</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="menu-panel" id="m-test" aria-hidden="true">
+            <ul class="menu-listview">
+              <li class="menu-listitem menu-listitem--prev">
+                <a
+                  class="menu-listitem__text menu-btn--prev"
+                  href="#"
+                  aria-label="Close submenu"
+                  >Retour</a
+                >
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="https://muco.65dev.com/liens-utiles/"
+                  class="menu-listitem__text subitem"
+                  >Liens utiles</a
+                >
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="https://muco.65dev.com/publication/"
+                  class="menu-listitem__text subitem"
+                  >Publications</a
+                >
+              </li>
+              <li class="menu-listitem">
+                <a
+                  href="https://muco.65dev.com/brochures/"
+                  class="menu-listitem__text subitem"
+                  >Brochures</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu__backdrop"></div>
     </header>
 
     <main>
-      <section class="ctas mb-15">
+      <section class="ctas lg:mb-15 mb-10">
         <div class="container">
           {{>components/ctas-home-1}}
           <!-- {{>components/ctas-home-2}} -->
@@ -556,13 +856,62 @@
 
       <section class="slider mb-15 overflow-x-clip">
         <div class="container">
-          <div class="mb-10 flex items-center justify-between">
-            <h2 class="text-[40px] font-semibold leading-[46px] text-blue-500">
-              À la une
-            </h2>
-            <div class="gap-3.75 flex items-center">
-              <a href="#" class="btn-secondary">Voir toute la boutique</a>
-              <div class="gap-1.25 flex">
+          <div class="gap-y-7.5 grid grid-cols-2 md:gap-y-10">
+            <div class="flex items-center justify-between">
+              <h2
+                class="text-[40px] font-semibold leading-[46px] text-blue-500"
+              >
+                À la une
+              </h2>
+            </div>
+
+            <div class="col-span-2">
+              <div class="breakout-right">
+                <div class="swiper md:mb-10">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination mx-auto max-md:hidden"></div>
+            </div>
+
+            <div
+              class="gap-3.75 flex items-center max-md:col-span-2 max-md:text-center md:col-start-2 md:row-start-1 md:ml-auto"
+            >
+              <a href="#" class="btn-secondary max-md:mx-auto">
+                Voir toute la boutique
+              </a>
+              <div class="gap-1.25 hidden md:flex">
                 <button
                   class="swiper-button-prev px-3.75 shrink-0 rounded-full border border-red-300 py-4 text-red-400"
                 >
@@ -601,44 +950,6 @@
               </div>
             </div>
           </div>
-
-          <div class="breakout-right">
-            <div class="swiper mb-10">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination mx-auto"></div>
         </div>
       </section>
 
@@ -646,12 +957,12 @@
         <div class="container-large py-15 rounded-[20px] bg-gray-100">
           <div class="container">
             <h2
-              class="mb-10 text-[40px] font-semibold leading-[46px] text-blue-500"
+              class="mb-7.5 text-[35px] font-semibold leading-[1.14] text-blue-500 max-md:text-center lg:mb-10 lg:text-[40px]"
             >
               Meilleures catégories
             </h2>
 
-            <div class="grid grid-cols-6 gap-[30px]">
+            <div class="grid grid-cols-2 gap-[30px] lg:grid-cols-6">
               {{> components/cta-product title="En promotion"}} {{>
               components/cta-product title="Calypso"}} {{>
               components/cta-product title="Pop corn sucré"}} {{>
@@ -665,13 +976,62 @@
 
       <section class="slider mb-15 overflow-x-clip">
         <div class="container">
-          <div class="mb-10 flex items-center justify-between">
-            <h2 class="text-[40px] font-semibold leading-[46px] text-blue-500">
-              Nouveaux produits
-            </h2>
-            <div class="gap-3.75 flex items-center">
-              <a href="#" class="btn-secondary">Voir toute la boutique</a>
-              <div class="gap-1.25 flex">
+          <div class="gap-y-7.5 grid grid-cols-2 md:gap-y-10">
+            <div class="flex items-center justify-between">
+              <h2
+                class="text-[40px] font-semibold leading-[46px] text-blue-500"
+              >
+                Nouveaux produits
+              </h2>
+            </div>
+
+            <div class="col-span-2">
+              <div class="breakout-right">
+                <div class="swiper md:mb-10">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination mx-auto max-md:hidden"></div>
+            </div>
+
+            <div
+              class="gap-3.75 flex items-center max-md:col-span-2 max-md:text-center md:col-start-2 md:row-start-1 md:ml-auto"
+            >
+              <a href="#" class="btn-secondary max-md:mx-auto">
+                Voir toute la boutique
+              </a>
+              <div class="gap-1.25 hidden md:flex">
                 <button
                   class="swiper-button-prev px-3.75 shrink-0 rounded-full border border-red-300 py-4 text-red-400"
                 >
@@ -710,51 +1070,17 @@
               </div>
             </div>
           </div>
-
-          <div class="breakout-right">
-            <div class="swiper mb-10">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination mx-auto"></div>
         </div>
       </section>
 
       <section class="cta-reassurance mb-15">
-        <div class="container-large rounded-[20px] bg-gray-100 py-5">
+        <div
+          class="container-large rounded-[20px] bg-gray-100 py-5 max-lg:pb-10"
+        >
           <div class="container">
-            <div class="nowrap flex items-center">
+            <div
+              class="nowrap max-lg:gap-7.5 flex flex-col items-center lg:flex-row"
+            >
               <div class="shrink-0 xl:-translate-x-[calc(1/12_*_100%_+_60px)]">
                 <img
                   class="rounded-[15px]"
@@ -765,13 +1091,15 @@
 
               <div>
                 <h2
-                  class="mb-10 text-[40px] font-semibold leading-[46px] text-blue-500"
+                  class="mb-7.5 text-[35px] font-semibold leading-[1.14] -tracking-[0.7px] text-blue-500 lg:mb-10 lg:text-[40px]"
                 >
                   Barbarich Import c’est...
                 </h2>
-                <div class="grid grid-cols-2 gap-[60px]">
-                  <div class="flex flex-col items-start justify-start gap-2.5">
-                    <svg class="size-8" fill="none" aria-hidden="true">
+                <div class="grid gap-5 lg:grid-cols-2 lg:gap-[60px]">
+                  <div
+                    class="gap-7.5 flex items-start justify-start lg:flex-col lg:gap-2.5"
+                  >
+                    <svg class="size-8 shrink-0" fill="none" aria-hidden="true">
                       <path
                         d="M5.5 13.003c-2.49 0-4.5 2.01-4.5 4.5v1.5c0 2.49 2.01 4.5 4.5 4.5v-10.5ZM28 13.263c-.47-.17-.97-.26-1.5-.26H25c-.83 0-1.5.67-1.5 1.5v7.5c0 .83.67 1.5 1.5 1.5h1.5c.53 0 1.03-.1 1.5-.26v-9.98Z"
                         fill="#25E9B2"
@@ -781,23 +1109,28 @@
                         fill="#324E73"
                       />
                     </svg>
-                    <h3
-                      class="text-xl font-semibold leading-snug text-blue-500"
-                    >
-                      Un service client réactif
-                    </h3>
-
-                    <p class="text-base font-normal leading-snug text-blue-800">
-                      Contactez-nous au +32 87 33 60 45 ou sur
-                      <a
-                        href="mailto:info@barbarich.be"
-                        class="text-red-400 underline"
-                        >info@barbarich.be
-                      </a>
-                    </p>
+                    <div class="flex flex-col gap-2.5">
+                      <h3
+                        class="text-xl font-semibold leading-snug text-blue-500"
+                      >
+                        Un service client réactif
+                      </h3>
+                      <p
+                        class="text-base font-normal leading-snug text-blue-800"
+                      >
+                        Contactez-nous au +32 87 33 60 45 ou sur
+                        <a
+                          href="mailto:info@barbarich.be"
+                          class="text-red-400 underline"
+                          >info@barbarich.be
+                        </a>
+                      </p>
+                    </div>
                   </div>
-                  <div class="flex flex-col items-start justify-start gap-2.5">
-                    <svg class="size-8" fill="none" aria-hidden="true">
+                  <div
+                    class="gap-7.5 flex items-start justify-start lg:flex-col lg:gap-2.5"
+                  >
+                    <svg class="size-8 shrink-0" fill="none" aria-hidden="true">
                       <path
                         d="M14.77 1.003c-.79.88-1.27 2.05-1.27 3.33v8.33c0 1.28.48 2.45 1.27 3.33h-2.94c-1.84 0-3.33-1.49-3.33-3.33v-8.33c0-1.84 1.49-3.33 3.33-3.33h2.94ZM7.27 16.003c-.79.88-1.27 2.05-1.27 3.33v8.33c0 1.28.48 2.45 1.27 3.33H4.33c-1.84 0-3.33-1.49-3.33-3.33v-8.33c0-1.84 1.49-3.33 3.33-3.33h2.94ZM22.27 16.003c-.79.88-1.27 2.05-1.27 3.33v8.33c0 1.28.48 2.45 1.27 3.33h-2.94c-1.84 0-3.33-1.49-3.33-3.33v-8.33c0-1.84 1.49-3.33 3.33-3.33h2.94Z"
                         fill="#25E9B2"
@@ -808,21 +1141,25 @@
                       />
                     </svg>
 
-                    <div
-                      class="text-xl font-semibold leading-snug text-blue-500"
-                    >
-                      La livraison gratuite
-                    </div>
-                    <div
-                      class="text-base font-normal leading-snug text-blue-800"
-                    >
-                      Livraison gratuite BE à partir de 350 € dans les 3 à 5
-                      jours ouvrés
+                    <div class="flex flex-col gap-2.5">
+                      <h3
+                        class="text-xl font-semibold leading-snug text-blue-500"
+                      >
+                        La livraison gratuite
+                      </h3>
+                      <p
+                        class="text-base font-normal leading-snug text-blue-800"
+                      >
+                        Livraison gratuite BE à partir de 350 € dans les 3 à 5
+                        jours ouvrés
+                      </p>
                     </div>
                   </div>
 
-                  <div class="flex flex-col items-start justify-start gap-2.5">
-                    <svg class="size-8" fill="none" aria-hidden="true">
+                  <div
+                    class="gap-7.5 flex items-start justify-start lg:flex-col lg:gap-2.5"
+                  >
+                    <svg class="size-8 shrink-0" fill="none" aria-hidden="true">
                       <path
                         d="M18.19 1.283c-3.75 2.06-6.32 6.16-6.32 10.6v.82c0 4.6 2.55 8.78 5.27 11.93-.73.52-1.68.49-2.39-.07-2.55-2.04-8.13-7.21-8.13-13.3v-.66c0-5.08 4.2-9.6 9.38-9.6.75 0 1.49.1 2.19.28Z"
                         fill="#25E9B2"
@@ -836,22 +1173,25 @@
                         fill="#324E73"
                       />
                     </svg>
-
-                    <div
-                      class="text-xl font-semibold leading-snug text-blue-500"
-                    >
-                      Un large assortiment
-                    </div>
-                    <div
-                      class="text-base font-normal leading-snug text-blue-800"
-                    >
-                      Plus de 1.200 produits nationaux et d’importation
-                      sélectionnés avec soin
+                    <div class="flex flex-col gap-2.5">
+                      <h3
+                        class="text-xl font-semibold leading-snug text-blue-500"
+                      >
+                        Un large assortiment
+                      </h3>
+                      <p
+                        class="text-base font-normal leading-snug text-blue-800"
+                      >
+                        Plus de 1.200 produits nationaux et d’importation
+                        sélectionnés avec soin
+                      </p>
                     </div>
                   </div>
 
-                  <div class="flex flex-col items-start justify-start gap-2.5">
-                    <svg class="size-8" fill="none" aria-hidden="true">
+                  <div
+                    class="gap-7.5 flex items-start justify-start lg:flex-col lg:gap-2.5"
+                  >
+                    <svg class="size-8 shrink-0" fill="none" aria-hidden="true">
                       <path
                         d="M24.25 17.083v7.38c0 2.3 1.52 4.16 2.82 5.36.02.01.03.03.05.04-.68.48-1.29.83-1.65 1.04a.75.75 0 0 1-.74 0c-1.29-.72-5.53-3.32-5.53-6.44v-4.33c0-.32.18-.61.47-.75l4.59-2.3h-.01ZM9.03 1.003A5.973 5.973 0 0 0 7 5.503v15c0 1.79.79 3.4 2.03 4.5H5.5c-2.49 0-4.5-2.01-4.5-4.5v-15a4.5 4.5 0 0 1 4.5-4.5h3.53Z"
                         fill="#25E9B2"
@@ -865,17 +1205,18 @@
                         fill="#324E73"
                       />
                     </svg>
-
-                    <div
-                      class="text-xl font-semibold leading-snug text-blue-500"
-                    >
-                      Le paiement sécurisé
-                    </div>
-                    <div
-                      class="text-base font-normal leading-snug text-blue-800"
-                    >
-                      Payez en toute sécurité par cartes Maestro, Mastercard,
-                      Bancontact, Visa
+                    <div class="flex flex-col gap-2.5">
+                      <h3
+                        class="text-xl font-semibold leading-snug text-blue-500"
+                      >
+                        Le paiement sécurisé
+                      </h3>
+                      <p
+                        class="text-base font-normal leading-snug text-blue-800"
+                      >
+                        Payez en toute sécurité par cartes Maestro, Mastercard,
+                        Bancontact, Visa
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -887,13 +1228,62 @@
 
       <section class="slider mb-15 overflow-x-clip">
         <div class="container">
-          <div class="mb-10 flex items-center justify-between">
-            <h2 class="text-[40px] font-semibold leading-[46px] text-blue-500">
-              Déjà vu
-            </h2>
-            <div class="gap-3.75 flex items-center">
-              <a href="#" class="btn-secondary">Voir toute la boutique</a>
-              <div class="gap-1.25 flex">
+          <div class="gap-y-7.5 grid grid-cols-2 md:gap-y-10">
+            <div class="flex items-center justify-between">
+              <h2
+                class="text-[40px] font-semibold leading-[46px] text-blue-500"
+              >
+                Déjà vu
+              </h2>
+            </div>
+
+            <div class="col-span-2">
+              <div class="breakout-right">
+                <div class="swiper md:mb-10">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination mx-auto max-md:hidden"></div>
+            </div>
+
+            <div
+              class="gap-3.75 flex items-center max-md:col-span-2 max-md:text-center md:col-start-2 md:row-start-1 md:ml-auto"
+            >
+              <a href="#" class="btn-secondary max-md:mx-auto">
+                Voir toute la boutique
+              </a>
+              <div class="gap-1.25 hidden md:flex">
                 <button
                   class="swiper-button-prev px-3.75 shrink-0 rounded-full border border-red-300 py-4 text-red-400"
                 >
@@ -932,51 +1322,15 @@
               </div>
             </div>
           </div>
-
-          <div class="breakout-right">
-            <div class="swiper mb-10">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-                <div class="swiper-slide w-[323px]">
-                  {{> components/cart-product-item}}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination mx-auto"></div>
         </div>
       </section>
 
       <section class="about mb-15">
-        <div class="container-large rounded-[20px] bg-gray-100 py-5">
+        <div
+          class="container-large rounded-[20px] bg-gray-100 py-5 max-lg:pb-10"
+        >
           <div class="container">
-            <div class="nowrap flex">
+            <div class="nowrap flex flex-col lg:flex-row">
               <div
                 class="shrink-0 basis-7/12 xl:order-1 xl:translate-x-[calc(1/12_*_100%_+_60px)]"
               >
@@ -989,12 +1343,12 @@
 
               <div class="mt-10">
                 <h2
-                  class="mb-10 text-[40px] font-semibold leading-[46px] text-blue-500"
+                  class="mb-5 text-[35px] font-semibold leading-[1.14] -tracking-[0.7px] text-blue-500 lg:mb-10 lg:text-[40px]"
                 >
                   Barbarich Import,<br />confiseries en gros
                 </h2>
                 <div
-                  class="prose mb-10 text-lg font-normal leading-7 text-blue-800"
+                  class="prose mb-5 text-lg font-normal leading-7 text-blue-800 lg:mb-10"
                 >
                   <p>
                     Actif depuis 1983, la société à responsabilité limitée
@@ -1014,7 +1368,7 @@
                   </p>
                 </div>
                 <button class="btn-primary">
-                  M’inscrire
+                  En savoir plus
                   <svg
                     width="10"
                     height="12"

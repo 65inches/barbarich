@@ -45,6 +45,7 @@
 
 @import './components/buttons.css';
 @import './components/form.css';
+@import './components/menu-mobile.css';
 ::placeholder {
   opacity: 1;
   color: color-mix(in oklab, currentColor 100%, transparent);
@@ -54,16 +55,18 @@ strong {
   font-weight: 600;
 }
 
-.dropdown {
-  &::before {
-    position: absolute;
-    top: -7px;
-    width: 17px;
-    height: 8px;
-    inset-inline: 0;
-    margin-inline: auto;
-    content: '';
-    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 17 8'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M10.621.879a3 3 0 0 0-4.242 0L.216 7.042h16.568L10.621.879Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+@media (min-width: 992px) {
+  .dropdown {
+    &::before {
+      position: absolute;
+      top: -7px;
+      width: 17px;
+      height: 8px;
+      inset-inline: 0;
+      margin-inline: auto;
+      content: '';
+      background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 17 8'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M10.621.879a3 3 0 0 0-4.242 0L.216 7.042h16.568L10.621.879Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    }
   }
 }
 

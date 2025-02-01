@@ -1,17 +1,23 @@
-<div class="gap-3.75 grid grid-cols-[repeat(2,1fr)_0.56fr]">
+<div class="gap-3.75 grid lg:grid-cols-[repeat(2,1fr)_0.56fr]">
   <div
-    class="p-7.5 relative row-span-2 flex flex-col items-start justify-start gap-5 overflow-hidden rounded-[20px] bg-yellow-300 pb-2.5"
+    class="max-lg:h-100 lg:p-7.5 relative flex flex-col items-start justify-start overflow-hidden rounded-[20px] bg-yellow-300 p-5 pb-2.5 lg:row-span-2 lg:gap-5"
   >
-    <h2 class="text-[50px] font-semibold leading-[52px] text-blue-800">
+    <h2
+      class="text-[30px] font-semibold leading-none text-blue-800 max-lg:mb-2.5 lg:text-[50px]"
+    >
       Nooooodles Time!
     </h2>
-    <p class="text-lg font-normal leading-[1.33] text-blue-800">
+    <p class="text-lg font-normal leading-[1.33] text-blue-800 max-lg:mb-5">
       Découvrez les nouilles instantanées les plus piquantes au monde de la
-      marque Daebak !<br />Retrouvez les saveurs authentiques coréennes avec ces
-      nouilles moelleuses irrésistiblement piquantes.
+      marque Daebak !<br /><span class="hidden lg:block">
+        Retrouvez les saveurs authentiques coréennes avec ces nouilles
+        moelleuses irrésistiblement piquantes.
+      </span>
     </p>
-    <div class="span-rows-1 relative z-[1] flex items-start gap-5">
-      <a href="#" class="btn-primary whitespace-nowrap">
+    <div
+      class="span-rows-1 flex w-full flex-col items-start gap-5 lg:relative lg:z-[1] lg:flex-row"
+    >
+      <a href="#" class="btn-primary relative z-[2] whitespace-nowrap">
         Commander
         <svg
           width="10"
@@ -28,20 +34,24 @@
           ></path>
         </svg>
       </a>
-      <img class="" src="img/visuel.png" alt="" />
+      <img
+        class="z-[1] max-lg:absolute max-lg:bottom-2.5 max-lg:right-0 max-lg:w-[175px]"
+        src="img/visuel.png"
+        alt=""
+      />
     </div>
     <div
-      class="size-100 absolute -bottom-[90px] -right-[60px] z-[0] rounded-full border-8 border-white bg-white opacity-40"
+      class="size-80 lg:size-100 absolute -bottom-[110px] -right-[50px] z-[0] rounded-full bg-white opacity-40 lg:-bottom-[90px] lg:-right-[60px]"
     ></div>
   </div>
 
   <div
-    class="p-7.5 relative row-span-1 overflow-hidden rounded-[20px] bg-red-300 pb-2.5"
+    class="max-lg:h-100 lg:p-7.5 relative overflow-hidden rounded-[20px] bg-red-300 p-5 pb-2.5 lg:row-span-1"
   >
-    <div class="relative z-[1] flex items-start gap-5">
+    <div class="z-[1] flex flex-col items-start gap-5 lg:relative lg:flex-row">
       <div class="flex flex-col items-start justify-start gap-2.5">
         <h2
-          class="whitespace-nowrap text-[32px] font-semibold leading-none text-blue-800"
+          class="whitespace-nowrap text-[30px] font-semibold leading-none text-blue-800 lg:text-[32px]"
         >
           Nouveau format !
         </h2>
@@ -49,7 +59,7 @@
           Les délicieux bonbons Crunch Punch ultra croustillants débarquent
           désormais au format 100 gr.
         </p>
-        <a href="#" class="btn-primary whitespace-nowrap">
+        <a href="#" class="btn-primary relative z-[1] whitespace-nowrap">
           Commander
           <svg
             width="10"
@@ -67,20 +77,24 @@
           </svg>
         </a>
       </div>
-      <img src="img/visuel-3.png" alt="" />
+      <img
+        class="z-[1] max-lg:absolute max-lg:bottom-2.5 max-lg:right-0 max-lg:w-[175px]"
+        src="img/visuel-3.png"
+        alt=""
+      />
     </div>
     <div
-      class="size-80 absolute -bottom-[50px] -right-[60px] z-[0] rounded-full border-8 border-white bg-white opacity-40"
+      class="size-80 absolute -bottom-[110px] -right-[50px] z-[0] rounded-full border-8 border-white bg-white opacity-40 lg:-bottom-[50px] lg:-right-[60px]"
     ></div>
   </div>
 
   <div
-    class="p-7.5 relative col-start-2 row-span-1 row-start-2 overflow-hidden rounded-[20px] bg-blue-300 pb-2.5"
+    class="max-lg:h-100 lg:p-7.5 relative overflow-hidden rounded-[20px] bg-blue-300 p-5 pb-2.5 lg:col-start-2 lg:row-span-1 lg:row-start-2"
   >
-    <div class="relative z-[1] flex items-start gap-5">
+    <div class="z-[1] flex items-start gap-5 lg:relative">
       <div class="flex flex-col items-start justify-start gap-2.5">
         <h2
-          class="whitespace-nowrap text-[32px] font-semibold leading-none text-blue-800"
+          class="whitespace-nowrap text-[30px] font-semibold leading-none text-blue-800 lg:text-[32px]"
         >
           Nouveau format !
         </h2>
@@ -88,7 +102,7 @@
           Les délicieux bonbons Crunch Punch ultra croustillants débarquent
           désormais au format 100 gr.
         </p>
-        <a href="#" class="btn-primary whitespace-nowrap">
+        <a href="#" class="btn-primary relative z-[1] whitespace-nowrap">
           Commander
           <svg
             width="10"
@@ -106,16 +120,22 @@
           </svg>
         </a>
       </div>
-      <img src="img/visuel-3.png" alt="" />
+      <img
+        class="z-[1] max-lg:absolute max-lg:bottom-2.5 max-lg:right-0 max-lg:w-[175px]"
+        src="img/visuel-3.png"
+        alt=""
+      />
     </div>
     <div
-      class="size-80 absolute -bottom-[50px] -right-[60px] z-[0] rounded-full border-8 border-white bg-white opacity-40"
+      class="size-80 absolute -bottom-[110px] -right-[50px] z-[0] rounded-full border-8 border-white bg-white opacity-40 lg:-bottom-[50px] lg:-right-[60px]"
     ></div>
   </div>
   <div
-    class="p-7.5 relative row-span-2 flex flex-col items-start justify-start gap-5 overflow-hidden rounded-[20px] bg-green-300 pb-2.5"
+    class="max-lg:h-100 lg:p-7.5 relative flex flex-col items-start justify-start gap-5 overflow-hidden rounded-[20px] bg-green-300 p-5 pb-2.5 lg:row-span-2"
   >
-    <h2 class="text-3xl font-semibold leading-[1.33] text-blue-800">
+    <h2
+      class="text-[30px] font-semibold leading-none text-blue-800 lg:text-3xl lg:leading-[1.33]"
+    >
       Tendance sur TikTok
     </h2>
     <p class="text-lg font-normal leading-[1.33] text-blue-800">
@@ -124,7 +144,7 @@
       urgence !
     </p>
     <div class="relative z-[1]">
-      <a href="#" class="btn-primary whitespace-nowrap">
+      <a href="#" class="btn-primary relative z-[1] whitespace-nowrap">
         Commander
         <svg
           width="10"
@@ -142,9 +162,14 @@
         </svg>
       </a>
     </div>
-    <img class="relative z-[1]" src="img/visuel-4.png" alt="" />
+    <img
+      class="z-[1] max-lg:absolute max-lg:bottom-2.5 max-lg:right-0 max-lg:w-[175px]"
+      class="relative z-[1]"
+      src="img/visuel-4.png"
+      alt=""
+    />
     <div
-      class="size-80 absolute -bottom-[90px] -right-[60px] z-[0] rounded-full border-8 border-white bg-white opacity-40"
+      class="size-80 absolute -bottom-[110px] -right-[50px] z-[0] rounded-full border-8 border-white bg-white opacity-40 lg:-bottom-[90px] lg:-right-[60px]"
     ></div>
   </div>
 </div>

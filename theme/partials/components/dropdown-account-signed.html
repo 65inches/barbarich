@@ -13,10 +13,10 @@
       />
     </svg>
 
-    Mon compte
+    <span class="hidden lg:block">Mon compte</span>
 
     <svg
-      class="w-[12px] fill-current transition-all group-aria-expanded:rotate-180"
+      class="hidden w-[12px] fill-current transition-all group-aria-expanded:rotate-180 lg:block"
       viewBox="0 0 12 7"
       aria-hidden="true"
     >
@@ -27,45 +27,62 @@
   </button>
   <div
     id="dropdown-menu"
-    class="w-56.25 shadow-general starting:opacity-0 absolute inset-x-1/2 z-[5] mx-auto mt-2 hidden origin-center -translate-x-1/2 rounded-md bg-white opacity-0 transition-all duration-300"
+    class="lg:w-56.25 lg:shadow-general starting:opacity-0 fixed top-[61px] z-[5] mx-auto hidden w-60 w-full origin-center bg-gray-100 opacity-0 transition-all duration-300 max-lg:left-0 max-lg:h-[calc(100dvh_-_40px)] lg:absolute lg:inset-x-1/2 lg:mt-2 lg:-translate-x-1/2 lg:rounded-md lg:bg-white"
   >
     <div
-      class="dropdown p-0.75 relative"
+      class="dropdown lg:p-0.75 relative"
       role="menu"
       aria-orientation="vertical"
       aria-labelledby="dropdown-button"
     >
-      <div role="menuitem" class="block rounded-[5px] bg-gray-300 px-5 py-2.5">
+      <div
+        role="menuitem"
+        class="relative block rounded-[5px] bg-white px-5 py-2.5 lg:bg-gray-300"
+      >
         <span
-          class="whitespace-nowrap text-xl font-semibold leading-7 text-blue-800"
+          class="block whitespace-nowrap text-xl font-semibold leading-7 text-blue-800"
         >
           Ravi de vous revoir&nbsp;!
         </span>
-        <span class="text-base font-medium leading-none text-blue-500">
+        <span class="block text-base font-medium leading-none text-blue-500">
           studio@netside.be
         </span>
+
+        <button id="dropdown-menu-close" class="absolute inset-y-0 right-8">
+          <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+            <path
+              d="M2.71018 0.293707C2.3197 -0.0968646 1.68661 -0.0968646 1.29613 0.293707C0.905658 0.684278 0.905658 1.31752 1.29613 1.70809L6.58638 6.9996L1.29457 12.2925C0.904087 12.6831 0.904088 13.3163 1.29457 13.7069C1.68506 14.0974 2.31815 14.0974 2.70864 13.7069L8.00042 8.41399L13.292 13.7068C13.6825 14.0974 14.3156 14.0974 14.706 13.7068C15.0965 13.3163 15.0965 12.683 14.706 12.2925L9.41449 6.99963L14.7047 1.70832C15.0952 1.31776 15.0952 0.684528 14.7047 0.293963C14.3142 -0.0966019 13.6811 -0.096602 13.2906 0.293963L8.00044 5.58524L2.71018 0.293707Z"
+              fill="#D01B56"
+            />
+          </svg>
+          <div class="sr-only">Close</div>
+        </button>
       </div>
-      <a
-        role="menuitem"
-        href="#"
-        class="block rounded-[5px] px-5 py-[15px] text-base font-medium leading-none text-blue-800 transition duration-300 hover:bg-red-400 hover:text-white"
+      <div
+        class="max-lg:divide-y max-lg:divide-gray-500 max-lg:border-b max-lg:border-gray-500"
       >
-        Mes données
-      </a>
-      <a
-        role="menuitem"
-        href="#"
-        class="block rounded-[5px] px-5 py-[15px] text-base font-medium leading-none text-blue-800 transition duration-300 hover:bg-red-400 hover:text-white"
-      >
-        Mes documents
-      </a>
-      <a
-        role="menuitem"
-        href="#"
-        class="block rounded-[5px] px-5 py-[15px] text-base font-medium leading-none text-blue-800 transition duration-300 hover:bg-red-400 hover:text-white"
-      >
-        Déconnexion
-      </a>
+        <a
+          role="menuitem"
+          href="#"
+          class="block rounded-[5px] px-5 py-[15px] text-base font-medium leading-none text-blue-800 transition duration-300 hover:bg-red-400 hover:text-white"
+        >
+          Mes données
+        </a>
+        <a
+          role="menuitem"
+          href="#"
+          class="block rounded-[5px] px-5 py-[15px] text-base font-medium leading-none text-blue-800 transition duration-300 hover:bg-red-400 hover:text-white"
+        >
+          Mes documents
+        </a>
+        <a
+          role="menuitem"
+          href="#"
+          class="block rounded-[5px] px-5 py-[15px] text-base font-medium leading-none text-blue-800 transition duration-300 hover:bg-red-400 hover:text-white"
+        >
+          Déconnexion
+        </a>
+      </div>
     </div>
   </div>
 </div>

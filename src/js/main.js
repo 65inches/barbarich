@@ -1,6 +1,9 @@
 import Swiper from 'swiper/bundle';
+import MenuMobile from './menu';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const menuMobile = new MenuMobile('#nav-mobile');
+
   const swipers = document.querySelectorAll('.slider');
 
   if (swipers) {
@@ -62,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // initSocialButtons();
 
   const dropdownButton = document.getElementById('dropdown-button');
+  const dropdownButtonClose = document.getElementById('dropdown-menu-close');
   const dropdownMenu = document.getElementById('dropdown-menu');
   let isDropdownOpen = false;
 
@@ -75,6 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   dropdownButton.addEventListener('click', toggleDropdown);
 
+  dropdownButtonClose?.addEventListener('click', () => {
+    console.log('aezaze');
+    dropdownMenu.classList.add('hidden');
+    dropdownButton.setAttribute('aria-expanded', 'false');
+    isDropdownOpen = false;
+  });
+
   window.addEventListener('click', (event) => {
     if (
       !dropdownButton.contains(event.target) &&
@@ -83,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isDropdownOpen) {
         requestAnimationFrame(() => {
           dropdownMenu.classList.add('hidden');
-          dropdownButton.setAttribute('aria-expanded', false);
+          dropdownButton.setAttribute('aria-expanded', 'false');
           isDropdownOpen = false;
         });
       }

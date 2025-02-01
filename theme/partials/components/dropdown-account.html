@@ -13,10 +13,10 @@
       />
     </svg>
 
-    Mon compte
+    <span class="hidden lg:block">Mon compte</span>
 
     <svg
-      class="w-[12px] fill-current transition-all group-aria-expanded:rotate-180"
+      class="hidden w-[12px] fill-current transition-all group-aria-expanded:rotate-180 lg:block"
       viewBox="0 0 12 7"
       aria-hidden="true"
     >
@@ -27,7 +27,7 @@
   </button>
   <div
     id="dropdown-menu"
-    class="shadow-general starting:opacity-0 absolute inset-x-1/2 z-[5] mx-auto mt-2 hidden w-60 origin-center -translate-x-1/2 rounded-md bg-white opacity-0 transition-all duration-300"
+    class="lg:shadow-general starting:opacity-0 fixed top-[61px] z-[5] mx-auto hidden w-60 w-full origin-center bg-white opacity-0 transition-all duration-300 max-lg:left-0 max-lg:h-[calc(100dvh_-_40px)] lg:absolute lg:inset-x-1/2 lg:mt-2 lg:-translate-x-1/2 lg:rounded-md"
   >
     <div
       class="dropdown p-0.75 relative"
