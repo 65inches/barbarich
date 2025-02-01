@@ -1,20 +1,19 @@
-| Page Structure          | Desktop | Tablet | Mobile |
-| ----------------------- | ------- | ------ | ------ |
-| Home                    | ❌      | ❌     | ❌     |
-| Menu                    | ❌      | ❌     | ❌     |
-| Boutique                | ❌      | ❌     | ❌     |
-| Boutique                | ❌      | ❌     | ❌     |
-| Panier                  | ❌      | ❌     | ❌     |
-| Login                   | ❌      | ❌     | ❌     |
-| Create account          | ❌      | ❌     | ❌     |
-| Account                 | ❌      | ❌     | ❌     |
-| Contact                 | ❌      | ❌     | ❌     |
-| FAQs                    | ❌      | ❌     | ❌     |
-| A propos                | ❌      | ❌     | ❌     |
-| Legal                   | ❌      | ❌     | ❌     |
-| Mes documents           | ❌      | ❌     | ❌     |
-| Mes documents>Recherche | ❌      | ❌     | ❌     |
-| 404                     | ❌      | ❌     | ❌     |
+| Page Structure | Desktop | Tablet | Mobile |
+| -------------- | ------- | ------ | ------ |
+| Home           | ❌      | ❌     | ❌     |
+| Menu           | ❌      | ❌     | ❌     |
+| Boutique       | ❌      | ❌     | ❌     |
+| Boutique       | ❌      | ❌     | ❌     |
+| Panier         | ❌      | ❌     | ❌     |
+| Login          | ❌      | ❌     | ❌     |
+| Create account | ❌      | ❌     | ❌     |
+| Account        | ❌      | ❌     | ❌     |
+| Contact        | ❌      | ❌     | ❌     |
+| FAQs           | ❌      | ❌     | ❌     |
+| A propos       | ❌      | ❌     | ❌     |
+| Legal          | ❌      | ❌     | ❌     |
+| Mes documents  | ❌      | ❌     | ❌     |
+| 404            | ❌      | ❌     | ❌     |
 
 # Usage
 
