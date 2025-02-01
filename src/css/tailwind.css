@@ -2,14 +2,18 @@
 
 @theme {
   --font-*: initial;
-  --font-serif: 'Outfit', 'serif';
+  --font-sans: 'Outfit', 'serif';
 
+  --color-yellow-300: #fae3bd;
   --color-red-100: #f8c9d9;
+  --color-red-300: #fbd7d7;
   --color-red-400: #d01b56;
+  --color-green-300: #dcf0f1;
   --color-green-400: #1f8910;
   --color-orange-400: #ff5300;
   --color-purple-400: #925aac;
   --color-aquamarine-400: #25e9b2;
+  --color-blue-300: #cae1fb;
   --color-blue-500: #324e73;
   --color-blue-800: #253a55;
   --color-gray-100: #f4f5f8;
@@ -23,8 +27,8 @@
   --breakpoint-xl: 1290px;
   --breakpoint-2xl: 1320px;
 
-  --shadow-general: 0px 4px 14px 0px rgba(227, 228, 255, 0.5);
-
+  --shadow-general: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
+  --shadow-menu: 0px 4px 40px 0px rgba(0, 0, 0, 0.8);
   --ease-elastic-out: cubic-bezier(0.2, 0, 0, 1.6);
 }
 
@@ -48,4 +52,55 @@
 
 strong {
   font-weight: 600;
+}
+
+.dropdown {
+  &::before {
+    position: absolute;
+    top: -7px;
+    width: 17px;
+    height: 8px;
+    inset-inline: 0;
+    margin-inline: auto;
+    content: '';
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 17 8'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M10.621.879a3 3 0 0 0-4.242 0L.216 7.042h16.568L10.621.879Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  }
+}
+
+.nav-item {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    content: '';
+    bottom: 0;
+    background: var(--color-red-400);
+    opacity: 0;
+    transform: translateY(2px);
+    transition: 300ms ease-in;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.submenu .container {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50vw;
+    right: calc(100% - 15px);
+    z-index: 0;
+    pointer-events: none;
+    display: block;
+    background: var(--color-red-400);
+  }
 }

@@ -60,6 +60,55 @@ document.addEventListener('DOMContentLoaded', () => {
   //   new Video(video);
   // });
   // initSocialButtons();
+
+  const dropdownButton = document.getElementById('dropdown-button');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+  let isDropdownOpen = false;
+
+  function toggleDropdown() {
+    isDropdownOpen = !isDropdownOpen;
+    dropdownMenu.classList.toggle('hidden', !isDropdownOpen);
+    dropdownMenu.classList.remove('opacity-0', !isDropdownOpen);
+    dropdownMenu.classList.add('opacity-100', !isDropdownOpen);
+    dropdownButton.setAttribute('aria-expanded', isDropdownOpen);
+  }
+
+  dropdownButton.addEventListener('click', toggleDropdown);
+
+  window.addEventListener('click', (event) => {
+    if (
+      !dropdownButton.contains(event.target) &&
+      !dropdownMenu.contains(event.target)
+    ) {
+      if (isDropdownOpen) {
+        requestAnimationFrame(() => {
+          dropdownMenu.classList.add('hidden');
+          dropdownButton.setAttribute('aria-expanded', false);
+          isDropdownOpen = false;
+        });
+      }
+    }
+  });
+
+  // Mega menu shop
+  const nav = document.querySelector('.main-nav');
+  const shopMenuLink = document.querySelector('.submenu-toggle');
+  const shopMenu = document.querySelector('.menu');
+  let isShopMenuOpen = false;
+
+  nav?.addEventListener('mouseover', (e) => {
+    if (shopMenuLink && shopMenuLink.contains(e.target)) {
+      isShopMenuOpen = true;
+      shopMenu?.setAttribute('aria-expanded', 'true');
+    } else {
+      isShopMenuOpen = false;
+      shopMenu?.setAttribute('aria-expanded', 'false');
+    }
+  });
+  shopMenu?.addEventListener('mouseleave', (e) => {
+    isShopMenuOpen = false;
+    shopMenu?.setAttribute('aria-expanded', 'false');
+  });
 });
 
 // function decrement(e) {

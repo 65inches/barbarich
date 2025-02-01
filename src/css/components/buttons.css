@@ -3,14 +3,19 @@
     @apply bg-red-400 text-base font-semibold leading-none text-white rounded-[60px] px-5 py-4;
   }
 
-  .btn-primary:has(svg) {
-    @apply inline-flex items-center gap-2.5;
-  }
   .btn-secondary {
     @apply text-base font-semibold leading-none text-red-400 rounded-[60px] px-5 py-4 border border-red-300;
   }
 
-  .btn-secondary:has(svg) {
-    @apply inline-flex items-center gap-2.5;
+  .btn-tertiary {
+    @apply text-base font-semibold leading-none bg-white text-red-400 rounded-[60px] px-5 py-4;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-tertiary {
+    &:has(svg) {
+      @apply inline-flex items-center gap-2.5;
+    }
   }
 }

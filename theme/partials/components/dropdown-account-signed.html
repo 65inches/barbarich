@@ -1,0 +1,71 @@
+<div class="relative">
+  <button
+    id="dropdown-button"
+    class="aria-expanded:text-aquamarine-400 hover:text-aquamarine-400 group flex w-full cursor-pointer items-center justify-center gap-2.5 rounded-md px-5 py-2 text-sm font-semibold text-white transition focus:outline-none"
+    aria-expanded="false"
+  >
+    <svg class="fill-aquamarine-400 w-5" viewBox="0 0 20 19" aria-hidden="true">
+      <path
+        d="M14.2774 18.5029C13.9996 18.5029 13.7218 18.4017 13.5107 18.1879L11.4552 16.1854C11.0107 15.7579 10.9996 15.0379 11.4218 14.5992C11.8441 14.1492 12.5552 14.1379 12.9885 14.5654L14.2663 15.8142L18.1107 12.0679C18.5552 11.6404 19.2552 11.6517 19.6774 12.1017C20.0996 12.5517 20.0885 13.2604 19.6441 13.6879L15.0329 18.1879C14.8218 18.4017 14.5441 18.5029 14.2663 18.5029H14.2774Z"
+      />
+      <path
+        d="M8.81111 18.503H1.85556C0.833333 18.503 0 17.6593 0 16.6243C0 13.5193 2.48889 10.9993 5.55556 10.9993H10.4889C10.5889 10.9993 10.6889 10.9993 10.7889 10.9993C11.4 11.033 11.8667 11.5618 11.8333 12.1805C11.8 12.7993 11.3 13.2718 10.6667 13.238H10.4889H5.55556C3.84444 13.238 2.42222 14.5543 2.24444 16.2418H8.81111C9.42222 16.2418 9.92222 16.748 9.92222 17.3668C9.92222 17.9855 9.42222 18.4918 8.81111 18.4918V18.503ZM8.02222 10.1893C5.38889 10.1893 3.23333 8.01804 3.23333 5.34054C3.23333 2.66304 5.38889 0.503036 8.02222 0.503036C10.6556 0.503036 12.8111 2.67429 12.8111 5.35179C12.8111 8.02929 10.6667 10.2005 8.02222 10.2005V10.1893ZM8.02222 2.75304C6.61111 2.75304 5.45555 3.91179 5.45555 5.35179C5.45555 6.79179 6.6 7.95054 8.02222 7.95054C9.44444 7.95054 10.5889 6.79179 10.5889 5.35179C10.5889 3.91179 9.44444 2.75304 8.02222 2.75304Z"
+      />
+    </svg>
+
+    Mon compte
+
+    <svg
+      class="w-[12px] fill-current transition-all group-aria-expanded:rotate-180"
+      viewBox="0 0 12 7"
+      aria-hidden="true"
+    >
+      <path
+        d="M6 6.5c-.3 0-.5-.1-.7-.3L.6 1.5 2 .1l4 4 4-4 1.4 1.4-4.7 4.7c-.2.2-.4.3-.7.3z"
+      />
+    </svg>
+  </button>
+  <div
+    id="dropdown-menu"
+    class="w-56.25 shadow-general starting:opacity-0 absolute inset-x-1/2 z-[5] mx-auto mt-2 hidden origin-center -translate-x-1/2 rounded-md bg-white opacity-0 transition-all duration-300"
+  >
+    <div
+      class="dropdown p-0.75 relative"
+      role="menu"
+      aria-orientation="vertical"
+      aria-labelledby="dropdown-button"
+    >
+      <div role="menuitem" class="block rounded-[5px] bg-gray-300 px-5 py-2.5">
+        <span
+          class="whitespace-nowrap text-xl font-semibold leading-7 text-blue-800"
+        >
+          Ravi de vous revoir&nbsp;!
+        </span>
+        <span class="text-base font-medium leading-none text-blue-500">
+          studio@netside.be
+        </span>
+      </div>
+      <a
+        role="menuitem"
+        href="#"
+        class="block rounded-[5px] px-5 py-[15px] text-base font-medium leading-none text-blue-800 transition duration-300 hover:bg-red-400 hover:text-white"
+      >
+        Mes données
+      </a>
+      <a
+        role="menuitem"
+        href="#"
+        class="block rounded-[5px] px-5 py-[15px] text-base font-medium leading-none text-blue-800 transition duration-300 hover:bg-red-400 hover:text-white"
+      >
+        Mes documents
+      </a>
+      <a
+        role="menuitem"
+        href="#"
+        class="block rounded-[5px] px-5 py-[15px] text-base font-medium leading-none text-blue-800 transition duration-300 hover:bg-red-400 hover:text-white"
+      >
+        Déconnexion
+      </a>
+    </div>
+  </div>
+</div>
