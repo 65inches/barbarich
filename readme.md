@@ -1,10 +1,11 @@
 # Todo
+
 - Menu accessibility (focus, aria)
 
 | Page Structure | Desktop | Tablet | Mobile |
 | -------------- | ------- | ------ | ------ |
-| Home           | ✅      | ❌     | ❌     |
-| Menu           | ✅      | ❌     | ❌     |
+| Home           | ✅      | ❌     | ✅     |
+| Menu           | ✅      | ❌     | ✅     |
 | Boutique       | ❌      | ❌     | ❌     |
 | Panier         | ❌      | ❌     | ❌     |
 | Login          | ❌      | ❌     | ❌     |
