@@ -1,7 +1,7 @@
 | Page Structure | Desktop | Tablet | Mobile |
 | -------------- | ------- | ------ | ------ |
-| Home           | ❌      | ❌     | ❌     |
-| Menu           | ❌      | ❌     | ❌     |
+| Home           | ✅      | ❌     | ❌     |
+| Menu           | ✅      | ❌     | ❌     |
 | Boutique       | ❌      | ❌     | ❌     |
 | Panier         | ❌      | ❌     | ❌     |
 | Login          | ❌      | ❌     | ❌     |
