@@ -3,7 +3,6 @@
 | Home           | ❌      | ❌     | ❌     |
 | Menu           | ❌      | ❌     | ❌     |
 | Boutique       | ❌      | ❌     | ❌     |
-| Boutique       | ❌      | ❌     | ❌     |
 | Panier         | ❌      | ❌     | ❌     |
 | Login          | ❌      | ❌     | ❌     |
 | Create account | ❌      | ❌     | ❌     |
