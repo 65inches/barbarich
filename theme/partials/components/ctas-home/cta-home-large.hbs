@@ -11,7 +11,9 @@
       >
         {{title}}
       </h2>
-      <p class='text-lg font-normal leading-[1.33] text-blue-800 mb-2 group-[:not(.xl-small)]:mt-2'>
+      <p
+        class='mb-2 text-lg font-normal leading-[1.33] text-blue-800 group-[:not(.xl-small)]:mt-2'
+      >
         {{content}}
       </p>
       <a href='#' class='btn-primary relative z-[1] whitespace-nowrap'>
@@ -41,10 +43,21 @@
         alt=''
       />
 
-      <div
-        class='size-80 @min-[480px]:size-100 @min-[480px]:-left-[62px] @min-[480px]:top-[72px] absolute -left-[85px] top-[35px] z-[0] rounded-full border-8 border-white bg-white opacity-40'
-      >
-      </div>
+    </div>
+    <div
+      class='size-80 @max-[301px]:-bottom-[109px] absolute -bottom-[35px] -right-[85px] z-[0] rounded-full border-8 border-white bg-white opacity-40'
+    >
     </div>
   </div>
 </div>
+
+{{! @min-[481px]:size-80 
+      @min-[481px]:-right-[50px] 
+      @min-[481px]:-bottom-[110px]  
+      @min-[480px]:group-[:not(.xl-small)]:size-100 
+      @min-[480px]:group-[:not(.xl-small)]:-right-[62px] 
+      @min-[480px]:group-[:not(.xl-small)]:-bottom-[90px] 
+      @min-[480px]:size-80 
+      @min-[480px]:-right-[50px] 
+      @min-[480px]:-bottom-[110px] 
+      @max-[301px]:-right-[50px] @max-[301px]:-bottom-[109px] absolute -bottom-[35px] -right-[85px] z-[0] rounded-full border-8 border-white bg-white opacity-40' }}

@@ -7,41 +7,7 @@
     <main>
       <section class="ctas lg:mb-15 pt-7.5 mb-10">
         <div class="container">
-          <div
-            class="gap-3.75 grid md:grid-cols-2 xl:grid-cols-[repeat(2,480px)_300px] xl:grid-rows-[repeat(2,293px)]"
-          >
-            <div class="xl:row-span-2 xl:row-start-1">
-              {{>components/cta-home class="bg-yellow-300" title="Nooooodles
-              Time!" content="Découvrez les nouilles instantanées les plus
-              piquantes au monde de la marque Daebak ! Retrouvez les saveurs
-              authentiques coréennes avec ces nouilles moelleuses
-              irrésistiblement piquantes." img="img/visuel.png" }}
-              <!-- -->
-            </div>
-
-            <div class="xl:col-start-2 xl:row-span-1 xl:row-start-1">
-              {{>components/cta-home class="xl-small bg-blue-300" title="Trop
-              Cute " content="Fanta fruity, mandarine et pomme verte mais en
-              version mini !  C'est pas trop mignon? " img="img/visuel-2.png" }}
-            </div>
-            <!-- -->
-
-            <div class="xl:row-span-1 xl:row-start-2">
-              {{>components/cta-home class="xl-small bg-red-300" title="Nouveau
-              format !" content="Les délicieux bonbons Crunch Punch ultra
-              croustillants débarquent désormais au format 100 gr."
-              img="img/visuel-3.png" }}
-            </div>
-
-            <!-- -->
-            <div class="xl:row-span-2">
-              {{>components/cta-home class="bg-green-300" title="Tendance sur
-              TikTok" content="Qui n'a pas vu passer sur TikTok ces incroyables
-              chips au goût de saucisson au fuet? Un must que vos clients
-              voudront tester de toute urgence !" img="img/visuel-4.png" }}
-            </div>
-          </div>
-
+          {{>components/ctas-home/ctas-home-1}}
           <!-- {{>components/ctas-home-1}} -->
           <!-- {{>components/ctas-home-2}} -->
           <!-- {{>components/ctas-home-3}} -->
@@ -64,34 +30,64 @@
                 <div class="swiper md:mb-7.5 lg:mb-10">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Faxe Royal Export (5,6%)" desc="Bière Faxe Royal Export (5,6%) 500 ml x 24 pc" img="img/products/product_1.png" price="36,48" number="24" }}
+                      {{> components/cart-product-item title="Faxe Royal Export
+                      (5,6%)" desc="Bière Faxe Royal Export (5,6%) 500 ml x 24
+                      pc" img="img/products/product_1.png" price="36,48"
+                      number="24" }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="SoS Limonade Pastèque" desc="SoS Limonade Pastèque 1 L x 12 pc" img="img/products/product_2.png" price="27,26" number="12" }}
+                      {{> components/cart-product-item title="SoS Limonade
+                      Pastèque" desc="SoS Limonade Pastèque 1 L x 12 pc"
+                      img="img/products/product_2.png" price="27,26" number="12"
+                      }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Long Chips Shish Kebab" desc="Long Chips Shish Kebab 75 gr x 20 pc" img="img/products/product_3.png" price="24,43"  number="20"}}
+                      {{> components/cart-product-item title="Long Chips Shish
+                      Kebab" desc="Long Chips Shish Kebab 75 gr x 20 pc"
+                      img="img/products/product_3.png" price="24,43"
+                      number="20"}}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Pokemon Pikachu Ramune ..." desc="Pokemon Pikachu Ramune Lychee 200 ml x 30 pc" img="img/products/product_4.png" price="24,43" number="30" }}
+                      {{> components/cart-product-item title="Pokemon Pikachu
+                      Ramune ..." desc="Pokemon Pikachu Ramune Lychee 200 ml x
+                      30 pc" img="img/products/product_4.png" price="24,43"
+                      number="30" }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Snickers Fruit & Nut" desc="Snickers Fruit & Nut 40 gr x 18 pc" img="img/products/product_5.png" price="27,89" number="18"}}
+                      {{> components/cart-product-item title="Snickers Fruit &
+                      Nut" desc="Snickers Fruit & Nut 40 gr x 18 pc"
+                      img="img/products/product_5.png" price="27,89"
+                      number="18"}}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Faxe Royal Export (5,6%)" desc="Bière Faxe Royal Export (5,6%) 500 ml x 24 pc" img="img/products/product_1.png" price="36,48" number="24" }}
+                      {{> components/cart-product-item title="Faxe Royal Export
+                      (5,6%)" desc="Bière Faxe Royal Export (5,6%) 500 ml x 24
+                      pc" img="img/products/product_1.png" price="36,48"
+                      number="24" }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="SoS Limonade Pastèque" desc="SoS Limonade Pastèque 1 L x 12 pc" img="img/products/product_2.png" price="27,26" number="12" }}
+                      {{> components/cart-product-item title="SoS Limonade
+                      Pastèque" desc="SoS Limonade Pastèque 1 L x 12 pc"
+                      img="img/products/product_2.png" price="27,26" number="12"
+                      }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Long Chips Shish Kebab" desc="Long Chips Shish Kebab 75 gr x 20 pc" img="img/products/product_3.png" price="24,43"  number="20"}}
+                      {{> components/cart-product-item title="Long Chips Shish
+                      Kebab" desc="Long Chips Shish Kebab 75 gr x 20 pc"
+                      img="img/products/product_3.png" price="24,43"
+                      number="20"}}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Pokemon Pikachu Ramune ..." desc="Pokemon Pikachu Ramune Lychee 200 ml x 30 pc" img="img/products/product_4.png" price="24,43" number="30" }}
+                      {{> components/cart-product-item title="Pokemon Pikachu
+                      Ramune ..." desc="Pokemon Pikachu Ramune Lychee 200 ml x
+                      30 pc" img="img/products/product_4.png" price="24,43"
+                      number="30" }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Snickers Fruit & Nut" desc="Snickers Fruit & Nut 40 gr x 18 pc" img="img/products/product_5.png" price="27,89" number="18"}}
+                      {{> components/cart-product-item title="Snickers Fruit &
+                      Nut" desc="Snickers Fruit & Nut 40 gr x 18 pc"
+                      img="img/products/product_5.png" price="27,89"
+                      number="18"}}
                     </div>
                   </div>
                 </div>
@@ -189,28 +185,52 @@
                 <div class="swiper md:mb-7.5 lg:mb-10">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Mentos tropical" desc="Mentos tropical 340 ml x 24 pc" img="img/products/product_6.png" price="32,28" number="24" new=true }}
+                      {{> components/cart-product-item title="Mentos tropical"
+                      desc="Mentos tropical 340 ml x 24 pc"
+                      img="img/products/product_6.png" price="32,28" number="24"
+                      new=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Hombre Salsa Dip hot Porti..." desc="Hombre Salsa Dip hot Portion Pack 90 gr x 48 pc" img="img/products/product_7.png" price="59,13" number="48" new=true }}
+                      {{> components/cart-product-item title="Hombre Salsa Dip
+                      hot Porti..." desc="Hombre Salsa Dip hot Portion Pack 90
+                      gr x 48 pc" img="img/products/product_7.png" price="59,13"
+                      number="48" new=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Jack Daniels Honey BBQ" desc="Jack Daniels Honey BBQ sauce 473 ml x 6 pc" img="img/products/product_8.png" price="39,81" number="6" cart=true new=true }}
+                      {{> components/cart-product-item title="Jack Daniels Honey
+                      BBQ" desc="Jack Daniels Honey BBQ sauce 473 ml x 6 pc"
+                      img="img/products/product_8.png" price="39,81" number="6"
+                      cart=true new=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Display World Sweets" desc="Display World Sweets (6 étagères)" img="img/products/product_9.png" price="24,43" number="30" new=true }}
+                      {{> components/cart-product-item title="Display World
+                      Sweets" desc="Display World Sweets (6 étagères)"
+                      img="img/products/product_9.png" price="24,43" number="30"
+                      new=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Warheads Sour Jelly Beans" desc="Warheads Sour Jelly Beans 113 gr x 12 pc" img="img/products/product_10.png" price="38,87" number="18" new=true }}
+                      {{> components/cart-product-item title="Warheads Sour
+                      Jelly Beans" desc="Warheads Sour Jelly Beans 113 gr x 12
+                      pc" img="img/products/product_10.png" price="38,87"
+                      number="18" new=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Mentos tropical" desc="Mentos tropical 340 ml x 24 pc" img="img/products/product_6.png" price="32,28" number="24" new=true }}
+                      {{> components/cart-product-item title="Mentos tropical"
+                      desc="Mentos tropical 340 ml x 24 pc"
+                      img="img/products/product_6.png" price="32,28" number="24"
+                      new=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Hombre Salsa Dip hot Porti..." desc="Hombre Salsa Dip hot Portion Pack 90 gr x 48 pc" img="img/products/product_7.png" price="59,13" number="48" new=true }}
+                      {{> components/cart-product-item title="Hombre Salsa Dip
+                      hot Porti..." desc="Hombre Salsa Dip hot Portion Pack 90
+                      gr x 48 pc" img="img/products/product_7.png" price="59,13"
+                      number="48" new=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Jack Daniels Honey BBQ" desc="Jack Daniels Honey BBQ sauce 473 ml x 6 pc" img="img/products/product_8.png" price="39,81" number="6" cart=true new=true }}
+                      {{> components/cart-product-item title="Jack Daniels Honey
+                      BBQ" desc="Jack Daniels Honey BBQ sauce 473 ml x 6 pc"
+                      img="img/products/product_8.png" price="39,81" number="6"
+                      cart=true new=true }}
                     </div>
                   </div>
                 </div>
@@ -434,38 +454,66 @@
               <div class="breakout-right">
                 <div class="swiper md:mb-7.5 lg:mb-10">
                   <div class="swiper-wrapper">
-
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Mochi Tiramisu Crème" desc="Royal Family Mochi Tiramisu Crème 180 gr x 12 pc" img="img/products/product_11.png" price="58,34" number=12 backInStock=true }}
+                      {{> components/cart-product-item title="Mochi Tiramisu
+                      Crème" desc="Royal Family Mochi Tiramisu Crème 180 gr x 12
+                      pc" img="img/products/product_11.png" price="58,34"
+                      number=12 backInStock=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Brets barbecue" desc="Chips Brets saveur barbecue 125 gr x 10 pc" img="img/products/product_12.png" price="21,86" number=10 cart=true }}
+                      {{> components/cart-product-item title="Brets barbecue"
+                      desc="Chips Brets saveur barbecue 125 gr x 10 pc"
+                      img="img/products/product_12.png" price="21,86" number=10
+                      cart=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Hombre Salsa Dip hot Porti..." desc="Hombre Salsa Dip hot Portion Pack 90 gr x 48 pc" img="img/products/product_7.png" price="59,13" number="48" new=true }}
+                      {{> components/cart-product-item title="Hombre Salsa Dip
+                      hot Porti..." desc="Hombre Salsa Dip hot Portion Pack 90
+                      gr x 48 pc" img="img/products/product_7.png" price="59,13"
+                      number="48" new=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="SoS Fizzy Candy" desc="SoS Fizzy Candy 330 ml x 24 pc" img="img/products/product_13.png" price="36,67" number="24"}}
+                      {{> components/cart-product-item title="SoS Fizzy Candy"
+                      desc="SoS Fizzy Candy 330 ml x 24 pc"
+                      img="img/products/product_13.png" price="36,67"
+                      number="24"}}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Nachos & cheese dip" desc="Nachos Hombre 75 gr & cheese dip 90 gr x 24 pc" img="img/products/product_14.png" price="54,95" number="24" }}
+                      {{> components/cart-product-item title="Nachos & cheese
+                      dip" desc="Nachos Hombre 75 gr & cheese dip 90 gr x 24 pc"
+                      img="img/products/product_14.png" price="54,95"
+                      number="24" }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Mochi Tiramisu Crème" desc="Royal Family Mochi Tiramisu Crème 180 gr x 12 pc" img="img/products/product_11.png" price="58,34" number=12 backInStock=true }}
+                      {{> components/cart-product-item title="Mochi Tiramisu
+                      Crème" desc="Royal Family Mochi Tiramisu Crème 180 gr x 12
+                      pc" img="img/products/product_11.png" price="58,34"
+                      number=12 backInStock=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Brets barbecue" desc="Chips Brets saveur barbecue 125 gr x 10 pc" img="img/products/product_12.png" price="21,86" number=10 cart=true }}
+                      {{> components/cart-product-item title="Brets barbecue"
+                      desc="Chips Brets saveur barbecue 125 gr x 10 pc"
+                      img="img/products/product_12.png" price="21,86" number=10
+                      cart=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Hombre Salsa Dip hot Porti..." desc="Hombre Salsa Dip hot Portion Pack 90 gr x 48 pc" img="img/products/product_7.png" price="59,13" number="48" new=true }}
+                      {{> components/cart-product-item title="Hombre Salsa Dip
+                      hot Porti..." desc="Hombre Salsa Dip hot Portion Pack 90
+                      gr x 48 pc" img="img/products/product_7.png" price="59,13"
+                      number="48" new=true }}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="SoS Fizzy Candy" desc="SoS Fizzy Candy 330 ml x 24 pc" img="img/products/product_13.png" price="36,67" number="24"}}
+                      {{> components/cart-product-item title="SoS Fizzy Candy"
+                      desc="SoS Fizzy Candy 330 ml x 24 pc"
+                      img="img/products/product_13.png" price="36,67"
+                      number="24"}}
                     </div>
                     <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Nachos & cheese dip" desc="Nachos Hombre 75 gr & cheese dip 90 gr x 24 pc" img="img/products/product_14.png" price="54,95" number="24" }}
+                      {{> components/cart-product-item title="Nachos & cheese
+                      dip" desc="Nachos Hombre 75 gr & cheese dip 90 gr x 24 pc"
+                      img="img/products/product_14.png" price="54,95"
+                      number="24" }}
                     </div>
-
                   </div>
                 </div>
               </div>
