@@ -913,14 +913,17 @@
   .h-6\.5 {
     height: calc(var(--spacing) * 6.5);
   }
+  .h-13 {
+    height: calc(var(--spacing) * 13);
+  }
+  .h-50 {
+    height: calc(var(--spacing) * 50);
+  }
   .h-100 {
     height: calc(var(--spacing) * 100);
   }
   .h-12 {
     height: calc(var(--spacing) * 12);
-  }
-  .h-13 {
-    height: calc(var(--spacing) * 13);
   }
   .h-13\.5 {
     height: calc(var(--spacing) * 13.5);
@@ -931,23 +934,20 @@
   .h-14\.5 {
     height: calc(var(--spacing) * 14.5);
   }
-  .h-50 {
-    height: calc(var(--spacing) * 50);
-  }
   .h-\[0px\] {
     height: 0px;
   }
   .h-\[5px\] {
     height: 5px;
   }
-  .h-\[45px\] {
-    height: 45px;
-  }
   .h-\[236px\] {
     height: 236px;
   }
   .h-\[2px\] {
     height: 2px;
+  }
+  .h-\[45px\] {
+    height: 45px;
   }
   .h-\[367px\] {
     height: 367px;
@@ -1278,6 +1278,9 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-\[3px\] {
+    gap: 3px;
+  }
   .gap-\[5px\] {
     gap: 5px;
   }
@@ -1286,9 +1289,6 @@
   }
   .gap-\[30px\] {
     gap: 30px;
-  }
-  .gap-\[3px\] {
-    gap: 3px;
   }
   .gap-y-2 {
     row-gap: calc(var(--spacing) * 2);
@@ -1364,15 +1364,6 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .rounded-\[3px\] {
-    border-radius: 3px;
-  }
-  .rounded-\[5px\] {
-    border-radius: 5px;
-  }
-  .rounded-\[7px\] {
-    border-radius: 7px;
-  }
   .rounded-\[10px\] {
     border-radius: 10px;
   }
@@ -1381,6 +1372,15 @@
   }
   .rounded-\[1px\] {
     border-radius: 1px;
+  }
+  .rounded-\[3px\] {
+    border-radius: 3px;
+  }
+  .rounded-\[5px\] {
+    border-radius: 5px;
+  }
+  .rounded-\[7px\] {
+    border-radius: 7px;
   }
   .rounded-\[200px\] {
     border-radius: 200px;
@@ -1405,6 +1405,13 @@
   }
   .rounded-sm {
     border-radius: var(--radius-sm);
+  }
+  .rounded-t-3xl {
+    border-top-left-radius: var(--radius-3xl);
+    border-top-right-radius: var(--radius-3xl);
+  }
+  .rounded-tl-3xl {
+    border-top-left-radius: var(--radius-3xl);
   }
   .rounded-tl-\[30px\] {
     border-top-left-radius: 30px;
@@ -1687,6 +1694,9 @@
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-15 {
+    padding-top: calc(var(--spacing) * 15);
   }
   .pt-\[15px\] {
     padding-top: 15px;

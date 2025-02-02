@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head}}
+  <body class="page-product">
+    {{> header}}
+
+    <main>
+
+      <div class="bg-gray-100">
+        <section class="py-15 bg-white overflow-x-clip rounded-t-3xl">
+          <div class="container">
+            <div
+              class="grid grid-cols-[repeat(auto-fill,160px)] place-content-center gap-[30px] lg:grid-cols-[repeat(auto-fill,190px)]"
+            >
+              {{> components/cta-product title="En promotion"
+              img="img/categories/image_1.png" link='category-2.html'}}
+              {{> components/cta-product title="Nouveautés"
+              img="img/categories/image_7.png" link='category-2.html'}} 
+              {{> components/cta-product title="Baking Soda !"
+              img="img/categories/image_8.png" link='category-2.html'}} 
+              {{> components/cta-product title="Display et plano"
+              img="img/categories/image_9.png" link='category-2.html'}} 
+              {{> components/cta-product title="Marques partenaires"
+              img="img/categories/image_10.png" link='category-2.html'}} 
+              {{> components/cta-product title="Boissons non-alcoolisées"
+              img="img/categories/image_11.png" link='category-2.html'}} 
+              {{> components/cta-product title="Boissons alcoolisées"
+              img="img/categories/image_12.png" link='category-2.html'}} 
+              {{> components/cta-product title="Epicerie salée"
+              img="img/categories/image_13.png" link='category-2.html'}} 
+              {{> components/cta-product title="Epicerie sucrée"
+              img="img/categories/image_14.png" link='category-2.html'}} 
+              {{> components/cta-product title="Asian Food"
+              img="img/categories/image_15.png" link='category-2.html'}} 
+              {{> components/cta-product title="Pâtes"
+              img="img/categories/image_16.png" link='category-2.html'}} 
+              {{> components/cta-product title="Sauces et condiments"
+              img="img/categories/image_17.png" link='category-2.html'}} 
+              {{> components/cta-product title="Glaçons et glaces"
+              img="img/categories/image_18.png" link='category-2.html'}} 
+              {{> components/cta-product title="Non-food"
+              img="img/categories/image_19.png" link='category-2.html'}} 
+              {{> components/cta-product title="World"
+              img="img/categories/image_20.png" link='category-2.html'}} 
+              {{> components/cta-product title="Produits saisonniers"
+              img="img/categories/image_21.png" link='category-2.html'}} 
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {{> components/ctas/reassurance}}
+
+    </main>
+
+    {{> footer}}
+  </body>
+</html>
