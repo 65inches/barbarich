@@ -571,6 +571,9 @@
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
+  .end-2 {
+    inset-inline-end: calc(var(--spacing) * 2);
+  }
   .end-5 {
     inset-inline-end: calc(var(--spacing) * 5);
   }
@@ -591,6 +594,9 @@
   }
   .top-1\/2 {
     top: calc(1/2 * 100%);
+  }
+  .top-2 {
+    top: calc(var(--spacing) * 2);
   }
   .top-10 {
     top: calc(var(--spacing) * 10);
@@ -739,6 +745,9 @@
   .ms-2 {
     margin-inline-start: calc(var(--spacing) * 2);
   }
+  .me-2 {
+    margin-inline-end: calc(var(--spacing) * 2);
+  }
   .-mt-\[4px\] {
     margin-top: calc(4px * -1);
   }
@@ -747,6 +756,9 @@
   }
   .mt-2\.5 {
     margin-top: calc(var(--spacing) * 2.5);
+  }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
   }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
@@ -765,6 +777,12 @@
   }
   .mt-15 {
     margin-top: calc(var(--spacing) * 15);
+  }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
+  .mt-\[90px\] {
+    margin-top: 90px;
   }
   .mt-auto {
     margin-top: auto;
@@ -855,6 +873,10 @@
     width: calc(var(--spacing) * 2);
     height: calc(var(--spacing) * 2);
   }
+  .size-3 {
+    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 3);
+  }
   .size-4 {
     width: calc(var(--spacing) * 4);
     height: calc(var(--spacing) * 4);
@@ -906,6 +928,9 @@
   }
   .h-100 {
     height: calc(var(--spacing) * 100);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
   }
   .h-13 {
     height: calc(var(--spacing) * 13);
@@ -999,6 +1024,12 @@
   }
   .w-7 {
     width: calc(var(--spacing) * 7);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
@@ -1246,17 +1277,17 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .gap-\[15px\] {
-    gap: 15px;
-  }
-  .gap-\[30px\] {
-    gap: 30px;
-  }
   .gap-\[3px\] {
     gap: 3px;
   }
   .gap-\[5px\] {
     gap: 5px;
+  }
+  .gap-\[15px\] {
+    gap: 15px;
+  }
+  .gap-\[30px\] {
+    gap: 30px;
   }
   .gap-y-7 {
     row-gap: calc(var(--spacing) * 7);
@@ -1320,6 +1351,9 @@
   .rounded-\[5px\] {
     border-radius: 5px;
   }
+  .rounded-\[7px\] {
+    border-radius: 7px;
+  }
   .rounded-\[10px\] {
     border-radius: 10px;
   }
@@ -1329,8 +1363,8 @@
   .rounded-\[1px\] {
     border-radius: 1px;
   }
-  .rounded-\[7px\] {
-    border-radius: 7px;
+  .rounded-\[40px\] {
+    border-radius: 40px;
   }
   .rounded-\[200px\] {
     border-radius: 200px;
@@ -1338,14 +1372,11 @@
   .rounded-\[20px\] {
     border-radius: 20px;
   }
-  .rounded-\[400px\] {
-    border-radius: 400px;
-  }
-  .rounded-\[40px\] {
-    border-radius: 40px;
-  }
   .rounded-\[60px\] {
     border-radius: 60px;
+  }
+  .rounded-\[400px\] {
+    border-radius: 400px;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -1448,6 +1479,9 @@
   }
   .bg-gray-500 {
     background-color: var(--color-gray-500);
+  }
+  .bg-gray-900 {
+    background-color: var(--color-gray-900);
   }
   .bg-green-300 {
     background-color: var(--color-green-300);
@@ -1775,6 +1809,10 @@
   .leading-\[30px\] {
     --tw-leading: 30px;
     line-height: 30px;
+  }
+  .leading-\[32px\] {
+    --tw-leading: 32px;
+    line-height: 32px;
   }
   .leading-\[46px\] {
     --tw-leading: 46px;
@@ -2134,6 +2172,11 @@
   .group-\[\.disabled\]\/input-number\:text-gray-100 {
     &:is(:where(.group\/input-number):is(.disabled) *) {
       color: var(--color-gray-100);
+    }
+  }
+  .group-\[\:not\(\.xl-small\)\]\:mt-2 {
+    &:is(:where(.group):is(:not(.xl-small)) *) {
+      margin-top: calc(var(--spacing) * 2);
     }
   }
   .peer-checked\:opacity-100 {
@@ -2802,6 +2845,11 @@
       grid-template-columns: repeat(2,1fr) 0.56fr;
     }
   }
+  .lg\:grid-cols-\[repeat\(auto-fill\,190px\)\] {
+    @media (width >= 1024px) {
+      grid-template-columns: repeat(auto-fill,190px);
+    }
+  }
   .lg\:flex-col {
     @media (width >= 1024px) {
       flex-direction: column;
@@ -2955,6 +3003,11 @@
   .xl\:row-start-2 {
     @media (width >= 1320px) {
       grid-row-start: 2;
+    }
+  }
+  .xl\:mb-15 {
+    @media (width >= 1320px) {
+      margin-bottom: calc(var(--spacing) * 15);
     }
   }
   .xl\:h-full {
