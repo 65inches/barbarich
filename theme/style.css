@@ -787,6 +787,9 @@
   .mt-auto {
     margin-top: auto;
   }
+  .-mb-\[2px\] {
+    margin-bottom: calc(2px * -1);
+  }
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
   }
@@ -828,6 +831,18 @@
   }
   .mb-20 {
     margin-bottom: calc(var(--spacing) * 20);
+  }
+  .mb-\[-2px\] {
+    margin-bottom: -2px;
+  }
+  .mb-\[-5px\] {
+    margin-bottom: -5px;
+  }
+  .mb-\[0px\] {
+    margin-bottom: 0px;
+  }
+  .mb-\[12px\] {
+    margin-bottom: 12px;
   }
   .mb-\[15px\] {
     margin-bottom: 15px;
@@ -929,17 +944,14 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-100 {
+    height: calc(var(--spacing) * 100);
+  }
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
   .h-13 {
     height: calc(var(--spacing) * 13);
-  }
-  .h-50 {
-    height: calc(var(--spacing) * 50);
-  }
-  .h-100 {
-    height: calc(var(--spacing) * 100);
   }
   .h-13\.5 {
     height: calc(var(--spacing) * 13.5);
@@ -949,6 +961,9 @@
   }
   .h-14\.5 {
     height: calc(var(--spacing) * 14.5);
+  }
+  .h-50 {
+    height: calc(var(--spacing) * 50);
   }
   .h-\[0px\] {
     height: 0px;
@@ -1278,17 +1293,17 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .gap-\[3px\] {
-    gap: 3px;
-  }
-  .gap-\[5px\] {
-    gap: 5px;
-  }
   .gap-\[15px\] {
     gap: 15px;
   }
   .gap-\[30px\] {
     gap: 30px;
+  }
+  .gap-\[3px\] {
+    gap: 3px;
+  }
+  .gap-\[5px\] {
+    gap: 5px;
   }
   .gap-y-7 {
     row-gap: calc(var(--spacing) * 7);
@@ -1349,6 +1364,9 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-\[1px\] {
+    border-radius: 1px;
+  }
   .rounded-\[3px\] {
     border-radius: 3px;
   }
@@ -1364,23 +1382,20 @@
   .rounded-\[15px\] {
     border-radius: 15px;
   }
-  .rounded-\[1px\] {
-    border-radius: 1px;
-  }
-  .rounded-\[40px\] {
-    border-radius: 40px;
-  }
   .rounded-\[200px\] {
     border-radius: 200px;
   }
   .rounded-\[20px\] {
     border-radius: 20px;
   }
-  .rounded-\[60px\] {
-    border-radius: 60px;
-  }
   .rounded-\[400px\] {
     border-radius: 400px;
+  }
+  .rounded-\[40px\] {
+    border-radius: 40px;
+  }
+  .rounded-\[60px\] {
+    border-radius: 60px;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -2360,6 +2375,17 @@
       }
     }
   }
+  .focus\:ring-2 {
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentColor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:ring-blue-500 {
+    &:focus {
+      --tw-ring-color: var(--color-blue-500);
+    }
+  }
   .focus\:outline-2 {
     &:focus {
       outline-style: var(--tw-outline-style);
@@ -2865,6 +2891,31 @@
       height: calc(var(--spacing) * 100);
     }
   }
+  .lg\:h-\[2lh\] {
+    @media (width >= 1024px) {
+      height: 2lh;
+    }
+  }
+  .lg\:h-\[32px\] {
+    @media (width >= 1024px) {
+      height: 32px;
+    }
+  }
+  .lg\:h-\[36px\] {
+    @media (width >= 1024px) {
+      height: 36px;
+    }
+  }
+  .lg\:h-\[3rem\] {
+    @media (width >= 1024px) {
+      height: 3rem;
+    }
+  }
+  .lg\:h-\[54px\] {
+    @media (width >= 1024px) {
+      height: 54px;
+    }
+  }
   .lg\:h-auto {
     @media (width >= 1024px) {
       height: auto;
@@ -3009,10 +3060,22 @@
       font-size: 50px;
     }
   }
+  .lg\:leading-6 {
+    @media (width >= 1024px) {
+      --tw-leading: calc(var(--spacing) * 6);
+      line-height: calc(var(--spacing) * 6);
+    }
+  }
   .lg\:leading-\[1\.33\] {
     @media (width >= 1024px) {
       --tw-leading: 1.33;
       line-height: 1.33;
+    }
+  }
+  .lg\:leading-\[40px\] {
+    @media (width >= 1024px) {
+      --tw-leading: 40px;
+      line-height: 40px;
     }
   }
   .lg\:shadow-general {
@@ -3159,6 +3222,28 @@
     @container (width >= 480px) {
       &:is(:where(.group):is(:not(.xl-small)) *) {
         font-size: 50px;
+      }
+    }
+  }
+  .dark\:border-gray-600 {
+    @media (prefers-color-scheme: dark) {
+      border-color: var(--color-gray-600);
+    }
+  }
+  .dark\:bg-gray-700 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-gray-700);
+    }
+  }
+  .dark\:ring-offset-gray-800 {
+    @media (prefers-color-scheme: dark) {
+      --tw-ring-offset-color: var(--color-gray-800);
+    }
+  }
+  .dark\:focus\:ring-blue-600 {
+    @media (prefers-color-scheme: dark) {
+      &:focus {
+        --tw-ring-color: var(--color-blue-600);
       }
     }
   }
@@ -4108,4 +4193,3 @@ strong {
   syntax: "*";
   inherits: false;
 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

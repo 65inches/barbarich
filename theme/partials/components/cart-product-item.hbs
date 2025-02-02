@@ -3,17 +3,21 @@
 >
   <a href='#' class='absolute inset-0 z-[1] block'></a>
   <div class='h-50 relative flex w-full items-center justify-center'>
+    {{#if number}}
     <span
       class='h-6.5 absolute left-0 top-0 block flex items-center justify-center rounded-[40px] bg-purple-400 px-2.5 py-[5px] font-bold leading-none text-white'
     >
-      x48
+      x{{number}}
     </span>
+    {{/if}}
+    {{#if new}}
     <span
       class='h-6.5 absolute right-0 top-0 block flex items-center justify-center rounded-[40px] bg-orange-400 px-2.5 py-[5px] text-xs font-bold uppercase leading-none text-white'
     >
       New
     </span>
-    <img class='mx-auto' src='https://placehold.co/150x150/jpg' alt='' />
+    {{/if}}
+    <img class='mx-auto' src='{{img}}' alt='' />
     <a
       class='px-3.75 group/btn-fav absolute bottom-0 right-0 z-[2] rounded-full border border-red-300 py-4 text-red-400 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500 hover:text-white'
       href=''
@@ -31,27 +35,59 @@
       </span>
     </a>
   </div>
-  <div class='flex flex-col items-start justify-center gap-[15px]'>
+  <div class='flex flex-col items-start justify-center gap-[15px] w-full'>
     <div>
       <h4
         class='mb-1.25 text-xl font-semibold leading-snug text-blue-500 transition duration-300 group-hover:text-red-400 group-hover:underline'
       >
-        Hombre Salsa Dip hot Porti...
+        {{title}}
       </h4>
-      <span class='text-sm font-normal leading-[18px] text-blue-800'>
-        Hombre Salsa Dip hot Portion Pack 90 gr x 48 pc
+      <span class='text-sm font-normal leading-[18px] text-blue-800 lg:h-[36px] block'>
+        {{desc}}
       </span>
     </div>
-    <div class='flex w-full items-center justify-between'>
-      <div>
+    <div class='flex w-full items-center justify-between mb-[-5px]'>
+      <div class='relative'>
         <span class='block text-[22px] font-semibold leading-snug text-red-400'>
-          59,13 €
+          {{price}} €
         </span>
         <span class='text-xs font-normal leading-3 text-blue-800'>
           TVA non incluse
         </span>
+
+        {{#if cart}}
+        <div
+          class='bg-aquamarine-400 absolute top-[5px] inline-flex h-5 items-center justify-start gap-[3px] rounded-[40px] px-1.5 py-1 text-blue-800'
+        >
+          <svg class='w-[11px] fill-current' viewBox='0 0 11 10' fill='none'>
+            <path
+              d='M6.85931 9.22168C6.85931 9.65293 7.20914 10.0029 7.64018 10.0029C8.07123 10.0029 8.42106 9.65293 8.42106 9.22168C8.42106 8.79043 8.07123 8.44043 7.64018 8.44043C7.20914 8.44043 6.85931 8.79043 6.85931 9.22168ZM3.29852 9.22168C3.29852 9.65293 3.64835 10.0029 4.0794 10.0029C4.51044 10.0029 4.86027 9.65293 4.86027 9.22168C4.86027 8.79043 4.51044 8.44043 4.0794 8.44043C3.64835 8.44043 3.29852 8.79043 3.29852 9.22168ZM4.10438 7.94043H7.63394L7.62769 7.95293C8.55849 7.95293 9.33312 7.28418 9.47055 6.37793L9.73917 4.82793C9.80164 4.48418 9.57051 4.15918 9.23317 4.10293C8.88958 4.04668 8.56474 4.27168 8.50852 4.60918L8.23989 6.17168C8.19617 6.47168 7.93379 6.69668 7.63394 6.69668H4.10438C3.77329 6.69668 3.49218 6.45918 3.42971 6.13418L3.30477 5.45293V5.44043L2.45518 1.22793C2.32399 0.51543 1.69929 0.00292969 0.980887 0.00292969H0.830959C0.487374 0.00292969 0.200012 0.28418 0.200012 0.62793C0.200012 0.97168 0.481127 1.25293 0.824712 1.25293H0.97464C1.09958 1.25293 1.19953 1.34043 1.22452 1.46543L2.07411 5.68418L2.19905 6.35918C2.37397 7.27793 3.17358 7.94043 4.10438 7.94043ZM5.75984 4.34036C5.87853 4.45911 6.03471 4.51536 6.19088 4.51536C6.34706 4.51536 6.50323 4.45911 6.62193 4.34036L10.0078 1.07786C10.2577 0.840361 10.2639 0.446611 10.0265 0.196611C9.78915 -0.0533893 9.39559 -0.0596393 9.14571 0.177861L6.18464 3.02161L5.1164 1.99036C4.87277 1.75286 4.47296 1.75911 4.23557 2.00911C3.99819 2.25286 4.00444 2.65286 4.25431 2.89036L5.75984 4.34036Z'
+            />
+
+          </svg>
+
+          <div
+            class="text-Blue-Dark font-['Outfit'] text-[11px] font-bold uppercase leading-3"
+          >3</div>
+        </div>
+        {{/if}}
+
       </div>
 
+      {{#if backInStock}}
+      <span
+        class='gap-2.25 inline-flex text-sm font-semibold leading-[14px] text-orange-400'
+      >
+
+        <svg class='-mt-[4px] w-[19px] fill-current' viewBox='0 0 19 19'>
+          <path
+            d='M2.15 9.503c0-3.89 3.16-7.05 7.05-7.05 1.68 0 3.32.61 4.59 1.7h-2.65v1.95h3.89c.94 0 1.7-.76 1.7-1.7v-3.9h-1.95v1.95A9.004 9.004 0 0 0 9.19.503c-4.95 0-8.99 4.04-8.99 9v.24h1.95v-.24ZM16.25 9.263v.24c0 3.89-3.16 7.05-7.05 7.05-1.68 0-3.32-.61-4.6-1.7h2.65v-1.95H3.36c-.94 0-1.7.76-1.7 1.7v3.89h1.95v-1.95a9.004 9.004 0 0 0 5.59 1.95c4.96 0 9-4.04 9-9v-.24h-1.95v.01Z'
+          />
+        </svg>
+
+        En réappro
+      </span>
+      {{else}}
       <span
         class='gap-2.25 inline-flex text-sm font-semibold leading-[14px] text-green-400'
       >
@@ -67,6 +103,7 @@
 
         En stock
       </span>
+      {{/if}}
     </div>
     <div
       class='flex w-full flex-col items-start justify-start gap-1.5 border-t border-gray-100 pt-[15px] text-sm leading-[14px] text-blue-800'
@@ -88,12 +125,13 @@
 
   <div class='relative z-[2] flex w-full items-center gap-2.5'>
     <div
-      class='custom-number-input w-26 [.disabled]:border-gray-100 group/input-number rounded-[40px] border border-red-300'
+      class='custom-number-input w-26 {{#if backInStock}} disabled {{/if}} [.disabled]:border-gray-100 group/input-number rounded-[40px] border border-red-300'
     >
       <div class='relative flex w-full shrink-0 items-center gap-2.5 px-4 py-3'>
         <button
           data-action='decrement'
-          class='h-full cursor-pointer text-red-400 outline-none transition-all duration-300 hover:text-blue-500 disabled:text-gray-100'
+          class='h-full cursor-pointer text-red-400 outline-none transition-all duration-300 hover:text-blue-500 disabled:text-gray-100' 
+          {{#if backInStock}} disabled {{/if}}
         >
           <svg viewBox='0 0 13 2' class='w-[13px] fill-current'>
             <path d='M.2.003h12v2H.2v-2Z' />
@@ -107,7 +145,8 @@
         />
         <button
           data-action='increment'
-          class='h-full cursor-pointer text-red-400 transition-all duration-300 hover:text-blue-500 disabled:text-gray-100'
+          class='h-full cursor-pointer text-red-400 transition-all duration-300 hover:text-blue-500 disabled:text-gray-100' 
+          {{#if backInStock}} disabled {{/if}}
         >
           <svg viewBox='0 0 13 12' class='w-[13px] fill-current'>
             <path
@@ -117,8 +156,7 @@
         </button>
       </div>
     </div>
-    <button class='btn-primary w-full'>
-
+    <button class='btn-primary w-full' href="#" {{#if backInStock}} disabled {{/if}}>
       <svg class='w-[17px] fill-current' viewBox='0 0 17 16' aria-hidden='true'>
         <path
           d='M12.2155 16.0029C11.5255 16.0029 10.9655 15.4429 10.9655 14.7529C10.9655 14.0629 11.5255 13.5029 12.2155 13.5029C12.9055 13.5029 13.4655 14.0629 13.4655 14.7529C13.4655 15.4429 12.9055 16.0029 12.2155 16.0029ZM6.51548 16.0029C5.82548 16.0029 5.26548 15.4429 5.26548 14.7529C5.26548 14.0629 5.82548 13.5029 6.51548 13.5029C7.20548 13.5029 7.76548 14.0629 7.76548 14.7529C7.76548 15.4429 7.20548 16.0029 6.51548 16.0029ZM12.2055 12.7029H6.55548C5.06548 12.7029 3.78548 11.6429 3.50548 10.1729L3.30548 9.09293L1.94548 2.34293C1.90548 2.14293 1.74548 2.00293 1.54548 2.00293H1.30548C0.755481 2.00293 0.305481 1.55293 0.305481 1.00293C0.305481 0.45293 0.765481 0.00292969 1.31548 0.00292969H1.55548C2.70548 0.00292969 3.70548 0.82293 3.91548 1.96293L5.27548 8.70293C5.27548 8.70293 5.27548 8.70293 5.27548 8.71293L5.47548 9.79293C5.57548 10.3129 6.02548 10.6929 6.55548 10.6929H12.2055C12.6855 10.6929 13.1055 10.3329 13.1755 9.85293L14.1255 4.39293H7.09548C6.54548 4.39293 6.09548 3.94293 6.09548 3.39293C6.09548 2.84293 6.54548 2.39293 7.09548 2.39293H15.3055C15.5955 2.39293 15.8855 2.52293 16.0655 2.75293C16.2555 2.98293 16.3355 3.27293 16.2855 3.56293L15.1355 10.1729C14.9155 11.6229 13.6755 12.6929 12.1855 12.6929L12.2055 12.7029Z'
