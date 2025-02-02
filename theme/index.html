@@ -854,7 +854,7 @@
         </div>
       </section>
 
-      <section class="slider mb-15 overflow-x-clip">
+      <section class="slider lg:mb-15 mb-10 overflow-x-clip">
         <div class="container">
           <div class="gap-y-7.5 grid grid-cols-2 md:gap-y-10">
             <div class="flex items-center justify-between">
@@ -867,7 +867,7 @@
 
             <div class="col-span-2">
               <div class="breakout-right">
-                <div class="swiper md:mb-10">
+                <div class="swiper md:mb-7.5 lg:mb-10">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide w-[323px]">
                       {{> components/cart-product-item}}
@@ -957,12 +957,14 @@
         <div class="container-large py-15 rounded-[20px] bg-gray-100">
           <div class="container">
             <h2
-              class="mb-7.5 text-[35px] font-semibold leading-[1.14] text-blue-500 max-md:text-center lg:mb-10 lg:text-[40px]"
+              class="mb-7.5 text-[35px] font-semibold leading-[1.14] text-blue-500 max-lg:text-center lg:mb-10 lg:text-[40px]"
             >
               Meilleures catégories
             </h2>
 
-            <div class="grid grid-cols-2 gap-[30px] lg:grid-cols-6">
+            <div
+              class="grid grid-cols-[repeat(auto-fill,160px)] place-content-center gap-[30px]"
+            >
               {{> components/cta-product title="En promotion"}} {{>
               components/cta-product title="Calypso"}} {{>
               components/cta-product title="Pop corn sucré"}} {{>
@@ -974,7 +976,7 @@
         </div>
       </section>
 
-      <section class="slider mb-15 overflow-x-clip">
+      <section class="slider lg:mb-15 mb-10 overflow-x-clip">
         <div class="container">
           <div class="gap-y-7.5 grid grid-cols-2 md:gap-y-10">
             <div class="flex items-center justify-between">
@@ -987,7 +989,7 @@
 
             <div class="col-span-2">
               <div class="breakout-right">
-                <div class="swiper md:mb-10">
+                <div class="swiper md:mb-7.5 lg:mb-10">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide w-[323px]">
                       {{> components/cart-product-item}}
@@ -1073,17 +1075,17 @@
         </div>
       </section>
 
-      <section class="cta-reassurance mb-15">
+      <section class="cta-reassurance lg:mb-15 mb-10">
         <div
           class="container-large rounded-[20px] bg-gray-100 py-5 max-lg:pb-10"
         >
           <div class="container">
             <div
-              class="nowrap max-lg:gap-7.5 flex flex-col items-center lg:flex-row"
+              class="nowrap max-lg:gap-7.5 flex flex-col lg:flex-row lg:items-center"
             >
               <div class="shrink-0 xl:-translate-x-[calc(1/12_*_100%_+_60px)]">
                 <img
-                  class="rounded-[15px]"
+                  class="w-full rounded-[15px] object-cover"
                   src="https://placehold.co/665x502/jpg"
                   alt=""
                 />
@@ -1095,9 +1097,9 @@
                 >
                   Barbarich Import c’est...
                 </h2>
-                <div class="grid gap-5 lg:grid-cols-2 lg:gap-[60px]">
+                <div class="grid gap-5 md:grid-cols-2 md:gap-[60px]">
                   <div
-                    class="gap-7.5 flex items-start justify-start lg:flex-col lg:gap-2.5"
+                    class="gap-7.5 flex items-start justify-start md:flex-col md:gap-2.5"
                   >
                     <svg class="size-8 shrink-0" fill="none" aria-hidden="true">
                       <path
@@ -1128,7 +1130,7 @@
                     </div>
                   </div>
                   <div
-                    class="gap-7.5 flex items-start justify-start lg:flex-col lg:gap-2.5"
+                    class="gap-7.5 flex items-start justify-start md:flex-col md:gap-2.5"
                   >
                     <svg class="size-8 shrink-0" fill="none" aria-hidden="true">
                       <path
@@ -1157,7 +1159,7 @@
                   </div>
 
                   <div
-                    class="gap-7.5 flex items-start justify-start lg:flex-col lg:gap-2.5"
+                    class="gap-7.5 flex items-start justify-start md:flex-col md:gap-2.5"
                   >
                     <svg class="size-8 shrink-0" fill="none" aria-hidden="true">
                       <path
@@ -1189,7 +1191,7 @@
                   </div>
 
                   <div
-                    class="gap-7.5 flex items-start justify-start lg:flex-col lg:gap-2.5"
+                    class="gap-7.5 flex items-start justify-start md:flex-col md:gap-2.5"
                   >
                     <svg class="size-8 shrink-0" fill="none" aria-hidden="true">
                       <path
@@ -1226,7 +1228,7 @@
         </div>
       </section>
 
-      <section class="slider mb-15 overflow-x-clip">
+      <section class="slider lg:mb-15 mb-10 overflow-x-clip">
         <div class="container">
           <div class="gap-y-7.5 grid grid-cols-2 md:gap-y-10">
             <div class="flex items-center justify-between">
@@ -1239,7 +1241,7 @@
 
             <div class="col-span-2">
               <div class="breakout-right">
-                <div class="swiper md:mb-10">
+                <div class="swiper md:mb-7.5 lg:mb-10">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide w-[323px]">
                       {{> components/cart-product-item}}
@@ -1325,17 +1327,17 @@
         </div>
       </section>
 
-      <section class="about mb-15">
+      <section class="about lg:mb-15 mb-10">
         <div
           class="container-large rounded-[20px] bg-gray-100 py-5 max-lg:pb-10"
         >
           <div class="container">
             <div class="nowrap flex flex-col lg:flex-row">
               <div
-                class="shrink-0 basis-7/12 xl:order-1 xl:translate-x-[calc(1/12_*_100%_+_60px)]"
+                class="shrink-0 max-lg:w-full xl:order-1 xl:basis-7/12 xl:translate-x-[calc(1/12_*_100%_+_60px)]"
               >
                 <img
-                  class="rounded-[15px]"
+                  class="w-full rounded-[15px] object-cover"
                   src="https://placehold.co/745x580/jpg"
                   alt=""
                 />

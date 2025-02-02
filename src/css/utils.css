@@ -3,7 +3,7 @@
     margin-inline: auto;
     padding-inline: 20px;
 
-    @media (min-width: 765px) {
+    @media (min-width: 992px) {
       padding-inline: 15px;
     }
   }
@@ -12,6 +12,10 @@
     width: 100%;
     max-width: 1560px;
     margin-inline: auto;
+
+    @media (min-width: 768px) {
+      max-width: 728px;
+    }
   }
 
   .breakout {
