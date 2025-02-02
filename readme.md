@@ -22,11 +22,11 @@
 
 ## Install [bun](https://bun.sh/)
 
-```
+```shell
 powershell -c "irm bun.sh/install.ps1 | iex"
 ```
 
-```
+```shell
 bun i
 bun run watch
 ```
