@@ -4,16 +4,15 @@ import Drawer from './menu-drawer';
 import Select from './select';
 
 document.addEventListener('DOMContentLoaded', () => {
-
   const params = new URLSearchParams(window.location.search);
-  const isSigned = params.get("signed"); // "true" ou null
+  const isSigned = params.get('signed'); // "true" ou null
 
   if (isSigned) {
-      document.getElementById("dropdown-signed").classList.remove("hidden");
+    document.getElementById('dropdown-signed').classList.remove('hidden');
   } else {
-      document.getElementById("dropdown-guest").classList.remove("hidden");
+    document.getElementById('dropdown-guest').classList.remove('hidden');
   }
-  
+
   const menuMobile = new MenuMobile('#nav-mobile');
 
   // Initialize the drawer
@@ -183,20 +182,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.main-nav');
   const shopMenuLink = document.querySelector('.submenu-toggle');
   const shopMenu = document.querySelector('.menu');
+  let backdrop = document.querySelector('.backdrop');
   let isShopMenuOpen = false;
 
   nav?.addEventListener('mouseover', (e) => {
     if (shopMenuLink && shopMenuLink.contains(e.target)) {
       isShopMenuOpen = true;
       shopMenu?.setAttribute('aria-expanded', 'true');
+      backdrop?.classList.remove('hidden');
     } else {
       isShopMenuOpen = false;
       shopMenu?.setAttribute('aria-expanded', 'false');
+      backdrop?.classList.add('hidden');
     }
   });
+
   shopMenu?.addEventListener('mouseleave', (e) => {
     isShopMenuOpen = false;
     shopMenu?.setAttribute('aria-expanded', 'false');
+    backdrop?.classList.add('hidden');
   });
 });
 

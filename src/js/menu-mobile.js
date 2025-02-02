@@ -6,6 +6,7 @@ class MenuMobile {
     this.btn.addEventListener('click', this.handleButtonClick.bind(this));
 
     this.opened = false;
+
     this.panels = this.el.querySelectorAll('.menu-panel');
     this.buttons = this.el.querySelectorAll('.menu-listitem__btn');
 
