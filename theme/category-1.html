@@ -17,9 +17,7 @@
           <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
           <a class="text-red-400 underline" href="category-2.html">Epicerie salée</a>
           <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
-          <a class="text-red-400 underline" href="category-1.html">Chips</a>
-          <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
-          <div>Long Chips</div>
+          <div>Chips</div>
           </nav>
         </div>
 
@@ -29,17 +27,32 @@
               <h1
                 class="text-[40px] font-semibold leading-none text-blue-500 xl:text-[50px]"
               >
-              Long Chips  
+              Chips  
               </h1>
             </div>
             <div
               class="lg:w-8/12"
             >
-             <p class="leading-7s mt-5 text-lg font-normal text-blue-500">Long Chips sont des snacks uniques à base de pommes de terre. Frits dans de l’huile de colza de haute qualité pendant seulement 10 secondes, ils sont incroyablement croustillants et moins gras que les chips classiques.</p>
+             <p class="leading-7s mt-5 text-lg font-normal text-blue-500">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <strong>occaecat cupidatat non proident</strong>, sunt in culpa qui officia deserunt mollit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
             </div>
           </div>
         </div>
 
+        <div class="container pt-15 ">
+          <div
+            class="grid grid-cols-[repeat(auto-fill,160px)] place-content-center gap-[30px] lg:grid-cols-[repeat(auto-fill,190px)]"
+          >
+            {{> components/cta-product title="En promotion"
+            img="img/categories/image_1.png"}} {{> components/cta-product
+            title="Calypso" img="img/categories/image_2.png" }} {{>
+            components/cta-product title="Pop corn sucré"
+            img="img/categories/image_3.png"}} {{> components/cta-product
+            title="Cocktails Le Coq" img="img/categories/image_4.png"}} {{>
+            components/cta-product title="Sauces et condiments"
+            img="img/categories/image_5.png"}} {{> components/cta-product
+            title="Long Chips" img="img/categories/image_6.png"}}
+          </div>
+        </div>
       </section>
 
       <div class="bg-gray-100">
@@ -118,19 +131,18 @@
               </div>
             </div>
             <div class="grid md:grid-cols-2 xl:grid-cols-4">
-              {{> components/cart-product-item title="Long Chips Bacon" desc="Long Chips Bacon 75 gr x 20 pc" img="img/products/product_21.png" price="36,48"}}
-              {{> components/cart-product-item title="Long Chips Sour Cream & Onion" desc="Long Chips Sour Cream & Onion 75 gr x 20 pc" img="img/products/product_15.png" price="36,48" number=20}}
-              {{> components/cart-product-item title="Long Chips Thaï Sweet Chilli" desc="Long Chips Thaï Sweet Chilli 75 gr x 20 pc" img="img/products/product_22.png" price="36,48"}}
-              {{> components/cart-product-item title="Long Chips Cheese & Spring Onion" desc="Long Chips Cheese & Spring Onion 75 gr x 20 pc" img="img/products/product_17.png" price="36,48" number=20}}
-              {{> components/cart-product-item title="Long Chips Honey BBQ" desc="Long Chips Honey BBQ 75 gr x 20 pc" img="img/products/product_20.png" price="36,48" number=20}}
-              {{> components/cart-product-item title="Long Chips Grilled Paprika" desc="Long Chips Grilled Paprika 75 gr x 20 pc" img="img/products/product_23.png" price="36,48"}}
-              {{> components/cart-product-item title="Long Chips Original" desc="Long Chips Original 'Mashed Patato' 75 gr x 20 pc" img="img/products/product_16.png" price="36,48" number=20}}
-              {{> components/cart-product-item title="Long Chips BBQ" desc="Long Chips Cheese & Spring Onion 75 gr x 20 pc" img="img/products/product_24.png" price="36,48"}}
+              {{> components/cart-product-item title="Big Bag paprika" desc="Chips Big Bag paprika 330 gr x 16 pc" img="img/products/product_25.png" price="60,75"}}
+              {{> components/cart-product-item title="Big Bag bacon" desc="Chips Big Bag bacon 350 gr x 16 pc" img="img/products/product_26.png" price="60,75" }}
+              {{> components/cart-product-item title="Brets pizza" desc="Chips Brets saveur pizza 125 gr x 10 pc" img="img/products/product_27.png" price="36,48"}}
+              {{> components/cart-product-item title="Brets chèvre & piment d'espelette" desc="Chips Brets saveur chèvre & piment d'espelette 125 gr x 10 pc" img="img/products/product_28.png" price="36,48" }}
+              {{> components/cart-product-item title="Brets côte de boeuf" desc="Chips Brets saveur côte de boeuf grillée 125 gr x 10 pc" img="img/products/product_29.png" price="36,48" }}
+              {{> components/cart-product-item title="Brets barbecue" desc="Chips Brets saveur barbecue 125 gr x 10 pc" img="img/products/product_30.png" price="36,48"}}
+              {{> components/cart-product-item title="Brets frites mayonnaise" desc="Chips Brets saveur frites mayonnaise 125 gr x 10 pc" img="img/products/product_31.png" price="36,48" backInStock=true}}
+              {{> components/cart-product-item title="Brets à l'ancienne" desc="Chips Brets à l'ancienne 125 gr x 10 pc" img="img/products/product_32.png" price="36,48"}}
             </div>
           </div>
         </section>
       </div>
-
 
       {{> components/ctas/reassurance}}
 
