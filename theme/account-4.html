@@ -303,7 +303,7 @@
       aria-labelledby="drawer-label"
     >
       <div class="absolute right-0 top-0 h-[5px] w-full">
-        <div class="h-full w-1/5 bg-red-400"></div>
+        <div class="h-full w-4/5 bg-red-400"></div>
       </div>
       <button
         type="button"
@@ -332,35 +332,97 @@
         </span>
 
         <h2 class="mb-5 text-3xl font-semibold leading-9 text-blue-500">
-          Votre adresse mail
+          Mon profil
         </h2>
 
-        <p class="mb-[25px] text-lg font-normal leading-7 text-blue-500">
-          Entrez votre adresse de messagerie. Celle-ci sera également votre nom
-          d’utilisateur.
-        </p>
-
-        <div class="mb-[25px] w-full">
-          <label class="mb-2.5 block font-medium leading-none text-blue-500">
-            Nom d'utilisateur
-          </label>
-
-          <input
-            class="w-full gap-2.5 rounded-md border border-gray-500 bg-white px-5 py-3.25 font-normal leading-none text-blue-500"
-            placeholder="studio@netside.be"
-          />
+        <div
+          class="mb-[15px] gap-2.5 bg-gray-100 py-[15px] text-center text-base font-normal leading-snug text-blue-500"
+        >
+          Compte : studio@netside.be
         </div>
+
+        <div class="mb-5">
+          <span class="mb-2.5 block">
+            <span class="text-base font-semibold leading-snug text-blue-500">
+              Je suis
+            </span>
+            <span class="text-red-400">*</span>
+          </span>
+
+          {{> components/form/radio label_a="Un particulier" label_b="Une
+          société" id="je_suis" }}
+        </div>
+        <!-- -->
+        {{>components/form/input label="Nom de la société" id="societe"
+        value=""}}
+        <!-- -->
+        {{>components/form/input label="N° de TVA" id="tva" value=""}}
+        <!-- -->
+
+        {{>components/form/select label="Civilité" id="civilite" value=""}}
+        {{>components/form/input label="Prénom" id="prenom" value=""}}
+        <!-- -->
+        {{>components/form/input label="Nom de famille" id="nom_famille"
+        value=""}}
+        <!-- -->
+        {{>components/form/input label="Téléphone" id="telephone" value=""
+        type="tel"}}
+        <!-- -->
+        {{>components/form/input label="Mobile" id="mobile" value=""
+        type="tel"}}
+
+        <h2 class="mb-5 text-3xl font-semibold leading-9 text-blue-500">
+          Mon profil
+        </h2>
+
+        {{>components/form/input label="Pays" id="pays_facturation" value=""
+        type="select"}}
+
+        <!-- -->
+        {{>components/form/input label="Rue" id="rue_livraison" value=""}}
+        <!-- -->
+
+        {{>components/form/input label="N° & Boîte" id="boite_livraison"
+        value=""}}
+        <!-- -->
+        {{>components/form/input label="Code postal" id="code_postal_livraison"
+        value=""}}
+        <!-- -->
+        {{>components/form/input label="Localité" id="localite_livraison"
+        value=""}}
+        <!-- -->
+
+        <h2 class="mb-5 text-3xl font-semibold leading-9 text-blue-500">
+          Adresse de facturation
+        </h2>
+        <div class="mb-5">
+          {{> components/form/radio label_a="Facturation à mon adresse de
+          livraison" label_b="Facturation à une autre adresse" id="facturation"
+          }}
+        </div>
+
+        <!-- -->
+        {{>components/form/input label="Rue" id="rue_facturation" value=""}}
+        <!-- -->
+
+        {{>components/form/input label="N° & Boîte" id="boite_facturation"
+        value=""}}
+        <!-- -->
+        {{>components/form/input label="Code postal"
+        id="code_postal_facturation" value=""}}
+        <!-- -->
+        {{>components/form/input label="Localité" id="localite_facturation"
+        value=""}}
+
+        <p class="mb-5 text-xs font-normal leading-3 text-blue-800">
+          <span class="text-red-400">*</span>
+          Champ obligatoire
+        </p>
 
         <div
           class="flex w-full flex-col items-center justify-between gap-[15px] md:flex-row"
         >
-          <a
-            href="#"
-            class="text-sm font-medium leading-[18px] text-red-400 hover:underline"
-          >
-            Vous avez déjà un compte ?
-          </a>
-
+          <a href="#" class="btn-secondary max-md:w-full"> Précédent </a>
           <a href="#" class="btn-primary max-md:w-full">
             Suivant
 

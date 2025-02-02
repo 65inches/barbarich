@@ -42,12 +42,12 @@
 /* @import './typography.css';
 @import './components/articles.css';
 @import './components/events.css';
-@import './components/select.css';
 @import './components/collapse.css';
 @import './footer.css'; */
 
 @import './components/buttons.css';
 @import './components/form.css';
+@import './components/select.css';
 @import './components/menu-mobile.css';
 ::placeholder {
   opacity: 1;

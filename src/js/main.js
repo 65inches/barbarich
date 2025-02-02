@@ -1,6 +1,7 @@
 import Swiper from 'swiper/bundle';
 import MenuMobile from './menu-mobile';
 import Drawer from './menu-drawer';
+import Select from './select';
 
 document.addEventListener('DOMContentLoaded', () => {
   const menuMobile = new MenuMobile('#nav-mobile');
@@ -34,6 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  const selectElements = document.querySelectorAll('.select');
+
+  selectElements.forEach((selectElement) => {
+    new Select(selectElement);
+  });
 
   // initOnScrollAnimate();
   // if (swipers) {

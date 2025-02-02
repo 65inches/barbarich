@@ -303,7 +303,7 @@
       aria-labelledby="drawer-label"
     >
       <div class="absolute right-0 top-0 h-[5px] w-full">
-        <div class="h-full w-1/5 bg-red-400"></div>
+        <div class="h-full w-2/5 bg-red-400"></div>
       </div>
       <button
         type="button"
@@ -332,17 +332,29 @@
         </span>
 
         <h2 class="mb-5 text-3xl font-semibold leading-9 text-blue-500">
-          Votre adresse mail
+          Confirmation de l’adresse mail
         </h2>
 
+        <div
+          class="mb-[15px] gap-2.5 bg-gray-100 py-[15px] text-center text-base font-normal leading-snug text-blue-500"
+        >
+          Compte : studio@netside.be
+        </div>
+
         <p class="mb-[25px] text-lg font-normal leading-7 text-blue-500">
-          Entrez votre adresse de messagerie. Celle-ci sera également votre nom
-          d’utilisateur.
+          Entrez le code de code que nous avons envoyé à l’adresse
+          <a
+            class="text-red-400 hover:underline"
+            href="mailto:studio@netside.be"
+            >studio@netside.be</a
+          >. Si vous n’avez pas reçu l’e-mail, vérifier votre dossier de
+          courrier indésirable ou
+          <a class="text-red-400 hover:underline" href="">réessayez</a>.
         </p>
 
         <div class="mb-[25px] w-full">
           <label class="mb-2.5 block font-medium leading-none text-blue-500">
-            Nom d'utilisateur
+            Code de sécurité
           </label>
 
           <input
@@ -354,14 +366,8 @@
         <div
           class="flex w-full flex-col items-center justify-between gap-[15px] md:flex-row"
         >
-          <a
-            href="#"
-            class="text-sm font-medium leading-[18px] text-red-400 hover:underline"
-          >
-            Vous avez déjà un compte ?
-          </a>
-
-          <a href="#" class="btn-primary max-md:w-full">
+          <a href="#" class="btn-secondary max-md:w-full"> Précédent </a>
+          <a href="#" class="btn-primary disabled max-md:w-full">
             Suivant
 
             <svg
