@@ -1,8 +1,15 @@
 import Swiper from 'swiper/bundle';
-import MenuMobile from './menu';
+import MenuMobile from './menu-mobile';
+import Drawer from './menu-drawer';
 
 document.addEventListener('DOMContentLoaded', () => {
   const menuMobile = new MenuMobile('#nav-mobile');
+
+  // Initialize the drawer
+  if (document.querySelector('body')?.classList.contains('page-account')) {
+    //   initHomePage();
+    const drawer = new Drawer('drawer-account');
+  }
 
   const swipers = document.querySelectorAll('.slider');
 
