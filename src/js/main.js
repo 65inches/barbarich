@@ -42,6 +42,60 @@ document.addEventListener('DOMContentLoaded', () => {
     new Select(selectElement);
   });
 
+  const btnGallery = document.querySelectorAll("[popovertarget='gallery']");
+  btnGallery.forEach((el) => {
+    el?.addEventListener('click', () => {
+      document.body.classList.toggle('menu-opened');
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      document.body.classList.remove('menu-opened');
+    }
+  });
+
+  const swiper = new Swiper('.swiper-product-thumbs', {
+    spaceBetween: 15,
+    slidesPerView: 'auto',
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  const swiper2 = new Swiper('.swiper-product-small', {
+    spaceBetween: 0,
+
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+  const swiper3 = new Swiper('.swiper-product-large', {
+    spaceBetween: 0,
+
+    thumbs: {
+      swiper: swiper,
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  swiper2.on('slideChange', function () {
+    const activeIndex = swiper2.activeIndex;
+    swiper3.slideTo(activeIndex);
+  });
+
+  swiper3.on('slideChange', function () {
+    const activeIndex = swiper3.activeIndex;
+    swiper2.slideTo(activeIndex);
+  });
+
   // initOnScrollAnimate();
   // if (swipers) {
   //   swipers.forEach((el) => {
