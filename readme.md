@@ -1,6 +1,7 @@
 # Todo
 
 - Menu desktop accessibility (focus, aria)
+- Passer menu drawer en popover ?
 
 | Page Structure    | Desktop | Tablet | Mobile |
 | ----------------- | ------- | ------ | ------ |
