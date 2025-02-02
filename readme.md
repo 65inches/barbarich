@@ -1,6 +1,6 @@
 # Todo
 
-- Menu accessibility (focus, aria)
+- Menu desktop accessibility (focus, aria)
 
 | Page Structure | Desktop | Tablet | Mobile |
 | -------------- | ------- | ------ | ------ |
@@ -28,8 +28,5 @@ powershell -c "irm bun.sh/install.ps1 | iex"
 
 ```
 bun i
-```
-
-```
 bun run watch
 ```
