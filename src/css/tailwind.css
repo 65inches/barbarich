@@ -11,6 +11,7 @@
   --color-green-300: #dcf0f1;
   --color-green-400: #1f8910;
   --color-orange-400: #ff5300;
+
   --color-purple-400: #925aac;
   --color-aquamarine-400: #25e9b2;
   --color-blue-300: #cae1fb;
@@ -69,6 +70,21 @@ strong {
       content: '';
       background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 17 8'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M10.621.879a3 3 0 0 0-4.242 0L.216 7.042h16.568L10.621.879Z' clip-rule='evenodd'/%3E%3C/svg%3E");
     }
+  }
+}
+
+.tooltip {
+  &::after {
+    position: absolute;
+    top: calc(100% - 6px);
+    content: '';
+    inset-inline: 0;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    background: var(--color-blue-500);
+    transform: rotate(45deg);
+    z-index: -1;
   }
 }
 

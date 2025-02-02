@@ -1,5 +1,6 @@
-<div
-  class='p-1.25 flex flex-col items-center justify-start gap-2.5 rounded-[400px] bg-gray-300 pb-5 lg:p-5'
+<a
+  href='#'
+  class='p-1.25 group flex flex-col items-center justify-start gap-2.5 rounded-[400px] bg-gray-300 pb-5 transition duration-300 hover:translate-y-[-5px] lg:p-5'
 >
   <img class='rounded-full' src='https://placehold.co/150x150/jpg' />
 
@@ -11,14 +12,15 @@
     </h3>
 
   </div>
-  <a class='size-12 flex items-center justify-center rounded-[60px] bg-white'>
-    <svg class='w-[10px]' viewBox='0 0 10 12' fill='none'>
+  <span
+    class='size-12 flex items-center justify-center rounded-[60px] bg-white text-red-400 transition-all duration-300 group-hover:bg-blue-800 group-hover:text-white'
+  >
+    <svg class='w-[10px] stroke-current' viewBox='0 0 10 12' fill='none'>
       <path
         d='M1 3.00305H9M9 3.00305V11.0031M9 3.00305L1 11.0031'
-        stroke='#D01B56'
         stroke-width='2'
         stroke-linejoin='round'
       />
     </svg>
-  </a>
-</div>
+  </span>
+</a>

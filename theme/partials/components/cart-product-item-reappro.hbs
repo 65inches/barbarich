@@ -53,19 +53,16 @@
       </div>
 
       <span
-        class='gap-2.25 inline-flex text-sm font-semibold leading-[14px] text-green-400'
+        class='gap-2.25 inline-flex text-sm font-semibold leading-[14px] text-orange-400'
       >
-        <svg
-          class='w-[21px] fill-current'
-          viewBox='0 0 21 15'
-          aria-hidden='true'
-        >
+
+        <svg class='-mt-[4px] w-[19px] fill-current' viewBox='0 0 19 19'>
           <path
-            d='M6.884 15.002c-.32 0-.63-.12-.87-.37l-5.24-5.3c-.49-.5-.5-1.32-.02-1.83s1.27-.52 1.77-.02l4.36 4.42L18.274.372c.49-.5 1.29-.49 1.77.02s.47 1.33-.02 1.83l-12.27 12.41c-.24.25-.56.37-.87.37Z'
+            d='M2.15 9.503c0-3.89 3.16-7.05 7.05-7.05 1.68 0 3.32.61 4.59 1.7h-2.65v1.95h3.89c.94 0 1.7-.76 1.7-1.7v-3.9h-1.95v1.95A9.004 9.004 0 0 0 9.19.503c-4.95 0-8.99 4.04-8.99 9v.24h1.95v-.24ZM16.25 9.263v.24c0 3.89-3.16 7.05-7.05 7.05-1.68 0-3.32-.61-4.6-1.7h2.65v-1.95H3.36c-.94 0-1.7.76-1.7 1.7v3.89h1.95v-1.95a9.004 9.004 0 0 0 5.59 1.95c4.96 0 9-4.04 9-9v-.24h-1.95v.01Z'
           />
         </svg>
 
-        En stock
+        En réappro
       </span>
     </div>
     <div
@@ -88,12 +85,13 @@
 
   <div class='relative z-[2] flex w-full items-center gap-2.5'>
     <div
-      class='custom-number-input w-26 [.disabled]:border-gray-100 group/input-number rounded-[40px] border border-red-300'
+      class='custom-number-input w-26 disabled [.disabled]:border-gray-100 group/input-number rounded-[40px] border border-red-300'
     >
       <div class='relative flex w-full shrink-0 items-center gap-2.5 px-4 py-3'>
         <button
           data-action='decrement'
           class='h-full cursor-pointer text-red-400 outline-none transition-all duration-300 hover:text-blue-500 disabled:text-gray-100'
+          disabled
         >
           <svg viewBox='0 0 13 2' class='w-[13px] fill-current'>
             <path d='M.2.003h12v2H.2v-2Z' />
@@ -104,10 +102,12 @@
           class='text-md md:text-basecursor-default flex w-[30px] items-center text-center font-semibold text-red-400 outline-none focus:outline-none group-[.disabled]/input-number:text-gray-100'
           name='custom-input-number'
           value='0'
+          disabled
         />
         <button
           data-action='increment'
           class='h-full cursor-pointer text-red-400 transition-all duration-300 hover:text-blue-500 disabled:text-gray-100'
+          disabled
         >
           <svg viewBox='0 0 13 12' class='w-[13px] fill-current'>
             <path
@@ -117,13 +117,14 @@
         </button>
       </div>
     </div>
-    <button class='btn-primary w-full'>
 
+    <button class='btn-primary w-full' disabled>
       <svg class='w-[17px] fill-current' viewBox='0 0 17 16' aria-hidden='true'>
         <path
           d='M12.2155 16.0029C11.5255 16.0029 10.9655 15.4429 10.9655 14.7529C10.9655 14.0629 11.5255 13.5029 12.2155 13.5029C12.9055 13.5029 13.4655 14.0629 13.4655 14.7529C13.4655 15.4429 12.9055 16.0029 12.2155 16.0029ZM6.51548 16.0029C5.82548 16.0029 5.26548 15.4429 5.26548 14.7529C5.26548 14.0629 5.82548 13.5029 6.51548 13.5029C7.20548 13.5029 7.76548 14.0629 7.76548 14.7529C7.76548 15.4429 7.20548 16.0029 6.51548 16.0029ZM12.2055 12.7029H6.55548C5.06548 12.7029 3.78548 11.6429 3.50548 10.1729L3.30548 9.09293L1.94548 2.34293C1.90548 2.14293 1.74548 2.00293 1.54548 2.00293H1.30548C0.755481 2.00293 0.305481 1.55293 0.305481 1.00293C0.305481 0.45293 0.765481 0.00292969 1.31548 0.00292969H1.55548C2.70548 0.00292969 3.70548 0.82293 3.91548 1.96293L5.27548 8.70293C5.27548 8.70293 5.27548 8.70293 5.27548 8.71293L5.47548 9.79293C5.57548 10.3129 6.02548 10.6929 6.55548 10.6929H12.2055C12.6855 10.6929 13.1055 10.3329 13.1755 9.85293L14.1255 4.39293H7.09548C6.54548 4.39293 6.09548 3.94293 6.09548 3.39293C6.09548 2.84293 6.54548 2.39293 7.09548 2.39293H15.3055C15.5955 2.39293 15.8855 2.52293 16.0655 2.75293C16.2555 2.98293 16.3355 3.27293 16.2855 3.56293L15.1355 10.1729C14.9155 11.6229 13.6755 12.6929 12.1855 12.6929L12.2055 12.7029Z'
         />
       </svg>
+
       Ajouter</button>
   </div>
 </article>
