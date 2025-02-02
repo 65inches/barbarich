@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head}}
+  <body class="page-product">
+    {{> header}}
+
+    <main>
+      <section class="pt-7.5 overflow-x-clip bg-gray-100 pb-[50px]">
+        <div class="container">
+          <nav
+            aria-label="Breadcrumb"
+            class="mb-[30px] inline-flex items-center text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
+          >
+            <a class="text-red-400 underline" href="/">Accueil</a>
+            <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
+            <div>Mon compte</div>
+          </nav>
+          <div
+            class="mb-[50px] flex flex-col gap-[15px] md:max-lg:px-[60px] lg:flex-row"
+          >
+            <div class="lg:w-5/12">
+              <div
+                class="relative rounded-[10px] bg-white max-lg:mb-[40px] lg:mb-2.5"
+              >
+                <button
+                  class="px-3.75 group/btn-fav absolute bottom-5 right-5 z-[2] cursor-pointer rounded-full border border-red-300 py-4 text-red-400 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500 hover:text-white"
+                  popovertarget="gallery"
+                >
+                  <svg class="w-[16px] fill-current" viewBox="0 0 16 16">
+                    <path
+                      d="M15 16.0016H10.72C10.17 16.0016 9.72 15.5516 9.72 15.0016C9.72 14.4516 10.17 14.0016 10.72 14.0016H12.58L9.62 11.0416C9.23 10.6516 9.23 10.0216 9.62 9.63158C10.01 9.24158 10.64 9.24158 11.03 9.63158L13.99 12.5916V10.7316C13.99 10.1816 14.44 9.73158 14.99 9.73158C15.54 9.73158 15.99 10.1816 15.99 10.7316V15.0116C15.99 15.1516 15.96 15.2716 15.91 15.3916C15.86 15.5116 15.79 15.6216 15.69 15.7216C15.59 15.8216 15.48 15.8916 15.36 15.9416C15.24 15.9916 15.12 16.0216 14.98 16.0216L15 16.0016ZM4.89 16.0016H3.33C1.49 16.0016 0 14.5016 0 12.6716V11.1116C0 10.5616 0.45 10.1116 1 10.1116C1.55 10.1116 2 10.5616 2 11.1116V12.6716C2 13.4116 2.6 14.0016 3.33 14.0016H4.89C5.44 14.0016 5.89 14.4516 5.89 15.0016C5.89 15.5516 5.44 16.0016 4.89 16.0016ZM5.67 6.67158C5.41 6.67158 5.16 6.57158 4.96 6.38158L2 3.42158V5.28158C2 5.83158 1.55 6.28158 1 6.28158C0.45 6.28158 0 5.83158 0 5.28158V1.00158C0 0.861577 0.03 0.741577 0.08 0.621577C0.13 0.501577 0.2 0.391577 0.3 0.291577C0.4 0.191577 0.51 0.121577 0.63 0.0715771C0.75 0.0215771 0.87 -0.00842285 1.01 -0.00842285H5.29C5.84 -0.00842285 6.29 0.441577 6.29 0.991577C6.29 1.54158 5.84 1.99158 5.29 1.99158H3.43L6.39 4.95158C6.78 5.34158 6.78 5.97158 6.39 6.36158C6.19 6.56158 5.94 6.65158 5.68 6.65158L5.67 6.67158ZM15 5.89158C14.45 5.89158 14 5.44158 14 4.89158V3.33158C14 2.59158 13.4 2.00158 12.67 2.00158H11.12C10.57 2.00158 10.12 1.55158 10.12 1.00158C10.12 0.451577 10.57 0.00157715 11.12 0.00157715H12.67C14.51 0.00157715 16 1.50158 16 3.33158V4.89158C16 5.44158 15.55 5.89158 15 5.89158Z"
+                    />
+                  </svg>
+                </button>
+                <div class="swiper swiper-product-small">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      {{> components/product-item-slide text="1"}}
+                    </div>
+                    <div class="swiper-slide">
+                      {{> components/product-item-slide text="2"}}
+                    </div>
+                    <div class="swiper-slide">
+                      {{> components/product-item-slide text="3"}}
+                    </div>
+                    <div class="swiper-slide">
+                      {{> components/product-item-slide text="4"}}
+                    </div>
+                    <div class="swiper-slide">
+                      {{> components/product-item-slide text="5"}}
+                    </div>
+                    <div class="swiper-slide">
+                      {{> components/product-item-slide text="6"}}
+                    </div>
+                    <div class="swiper-slide">
+                      {{> components/product-item-slide text="7"}}
+                    </div>
+                  </div>
+                </div>
+                <span
+                  class="absolute block origin-top-left whitespace-nowrap text-xs font-normal leading-3 text-blue-500 max-lg:right-0 max-lg:top-[calc(100%_+_15px)] lg:bottom-0 lg:left-[calc(100%_+_15px)] lg:-rotate-90"
+                >
+                  Photo non contractuelle
+                </span>
+              </div>
+              <div thumbsSlider class="swiper swiper-product-thumbs">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    {{> components/product-item-slide-thumb text="1"}}
+                  </div>
+                  <div class="swiper-slide">
+                    {{> components/product-item-slide-thumb text="2"}}
+                  </div>
+                  <div class="swiper-slide">
+                    {{> components/product-item-slide-thumb text="3"}}
+                  </div>
+                  <div class="swiper-slide">
+                    {{> components/product-item-slide-thumb text="4"}}
+                  </div>
+                  <div class="swiper-slide">
+                    {{> components/product-item-slide-thumb text="5"}}
+                  </div>
+                  <div class="swiper-slide">
+                    {{> components/product-item-slide-thumb text="6"}}
+                  </div>
+                  <div class="swiper-slide">
+                    {{> components/product-item-slide-thumb text="7"}}
+                  </div>
+                </div>
+              </div>
+              <div popover id="gallery" class="h-dvh w-dvw bg-white">
+                <div class="relative grid h-full place-items-center">
+                  <div class="w-[390px] md:w-[600px]">
+                    <div class="swiper swiper-product-large">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          {{> components/product-item-slide-large text="1"}}
+                        </div>
+                        <div class="swiper-slide">
+                          {{> components/product-item-slide-large text="2"}}
+                        </div>
+                        <div class="swiper-slide">
+                          {{> components/product-item-slide-large text="3"}}
+                        </div>
+                        <div class="swiper-slide">
+                          {{> components/product-item-slide-large text="4"}}
+                        </div>
+                        <div class="swiper-slide">
+                          {{> components/product-item-slide-large text="5"}}
+                        </div>
+                        <div class="swiper-slide">
+                          {{> components/product-item-slide-large text="6"}}
+                        </div>
+                        <div class="swiper-slide">
+                          {{> components/product-item-slide-large text="7"}}
+                        </div>
+                      </div>
+                      <!-- <div class="b inline-flex h-12 items-center justify-center gap-[5px] px-[25px]"> -->
+                    </div>
+                  </div>
+                  <div
+                    class="swiper-actions absolute bottom-0 mx-auto mb-[30px] flex w-fit items-center gap-2.5 rounded-[40px] border border-gray-500"
+                  >
+                    <button
+                      class="swiper-button-prev px-5.25 shrink-0 py-4 pl-[25px] text-red-400 hover:text-blue-500"
+                    >
+                      <svg
+                        class="w-2 stroke-current"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M7 13L0.999833 6.99999L6.99997 1"
+                          stroke-width="2"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span class="sr-only">Photo précédente</span>
+                    </button>
+                    <div
+                      class="swiper-pagination font-medium text-blue-500"
+                    ></div>
+                    <button
+                      class="swiper-button-next px-5.25 py-4 pr-[25px] text-red-400 hover:text-blue-500"
+                    >
+                      <svg
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        class="w-2 stroke-current"
+                      >
+                        <path
+                          d="M1 1L7.00017 7.00001L1.00003 13"
+                          stroke-width="2"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span class="sr-only">Photo suivante</span>
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    popovertarget="gallery"
+                    popovertargetaction="hide"
+                    class="size-12 absolute end-5 top-5 ml-auto flex cursor-pointer items-center justify-center rounded-[60px] border border-red-300 bg-transparent text-red-400 hover:border-blue-800 hover:bg-blue-800 hover:text-white"
+                  >
+                    <svg
+                      viewBox="0 0 12 12"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-3 fill-current"
+                    >
+                      <path
+                        d="M4.2128 6.19778L0.382932 10.1539L2.17017 12L6.00004 8.04392L9.82983 11.9999L11.6171 10.1538L7.78729 6.19778L12 1.84623L10.2128 9.37528e-05L6.00005 4.35164L1.78724 0L0 1.84614L4.2128 6.19778Z"
+                      />
+                    </svg>
+                    <span class="sr-only">Close menu</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="lg:ml-auto lg:w-6/12">
+              <div class="mb-5">
+                <h2
+                  class="mb-1.25 text-3xl font-semibold leading-9 text-blue-500"
+                >
+                  Long Chips Thaï Sweet Chilli
+                </h2>
+                <p
+                  class="mb-[15px] text-base font-normal leading-snug text-blue-500"
+                >
+                  Long Chips Thaï Sweet Chilli 75 gr x 20 pc
+                </p>
+                <a
+                  class="inline-flex items-center gap-1 text-sm font-medium leading-[18px] text-red-400"
+                >
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none">
+                    <path
+                      d="M9.6875 4.49618L5.68749 8.56409M5.68749 8.56409L1.6875 4.4962M5.68749 8.56409L5.68749 0.564087"
+                      stroke="#D01B56"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  En savoir plus
+                </a>
+              </div>
+
+              <div
+                class="mb-5 border-b border-t border-dashed border-gray-500 py-5"
+              >
+                <div class="mb-7.5 flex w-full items-center justify-between">
+                  <div class="relative">
+                    <div class="flex items-center gap-2.5">
+                      <span
+                        class="block text-[40px] font-semibold leading-none text-red-400"
+                      >
+                        59,13 €
+                      </span>
+
+                      <div
+                        class="bg-aquamarine-400 top-[5px] inline-flex h-5 items-center justify-start gap-[3px] rounded-[40px] px-1.5 py-1 text-blue-800"
+                      >
+                        <svg
+                          class="w-[11px] fill-current"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                        >
+                          <path
+                            d="M6.85931 9.22168C6.85931 9.65293 7.20914 10.0029 7.64018 10.0029C8.07123 10.0029 8.42106 9.65293 8.42106 9.22168C8.42106 8.79043 8.07123 8.44043 7.64018 8.44043C7.20914 8.44043 6.85931 8.79043 6.85931 9.22168ZM3.29852 9.22168C3.29852 9.65293 3.64835 10.0029 4.0794 10.0029C4.51044 10.0029 4.86027 9.65293 4.86027 9.22168C4.86027 8.79043 4.51044 8.44043 4.0794 8.44043C3.64835 8.44043 3.29852 8.79043 3.29852 9.22168ZM4.10438 7.94043H7.63394L7.62769 7.95293C8.55849 7.95293 9.33312 7.28418 9.47055 6.37793L9.73917 4.82793C9.80164 4.48418 9.57051 4.15918 9.23317 4.10293C8.88958 4.04668 8.56474 4.27168 8.50852 4.60918L8.23989 6.17168C8.19617 6.47168 7.93379 6.69668 7.63394 6.69668H4.10438C3.77329 6.69668 3.49218 6.45918 3.42971 6.13418L3.30477 5.45293V5.44043L2.45518 1.22793C2.32399 0.51543 1.69929 0.00292969 0.980887 0.00292969H0.830959C0.487374 0.00292969 0.200012 0.28418 0.200012 0.62793C0.200012 0.97168 0.481127 1.25293 0.824712 1.25293H0.97464C1.09958 1.25293 1.19953 1.34043 1.22452 1.46543L2.07411 5.68418L2.19905 6.35918C2.37397 7.27793 3.17358 7.94043 4.10438 7.94043ZM5.75984 4.34036C5.87853 4.45911 6.03471 4.51536 6.19088 4.51536C6.34706 4.51536 6.50323 4.45911 6.62193 4.34036L10.0078 1.07786C10.2577 0.840361 10.2639 0.446611 10.0265 0.196611C9.78915 -0.0533893 9.39559 -0.0596393 9.14571 0.177861L6.18464 3.02161L5.1164 1.99036C4.87277 1.75286 4.47296 1.75911 4.23557 2.00911C3.99819 2.25286 4.00444 2.65286 4.25431 2.89036L5.75984 4.34036Z"
+                          ></path>
+                        </svg>
+                        <span
+                          class="text-[11px] font-bold uppercase leading-3 text-blue-800"
+                        >
+                          10
+                        </span>
+                      </div>
+                    </div>
+                    <span class="text-xs font-normal leading-3 text-blue-800">
+                      TVA non incluse
+                    </span>
+                  </div>
+                  <div class="flex flex-col items-end gap-2.5">
+                    <span class="text-xs font-normal leading-3 text-blue-800">
+                      Disponibilité
+                    </span>
+                    <span
+                      class="gap-2.25 inline-flex text-sm font-semibold leading-[14px] text-green-400"
+                    >
+                      <svg
+                        class="w-[21px] fill-current"
+                        viewBox="0 0 21 15"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M6.884 15.002c-.32 0-.63-.12-.87-.37l-5.24-5.3c-.49-.5-.5-1.32-.02-1.83s1.27-.52 1.77-.02l4.36 4.42L18.274.372c.49-.5 1.29-.49 1.77.02s.47 1.33-.02 1.83l-12.27 12.41c-.24.25-.56.37-.87.37Z"
+                        ></path>
+                      </svg>
+                      En stock
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  class="relative z-[2] mb-[15px] flex w-full items-center gap-2.5"
+                >
+                  <div
+                    class="custom-number-input w-26 [.disabled]:border-gray-100 group/input-number rounded-[40px] border border-red-300 bg-white"
+                  >
+                    <div
+                      class="relative flex w-full shrink-0 items-center gap-2.5 px-4 py-3"
+                    >
+                      <button
+                        data-action="decrement"
+                        class="h-full cursor-pointer text-red-400 outline-none transition-all duration-300 hover:text-blue-500 disabled:text-gray-100"
+                      >
+                        <svg viewBox="0 0 13 2" class="w-[13px] fill-current">
+                          <path d="M.2.003h12v2H.2v-2Z"></path>
+                        </svg>
+                      </button>
+                      <input
+                        type="number"
+                        class="text-md md:text-basecursor-default flex w-[30px] items-center text-center font-semibold text-red-400 outline-none focus:outline-none group-[.disabled]/input-number:text-gray-100"
+                        name="custom-input-number"
+                        value="0"
+                      />
+                      <button
+                        data-action="increment"
+                        class="h-full cursor-pointer text-red-400 transition-all duration-300 hover:text-blue-500 disabled:text-gray-100"
+                      >
+                        <svg viewBox="0 0 13 12" class="w-[13px] fill-current">
+                          <path
+                            d="M5.3441 7.1457V12.0029H7.3441V7.1457L12.2012 7.1457V5.1457L7.3441 5.1457V0.00292969H5.3441V5.1457L0.201233 5.1457V7.1457L5.3441 7.1457Z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="btn-primary w-full">
+                    <svg
+                      class="w-[17px] fill-current"
+                      viewBox="0 0 17 16"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12.2155 16.0029C11.5255 16.0029 10.9655 15.4429 10.9655 14.7529C10.9655 14.0629 11.5255 13.5029 12.2155 13.5029C12.9055 13.5029 13.4655 14.0629 13.4655 14.7529C13.4655 15.4429 12.9055 16.0029 12.2155 16.0029ZM6.51548 16.0029C5.82548 16.0029 5.26548 15.4429 5.26548 14.7529C5.26548 14.0629 5.82548 13.5029 6.51548 13.5029C7.20548 13.5029 7.76548 14.0629 7.76548 14.7529C7.76548 15.4429 7.20548 16.0029 6.51548 16.0029ZM12.2055 12.7029H6.55548C5.06548 12.7029 3.78548 11.6429 3.50548 10.1729L3.30548 9.09293L1.94548 2.34293C1.90548 2.14293 1.74548 2.00293 1.54548 2.00293H1.30548C0.755481 2.00293 0.305481 1.55293 0.305481 1.00293C0.305481 0.45293 0.765481 0.00292969 1.31548 0.00292969H1.55548C2.70548 0.00292969 3.70548 0.82293 3.91548 1.96293L5.27548 8.70293C5.27548 8.70293 5.27548 8.70293 5.27548 8.71293L5.47548 9.79293C5.57548 10.3129 6.02548 10.6929 6.55548 10.6929H12.2055C12.6855 10.6929 13.1055 10.3329 13.1755 9.85293L14.1255 4.39293H7.09548C6.54548 4.39293 6.09548 3.94293 6.09548 3.39293C6.09548 2.84293 6.54548 2.39293 7.09548 2.39293H15.3055C15.5955 2.39293 15.8855 2.52293 16.0655 2.75293C16.2555 2.98293 16.3355 3.27293 16.2855 3.56293L15.1355 10.1729C14.9155 11.6229 13.6755 12.6929 12.1855 12.6929L12.2055 12.7029Z"
+                      ></path>
+                    </svg>
+                    Ajouter au panier
+                  </button>
+                  <a
+                    class="px-3.75 group/btn-fav relative rounded-full border border-red-300 bg-white py-4 text-red-400 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500 hover:text-white"
+                    href=""
+                    data-added="false"
+                  >
+                    <svg
+                      viewBox="0 0 19 16"
+                      class="w-[19px] fill-current"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M9.41 16.003c-.47 0-.95-.17-1.321-.51-.9-.8-2.692-2.438-4.664-4.357C1.895 9.646.473 7.958.403 5.739c-.05-1.519.55-3.048 1.641-4.177.971-1 2.192-1.56 3.433-1.56 1.951 0 3.172.97 3.923 1.91.74-.94 1.962-1.91 3.923-1.91 1.241 0 2.462.55 3.433 1.56 1.09 1.13 1.691 2.648 1.641 4.177-.07 2.219-1.561 3.978-3.022 5.397-1.942 1.899-3.753 3.538-4.654 4.357-.38.34-.85.51-1.321.51h.01ZM5.487 2.012c-.69 0-1.421.34-2.002.95-.71.729-1.11 1.748-1.08 2.717.04 1.51 1.19 2.829 2.421 4.038a180.247 180.247 0 0 0 4.594 4.297c.87-.8 2.652-2.418 4.564-4.297 1.23-1.2 2.382-2.519 2.422-4.028.03-.979-.37-1.988-1.081-2.728-.58-.6-1.311-.95-2.002-.95-1.671 0-2.452 1.12-2.992 2.22a.99.99 0 0 1-.48.509c-.28.14-.601.14-.871.01-.1-.05-.2-.12-.29-.2-.1-.1-.17-.21-.22-.32-.541-1.109-1.332-2.218-2.993-2.218h.01Z"
+                      ></path>
+                    </svg>
+
+                    <span
+                      class="tooltip pointer-events-none absolute inset-x-1/2 -top-[28px] z-[2] mx-auto block w-fit -translate-x-1/2 translate-y-[5px] whitespace-nowrap rounded-[20px] bg-blue-500 px-2 py-[5px] text-[10px] font-bold uppercase leading-[11px] text-white opacity-0 transition-all duration-300 group-hover/btn-fav:translate-y-0 group-hover/btn-fav:opacity-100"
+                      >Ajouter aux favoris
+                    </span>
+                  </a>
+                </div>
+
+                <div class="flex gap-2.5">
+                  <a href="#" class="btn-secondary basis-1/2 text-center">
+                    Continuer mes achats
+                  </a>
+                  <a href="#" class="btn-secondary basis-1/2 text-center">
+                    Terminer mes achats
+                  </a>
+                </div>
+              </div>
+
+              <div class="divide-y divide-gray-300 border-b border-gray-300">
+                <div
+                  class="flex items-center justify-between px-[15px] py-[7px]"
+                >
+                  <span
+                    class="text-base font-semibold leading-snug text-blue-800"
+                  >
+                    Prix unitaire HTVA
+                  </span>
+                  <span
+                    class="text-base font-normal leading-snug text-blue-800"
+                  >
+                    1,22 €
+                  </span>
+                </div>
+                <div
+                  class="flex items-center justify-between px-[15px] py-[7px]"
+                >
+                  <span
+                    class="text-base font-semibold leading-snug text-blue-800"
+                  >
+                    Marge
+                  </span>
+                  <span
+                    class="text-base font-normal leading-snug text-blue-800"
+                  >
+                    4,44 %
+                  </span>
+                </div>
+                <div
+                  class="flex items-center justify-between bg-gray-300 px-[15px] py-[7px]"
+                >
+                  <div
+                    class="text-base font-semibold leading-snug text-blue-800"
+                  >
+                    Prix de vente conseillé
+                  </div>
+                  <div
+                    class="text-base font-semibold leading-snug text-blue-800"
+                  >
+                    1,35 €
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between px-[15px] py-[7px]"
+                >
+                  <div
+                    class="text-base font-semibold leading-snug text-blue-800"
+                  >
+                    Unité
+                  </div>
+                  <div class="text-base font-normal leading-snug text-blue-800">
+                    pack(s)
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between px-[15px] py-[7px]"
+                >
+                  <div
+                    class="text-base font-semibold leading-snug text-blue-800"
+                  >
+                    Stock
+                  </div>
+                  <div class="text-base font-normal leading-snug text-blue-800">
+                    735 pack(s)
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between px-[15px] py-[7px]"
+                >
+                  <div
+                    class="text-base font-semibold leading-snug text-blue-800"
+                  >
+                    Référence article
+                  </div>
+                  <div class="text-base font-normal leading-snug text-blue-800">
+                    LONTH
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between px-[15px] py-[7px]"
+                >
+                  <div
+                    class="text-base font-semibold leading-snug text-blue-800"
+                  >
+                    Code EAN
+                  </div>
+                  <div class="text-base font-normal leading-snug text-blue-800">
+                    4750127300625
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3
+            class="title-section mb-7.5 flex items-center gap-5 text-center text-3xl font-semibold leading-9 text-blue-500"
+          >
+            Description
+          </h3>
+
+          <div class="mx-auto w-10/12">
+            <p class="mb-7.5 text-lg font-normal leading-7 text-blue-500">
+              Les <strong>Long Chips Thaï Sweet Chili</strong> sont des chips
+              uniques à base de pommes de terre au bon goût de sauce Thai aigre
+              douce légèrement épicée. Frits dans de l'huile de colza de haute
+              qualité pendant seulement 10 secondes, ils sont incroyablement
+              croustillants et moins gras que les chips classiques. Ils ont une
+              forme originale : ils sont longs de 19cm, plats et très fins. Ils
+              sont placés dans une barquette afin de ne pas s'abîmer. En plus,
+              ils ne contiennent aucuns additifs artificiels! Liste des
+              ingrédients : flocons de pommes de terre (48%), huile de colza,
+              semoule de blé, fécule de pomme de terre, mélange d'épices [sel,
+              dextrose, épices (oignon, piment, paprika, ail), extrait de
+              levure, extrait d'épices (poivre, piment, romarin), huile
+              végétale, arôme artificiel (paprika), arôme naturel de fumée],
+              sel, antioxydant (extrait de romarin).
+            </p>
+
+            <p class="text-lg font-normal leading-7 text-blue-500">
+              <strong>Liste des ingrédients :</strong> flocons de pommes de
+              terre (48%), huile de colza, semoule de blé, fécule de pomme de
+              terre, mélange d'épices [sel, dextrose, épices (oignon, piment,
+              paprika, ail), extrait de levure, extrait d'épices (poivre,
+              piment, romarin), huile végétale, arôme artificiel (paprika),
+              arôme naturel de fumée], sel, antioxydant (extrait de romarin).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip pt-10">
+        <div class="container">
+          <div class="gap-y-7.5 grid grid-cols-[repeat(2,auto)] md:gap-y-10">
+            <div class="flex items-center justify-between">
+              <h2
+                class="text-[40px] font-semibold leading-[46px] text-blue-500 max-md:text-center"
+              >
+                Découvrez également...
+              </h2>
+            </div>
+
+            <div class="col-span-2">
+              <div class="grid md:grid-cols-2 xl:grid-cols-4">
+                {{> components/cart-product-item}} {{>
+                components/cart-product-item}} {{>
+                components/cart-product-item}} {{>
+                components/cart-product-item}}
+              </div>
+            </div>
+
+            <div
+              class="gap-3.75 flex items-center max-md:col-span-2 max-md:text-center md:col-start-2 md:row-start-1 md:ml-auto"
+            >
+              <a href="#" class="btn-secondary max-md:mx-auto">
+                Retour à la boutique
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="lg:mb-15 mb-10 overflow-x-clip">
+        <div class="container">
+          <h2
+            class="mb-10 text-center text-[40px] font-semibold leading-[46px] text-blue-500"
+          >
+            Nos produits associés
+          </h2>
+
+          <div
+            class="mx-auto grid gap-0 md:w-fit md:grid-cols-2 lg:place-items-center"
+          >
+            {{> components/cart-product-item}} {{>
+            components/cart-product-item}}
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{> footer}}
+  </body>
+</html>

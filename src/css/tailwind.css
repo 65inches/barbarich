@@ -125,3 +125,24 @@ strong {
     background: var(--color-red-400);
   }
 }
+
+.swiper-product-large {
+  .swiper-actions {
+    display: flex;
+  }
+}
+
+.swiper-product-thumbs {
+  .swiper-slide {
+    width: 96px;
+  }
+}
+
+.title-section {
+  position: relative;
+  &::before,
+  &::after {
+    @apply basis-1/2 h-[1px] inline-block bg-gray-500;
+    content: '';
+  }
+}
