@@ -12,6 +12,7 @@
     padding-block: var(--select-padding);
     width: 100%;
     position: relative;
+    margin-top: 10px;
   }
 
   .select input::placeholder {
@@ -22,7 +23,7 @@
     content: '';
     position: absolute;
     right: 25px;
-    top: 24px;
+    top: 22px;
     z-index: 2;
 
     width: 12px;
