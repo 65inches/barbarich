@@ -1,4 +1,4 @@
-/*! tailwindcss v4.0.1 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.0.3 | MIT License | https://tailwindcss.com */
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -932,17 +932,17 @@
   .h-\[0px\] {
     height: 0px;
   }
-  .h-\[236px\] {
-    height: 236px;
-  }
-  .h-\[2px\] {
-    height: 2px;
-  }
   .h-\[5px\] {
     height: 5px;
   }
   .h-\[45px\] {
     height: 45px;
+  }
+  .h-\[236px\] {
+    height: 236px;
+  }
+  .h-\[2px\] {
+    height: 2px;
   }
   .h-\[367px\] {
     height: 367px;
@@ -1069,9 +1069,6 @@
   }
   .w-\[82px\] {
     width: 82px;
-  }
-  .w-\[190px\] {
-    width: 190px;
   }
   .w-\[323px\] {
     width: 323px;
@@ -1258,9 +1255,6 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .gap-\[5px\] {
-    gap: 5px;
-  }
   .gap-\[15px\] {
     gap: 15px;
   }
@@ -1269,6 +1263,9 @@
   }
   .gap-\[3px\] {
     gap: 3px;
+  }
+  .gap-\[5px\] {
+    gap: 5px;
   }
   .gap-y-2 {
     row-gap: calc(var(--spacing) * 2);
@@ -1353,26 +1350,23 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-\[3px\] {
+    border-radius: 3px;
+  }
+  .rounded-\[10px\] {
+    border-radius: 10px;
+  }
   .rounded-\[15px\] {
     border-radius: 15px;
   }
   .rounded-\[1px\] {
     border-radius: 1px;
   }
-  .rounded-\[3px\] {
-    border-radius: 3px;
-  }
   .rounded-\[5px\] {
     border-radius: 5px;
   }
   .rounded-\[7px\] {
     border-radius: 7px;
-  }
-  .rounded-\[10px\] {
-    border-radius: 10px;
-  }
-  .rounded-\[40px\] {
-    border-radius: 40px;
   }
   .rounded-\[200px\] {
     border-radius: 200px;
@@ -1385,6 +1379,9 @@
   }
   .rounded-\[400px\] {
     border-radius: 400px;
+  }
+  .rounded-\[40px\] {
+    border-radius: 40px;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -1826,14 +1823,6 @@
     --tw-leading: 0.5em;
     line-height: 0.5em;
   }
-  .leading-\[0\.48\] {
-    --tw-leading: 0.48;
-    line-height: 0.48;
-  }
-  .leading-\[0\.64\] {
-    --tw-leading: 0.64;
-    line-height: 0.64;
-  }
   .leading-\[1\.5\] {
     --tw-leading: 1.5;
     line-height: 1.5;
@@ -1845,10 +1834,6 @@
   .leading-\[1\.33\] {
     --tw-leading: 1.33;
     line-height: 1.33;
-  }
-  .leading-\[2\.3\] {
-    --tw-leading: 2.3;
-    line-height: 2.3;
   }
   .leading-\[11px\] {
     --tw-leading: 11px;
@@ -3026,11 +3011,6 @@
       width: calc(10/12 * 100%);
     }
   }
-  .lg\:w-\[190px\] {
-    @media (width >= 1024px) {
-      width: 190px;
-    }
-  }
   .lg\:w-fit {
     @media (width >= 1024px) {
       width: fit-content;
@@ -4097,8 +4077,6 @@ input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-o
     --select-option-color: var(--color-blue-500);
     height: 48px;
     background: var(--select-bg);
-  }
-  .select.select-form input::placeholder {
   }
   .select.select-form::before {
     top: 22px;
