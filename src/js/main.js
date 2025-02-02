@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('body')?.classList.contains('page-account')) {
     //   initHomePage();
     const drawer = new Drawer('drawer-account');
+
+    if (
+      document.querySelector('body')?.classList.contains('page-account-show')
+    ) {
+      drawer.show();
+    }
   }
 
   const swipers = document.querySelectorAll('.slider');
