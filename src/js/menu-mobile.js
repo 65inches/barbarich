@@ -5,7 +5,7 @@ class MenuMobile {
 
     this.btn.addEventListener('click', this.handleButtonClick.bind(this));
 
-    // this.opened = false;
+    this.opened = false;
     this.panels = this.el.querySelectorAll('.menu-panel');
     this.buttons = this.el.querySelectorAll('.menu-listitem__btn');
 
@@ -23,7 +23,9 @@ class MenuMobile {
   }
 
   handleButtonClick() {
+    this.opened = !this.opened;
     this.el.classList.toggle('menu--open');
+    this.btn.setAttribute('aria-expanded', this.opened.toString());
     document.body.classList.toggle('menu-opened');
 
     setTimeout(() => {

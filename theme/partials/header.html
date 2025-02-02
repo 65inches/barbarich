@@ -107,8 +107,8 @@
           <div
             class="grid h-full place-content-center border-white/20 max-lg:border-l"
           >
-            <!-- {{> components/dropdown-account }} -->
-            {{> components/dropdown-account-signed }}
+            {{> components/dropdown-account }}
+            <!-- {{> components/dropdown-account-signed }} -->
           </div>
           <div
             class="flex h-full items-center justify-start gap-2.5 px-5 lg:border-none lg:pr-0"
@@ -134,9 +134,17 @@
               </span>
             </a>
           </div>
-          <div class="hidden h-full items-center pl-5 max-lg:flex">
-            <button class="menu-mobile-button" aria-controls="nav-mobile">
-              <svg class="w-[18px]" viewBox="0 0 18 14" aria-hidden="true">
+          <div class="hidden h-full items-center max-lg:flex">
+            <button
+              class="menu-mobile-button group pl-5"
+              aria-controls="nav-mobile"
+              aria-expanded="false"
+            >
+              <svg
+                class="w-[18px] group-aria-expanded:hidden"
+                viewBox="0 0 18 14"
+                aria-hidden="true"
+              >
                 <path
                   d="M1 1H17"
                   stroke="#25E9B2"
@@ -160,6 +168,18 @@
                   stroke="#25E9B2"
                   stroke-width="2"
                   stroke-linecap="round"
+                />
+              </svg>
+              <svg
+                viewBox="0 0 16 14"
+                fill="none"
+                class="hidden w-4 group-aria-expanded:inline"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2.7103 0.293714C2.31982 -0.096857 1.68673 -0.096857 1.29626 0.293714C0.90578 0.684285 0.90578 1.31753 1.29626 1.7081L6.5865 6.99961L1.29469 12.2925C0.90421 12.6831 0.90421 13.3163 1.29469 13.7069C1.68518 14.0974 2.31828 14.0974 2.70876 13.7069L8.00054 8.41399L13.2921 13.7069C13.6826 14.0974 14.3157 14.0974 14.7062 13.7069C15.0966 13.3163 15.0966 12.683 14.7062 12.2925L9.41461 6.99963L14.7048 1.70833C15.0953 1.31777 15.0953 0.684535 14.7048 0.29397C14.3143 -0.0965943 13.6812 -0.0965943 13.2908 0.29397L8.00057 5.58525L2.7103 0.293714Z"
+                  fill="#25E9B2"
                 />
               </svg>
             </button>

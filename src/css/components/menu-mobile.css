@@ -60,6 +60,12 @@ body.menu-opened {
   bottom: 0;
   margin: auto;
   right: var(--drawer-padding);
+  width: 8px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.999817 1L6.99998 7.00001L0.999845 13' stroke='%23D01B56' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.menu-panel-sub .menu-listitem__btn::after {
   width: 17px;
   height: 12px;
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.603 1.45454L15.3651 6.00001M15.3651 6.00001L10.6031 10.5455M15.3651 6.00001H6' stroke='%23D01B56' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -91,6 +97,7 @@ body.menu-opened {
 
   background-position: center;
   background-repeat: no-repeat;
+
   background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.00012 13L0.999955 6.99999L7.00009 1' stroke='%23D01B56' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 
   left: var(--drawer-padding);
