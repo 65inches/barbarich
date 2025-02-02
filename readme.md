@@ -10,7 +10,7 @@
 | Panier         | ❌      | ❌     | ❌     |
 | Login          | ❌      | ❌     | ❌     |
 | Create account | ❌      | ❌     | ❌     |
-| Account        | ❌      | ❌     | ❌     |
+| Account        | ✅      | ✅     | ✅     |
 | Contact        | ❌      | ❌     | ❌     |
 | FAQs           | ❌      | ❌     | ❌     |
 | A propos       | ❌      | ❌     | ❌     |
