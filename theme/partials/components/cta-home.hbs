@@ -1,0 +1,50 @@
+<div class='@container h-full'>
+  <div
+    class='group h-100 p-5 @min-[480px]:p-7.5 xl:h-full relative overflow-hidden rounded-[20px]
+      {{class}}'
+  >
+    <div
+      class='@max-[481px]:group-[.xl-small]:max-w-60 max-lg:h-100 relative z-[2] flex flex-col items-start justify-start gap-2.5'
+    >
+      <h2
+        class='@min-[480px]:group-[.xl-small]:whitespace-nowrap text-[30px] font-semibold leading-none text-blue-800 lg:text-[32px]'
+      >
+        {{title}}
+      </h2>
+      <p class='text-lg font-normal leading-[1.33] text-blue-800'>
+        {{content}}
+      </p>
+      <a href='#' class='btn-primary relative z-[1] whitespace-nowrap'>
+        Commander
+        <svg
+          width='10'
+          height='12'
+          viewBox='0 0 10 12'
+          fill='none'
+          aria-hidden='true'
+        >
+          <path
+            d='M1 3.00293H9M9 3.00293V11.0029M9 3.00293L1 11.0029'
+            stroke='white'
+            stroke-width='2'
+            stroke-linejoin='round'
+          ></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class='absolute bottom-2.5 right-2.5 z-[1]'>
+
+      <img
+        class='@max-[481px]:h-auto @min-[480px]:group-[.xl-small]:h-[260px] object-fit relative z-[1] h-[236px]'
+        src='{{img}}'
+        alt=''
+      />
+
+      <div
+        class='size-80 @min-[480px]:size-100 @min-[480px]:-left-[62px] @min-[480px]:top-[72px] absolute -left-[85px] top-[35px] z-[0] rounded-full border-8 border-white bg-white opacity-40'
+      >
+      </div>
+    </div>
+  </div>
+</div>
