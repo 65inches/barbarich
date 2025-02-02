@@ -14,7 +14,7 @@
 | Create account    | ❌      | ❌     | ❌     |
 | Account           | ✅      | ✅     | ✅     |
 | Contact           | ❌      | ❌     | ❌     |
-| FAQs              | ❌      | ❌     | ❌     |
+| FAQs              | ✅      | ✅     | ✅     |
 | A propos          | ❌      | ❌     | ❌     |
 | Legal             | ❌      | ❌     | ❌     |
 | Mes documents     | ❌      | ❌     | ❌     |
