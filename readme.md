@@ -17,7 +17,7 @@
 | FAQs              | ✅      | ✅     | ✅     |
 | A propos          | ❌      | ❌     | ❌     |
 | Legal             | ❌      | ❌     | ❌     |
-| Mes documents     | ❌      | ❌     | ❌     |
+| Mes documents     | ✅      | ✅     | ✅     |
 | 404               | ❌      | ❌     | ❌     |
 
 # Usage
