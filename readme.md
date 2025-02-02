@@ -5,7 +5,7 @@
 | Page Structure | Desktop | Tablet | Mobile |
 | -------------- | ------- | ------ | ------ |
 | Home           | ✅      | ✅     | ✅     |
-| Menu           | ✅      | ❌     | ✅     |
+| Menu           | ✅      | ✅     | ✅     |
 | Boutique       | ❌      | ❌     | ❌     |
 | Panier         | ❌      | ❌     | ❌     |
 | Login          | ❌      | ❌     | ❌     |
