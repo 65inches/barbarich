@@ -4,6 +4,16 @@ import Drawer from './menu-drawer';
 import Select from './select';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  const params = new URLSearchParams(window.location.search);
+  const isSigned = params.get("signed"); // "true" ou null
+
+  if (isSigned) {
+      document.getElementById("dropdown-signed").classList.remove("hidden");
+  } else {
+      document.getElementById("dropdown-guest").classList.remove("hidden");
+  }
+  
   const menuMobile = new MenuMobile('#nav-mobile');
 
   // Initialize the drawer

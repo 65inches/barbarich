@@ -823,8 +823,14 @@
   .ml-auto {
     margin-left: auto;
   }
+  .\!inline {
+    display: inline !important;
+  }
   .block {
     display: block;
+  }
+  .contents {
+    display: contents;
   }
   .flex {
     display: flex;
