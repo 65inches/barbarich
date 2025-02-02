@@ -1,0 +1,52 @@
+<div class='@container h-full'>
+  <div
+    class='group/cta h-100 p-5 @min-[480px]:p-7.5 xl:h-full relative overflow-hidden rounded-[20px]
+      {{class}}'
+  >
+    <div
+      class='xl:group-[.cta-two]/cta:max-w-65 xl:group-[.cta-three]/cta:max-w-65 max-lg:h-100 relative z-[2] flex flex-col items-start justify-start gap-2.5'
+    >
+      <h2
+        class='text-[30px] font-semibold leading-none text-blue-800 lg:text-[32px] xl:group-[.cta-one]/cta:text-[50px]'
+      >
+        {{title}}
+      </h2>
+      <p
+        class='mb-2 text-lg font-normal leading-[1.33] text-blue-800 group-[:not(.xl-small)]:mt-2'
+      >
+        {{content}}
+      </p>
+      <a href='#' class='btn-primary relative z-[1] whitespace-nowrap'>
+        Commander
+        <svg
+          width='10'
+          height='12'
+          viewBox='0 0 10 12'
+          fill='none'
+          aria-hidden='true'
+        >
+          <path
+            d='M1 3.00293H9M9 3.00293V11.0029M9 3.00293L1 11.0029'
+            stroke='white'
+            stroke-width='2'
+            stroke-linejoin='round'
+          ></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class='absolute bottom-2.5 right-2.5 z-[1]'>
+
+      <img
+        class='object-fit relative z-[1] md:h-[236px] md:max-lg:group-[.cta-four]/cta:h-auto md:max-lg:group-[.cta-four]/cta:w-[185px] xl:h-[260px] xl:group-[.cta-one]/cta:h-auto'
+        src='{{img}}'
+        alt=''
+      />
+
+    </div>
+    <div
+      class='size-80 xl:group-[.cta-four]/cta:-righ xl:group-[.cta-one]/cta:size-100 absolute -bottom-[110px] -right-[50px] rounded-full border-8 border-white bg-white opacity-40 xl:group-[.cta-four]/cta:-bottom-[109px] xl:group-[.cta-one]/cta:-bottom-[90px] xl:group-[.cta-one]/cta:-right-[62px]'
+    >
+    </div>
+  </div>
+</div>
