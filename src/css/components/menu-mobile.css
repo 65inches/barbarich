@@ -50,7 +50,11 @@ body.menu-opened {
 }
 
 .menu-listitem__text {
-  @apply relative grow overflow-hidden text-ellipsis whitespace-nowrap px-[24px] md:px-[85px] py-5 text-lg leading-none no-underline;
+  @apply relative grow overflow-hidden text-ellipsis whitespace-nowrap px-[24px] md:px-[85px] font-medium py-4 text-lg leading-none no-underline;
+}
+
+.menu-listitem__text__large{
+  @apply py-5;
 }
 
 .menu-listitem__btn::after {
