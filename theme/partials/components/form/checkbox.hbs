@@ -1,0 +1,23 @@
+<div class='flex gap-3'>
+  <div class='flex h-6 shrink-0 items-center'>
+    <div class='size-4 group grid grid-cols-1'>
+      <input
+        id='{{id}}'
+        aria-describedby='{{id}}-description'
+        name='{{id}}'
+        type='checkbox'
+        class='forced-colors:appearance-auto focus-visible:outline-aquamarine-400 col-start-1 row-start-1 h-4 w-4 appearance-none rounded-[3px] rounded-sm border border-gray-500 bg-white focus-visible:outline-2 focus-visible:outline-offset-2 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100'
+      />
+
+      <span
+        class='bg-aquamarine-400 size-2 group-has-checked:scale-100 pointer-events-none col-start-1 row-start-1 scale-0 self-center justify-self-center rounded-[1px] transition duration-300'
+      ></span>
+    </div>
+  </div>
+  <div class=''>
+    <label
+      for='{{id}}'
+      class='font-normal leading-snug text-blue-500'
+    >{{label}}</label>
+  </div>
+</div>
