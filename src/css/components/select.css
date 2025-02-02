@@ -1,163 +1,162 @@
-.select {
-  --select-padding-y: 16px;
-  --select-padding-x: 20px;
-  --select-rounded: 6px;
-  --select-color: var(--color-blue-500);
-  --select-bg: var(--color-white);
-  --select-option-color: var(--color-blue-500);
+@layer base {
+  .select {
+    --select-padding-y: 16px;
+    --select-padding-x: 20px;
+    --select-rounded: 40px;
+    --select-rounded-open: 24px;
+    --select-color: var(--color-red-400);
+    --select-bg: var(--color-white);
+    --select-option-color: var(--color-blue-500);
 
-  border-radius: var(--select-rounded);
-  padding-block: var(--select-padding);
-  width: 100%;
+    border-radius: var(--select-rounded);
+    padding-block: var(--select-padding);
+    width: 100%;
+    position: relative;
+  }
 
-  position: relative;
-}
+  .select input::placeholder {
+    color: currentColor;
+  }
 
-.select input::placeholder {
-  color: currentColor;
-}
+  .select::before {
+    content: '';
+    position: absolute;
+    right: 25px;
+    top: 24px;
+    z-index: 2;
 
-.select::before {
-  content: '';
-  position: absolute;
-  right: 25px;
-  top: 24px;
-  z-index: 2;
+    width: 12px;
+    height: 7px;
+    border-style: solid;
 
-  width: 12px;
-  height: 7px;
-  border-style: solid;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7' fill='none'%3E%3Cpath d='M10 2L5.99999 6L2 2.00002' stroke='%23D01B56' stroke-width='2' stroke-linecap='square' stroke-linejoin='round'/%3E%3C/svg%3E");
+    pointer-events: none;
+    background-size: 12px 7px;
+    background-repeat: no-repeat;
+    transition: all 0.3s linear;
+  }
 
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7' fill='none'%3E%3Cpath d='M10 2L5.99999 6L2 2.00002' stroke='%23D01B56' stroke-width='2' stroke-linecap='square' stroke-linejoin='round'/%3E%3C/svg%3E");
-  pointer-events: none;
-  background-size: 12px 7px;
-  background-repeat: no-repeat;
-  transition: all 0.3s linear;
-}
+  .select input {
+    @apply border border-gray-500;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: var(--select-rounded);
+    padding-inline: var(--select-padding-x);
+    padding-block: var(--select-padding-y);
+    cursor: pointer;
 
-.select input {
-  @apply border border-gray-500;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border-radius: var(--select-rounded);
-  padding-inline: var(--select-padding-x);
-  padding-block: var(--select-padding-y);
-  cursor: pointer;
+    outline: none;
 
-  outline: none;
+    font-size: 16px;
+    color: var(--select-color);
+    font-weight: 500;
 
-  font-size: 16px;
-  color: var(--select-color);
-  font-weight: 500;
+    user-select: none;
 
-  letter-spacing: -0.36px;
+    &:hover {
+      color: var(--select-color);
+    }
+  }
 
-  user-select: none;
+  .select .options {
+    @apply divide-y divide-gray-500 border border-t-0 border-gray-500;
+    width: 100%;
+    padding: 0;
 
-  &:hover {
+    list-style: none;
+    cursor: pointer;
+    background: var(--select-bg);
+    outline: none;
+
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    transition: all 0.3s;
+    z-index: 3;
+
+    opacity: 0;
+
+    visibility: hidden;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    pointer-events: none;
+
+    max-height: 300px;
+    overflow: auto;
+
+    border-bottom-left-radius: var(--select-rounded-open);
+    border-bottom-right-radius: var(--select-rounded-open);
+  }
+
+  .select .options .option {
+    padding: 10px 25px;
+
+    transition: all 0.25s ease-in-out;
+    color: var(--color-indigo-dark-300);
+
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .select .options .option.selected,
+  .select .options .option:hover {
+    color: var(--color-white);
+    background: var(--color-red-400);
+  }
+
+  .select.opened {
+    background: var(--select-bg);
+  }
+
+  .select.opened input {
     color: var(--select-color);
   }
-}
 
-.select .options {
-  @apply divide-y divide-gray-500 border border-t-0 border-gray-500;
-  width: 100%;
-  padding: 0;
+  .select.opened,
+  .select.opened input {
+    border-top-left-radius: var(--select-rounded-open);
+    border-top-right-radius: var(--select-rounded-open);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 
-  list-style: none;
-  cursor: pointer;
-  background: var(--select-bg);
-  outline: none;
+  .select.opened .options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: all;
+  }
 
-  overflow: hidden;
-  position: absolute;
-  top: 100%;
-  transition: all 0.3s;
-  z-index: 3;
+  .select.opened::before {
+    transform: rotate(-180deg);
+  }
 
-  opacity: 0;
+  /* Select-form */
 
-  visibility: hidden;
-  border-radius: 5px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  .select.select-form {
+    --select-padding-y: 16px;
+    --select-padding-x: 20px;
+    --select-rounded: 6px;
+    --select-rounded-open: 6px;
+    --select-color: var(--color-blue-500);
+    --select-bg: var(--color-white);
+    --select-option-color: var(--color-blue-500);
+    height: 48px;
+    background: var(--select-bg);
+  }
 
-  pointer-events: none;
+  .select.select-form input::placeholder {
+    /* color: color-mix(in oklab, currentColor 50%, transparent); */
+  }
 
-  max-height: 300px;
-  overflow: auto;
+  .select.select-form::before {
+    top: 22px;
+  }
 
-  border-bottom-left-radius: var(--select-rounded);
-  border-bottom-right-radius: var(--select-rounded);
-}
-
-.select .options .option {
-  padding: 10px 25px;
-
-  transition: all 0.25s ease-in-out;
-  color: var(--color-indigo-dark-300);
-
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-.select .options .option.selected,
-.select .options .option:hover {
-  color: var(--color-midnight-400);
-}
-
-.select.opened {
-  background: var(--select-bg);
-}
-
-.select.opened input {
-  color: var(--color-midnight-400);
-}
-
-.select.opened,
-.select.opened input {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.select.opened .options {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: all;
-}
-
-.select.opened::before {
-  transform: rotate(-180deg);
-}
-
-/* Select-form */
-
-.select.select-form {
-  /* --select-padding-y: 20px; */
-  /* --select-padding-x: 24px; */
-  --select-rounded: 4px;
-  /* --select-bg: var(--color-white); */
-  /* --select-color: var(--color-indigo-600); */
-  height: 48px;
-  background: var(--select-bg);
-}
-
-.select.select-form input::placeholder {
-  /* color: color-mix(in oklab, currentColor 50%, transparent); */
-}
-
-.select.select-form::before {
-  top: 22px;
-}
-
-.select.select-form .options {
-  @apply shadow-general;
-}
-
-.select.select-form .options .option.selected,
-.select.select-form .options .option:hover {
-  color: var(--color-white);
-  background: var(--color-red-400);
+  .select.select-form .options {
+    @apply shadow-general;
+  }
 }
