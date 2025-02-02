@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     swipers.forEach((el) => {
       const swiper = el.querySelector('.swiper');
       const pagination = el.querySelector('.swiper-pagination');
+      const scrollbar = el.querySelector('.swiper-scrollbar');
       const btnPrev = el.querySelector('.swiper-button-prev');
       const btnNext = el.querySelector('.swiper-button-next');
 
@@ -42,7 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
           el: pagination,
         },
-
+        scrollbar: {
+          el: scrollbar,
+          draggable: true,
+        },
         navigation: {
           nextEl: btnNext,
           prevEl: btnPrev,

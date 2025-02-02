@@ -138,6 +138,15 @@ strong {
   }
 }
 
+.swiper-scrollbar{
+  height: 2px;
+  background: var(--color-gray-300);
+  .swiper-scrollbar-drag {
+    height: 2px;
+    background: var(--color-red-400);
+  }
+}
+
 .title-section {
   position: relative;
   &::before,
