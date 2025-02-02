@@ -1,6 +1,6 @@
 <div class='@container h-full'>
-  <div
-    class='group/cta h-100 p-5 @min-[480px]:p-7.5 xl:h-full relative overflow-hidden rounded-[20px]
+  <a href='#'
+    class='block group/cta h-100 p-5 @min-[480px]:p-7.5 xl:h-full relative overflow-hidden rounded-[20px] transition duration-300 hover:translate-y-[-5px] cursor-pointer
       {{class}}'
   >
     <div
@@ -16,7 +16,7 @@
       >
         {{content}}
       </p>
-      <a href='#' class='btn-primary relative z-[1] whitespace-nowrap'>
+      <span class='btn-primary relative z-[1] whitespace-nowrap group-hover/cta:text-white group-hover/cta:bg-blue-800'>
         Commander
         <svg
           width='10'
@@ -32,7 +32,7 @@
             stroke-linejoin='round'
           ></path>
         </svg>
-      </a>
+      </span>
     </div>
 
     <div class='absolute bottom-2.5 right-2.5 z-[1]'>
@@ -48,5 +48,5 @@
       class='size-80 xl:group-[.cta-four]/cta:-righ xl:group-[.cta-one]/cta:size-100 absolute -bottom-[110px] -right-[50px] rounded-full border-8 border-white bg-white opacity-40 xl:group-[.cta-four]/cta:-bottom-[109px] xl:group-[.cta-one]/cta:-bottom-[90px] xl:group-[.cta-one]/cta:-right-[62px]'
     >
     </div>
-  </div>
+  </a>
 </div>

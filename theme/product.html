@@ -9,14 +9,22 @@
         <div class="container">
           <nav
             aria-label="Breadcrumb"
-            class="mb-[30px] inline-flex items-center text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
+            class="mb-[30px] inline-flex items-center gap-y-2 flex-wrap text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
           >
             <a class="text-red-400 underline" href="/">Accueil</a>
             <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
-            <div>Mon compte</div>
+            <a class="text-red-400 underline" href="/">Boutique</a>
+            <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
+            <a class="text-red-400 underline" href="/">Epicerie salée</a>
+            <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
+            <a class="text-red-400 underline" href="/">Chips</a>
+            <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
+            <a class="text-red-400 underline" href="/">Long Chips</a>
+            <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
+            <div>Long Chips Thaï Sweet Chilli</div>
           </nav>
           <div
-            class="mb-[50px] flex flex-col gap-[15px] md:max-lg:px-[60px] lg:flex-row"
+            class="mb-[30px] lg:mb-[50px] flex flex-col gap-[15px] md:max-lg:px-[60px] lg:flex-row"
           >
             <div class="lg:w-5/12">
               <div
@@ -35,25 +43,10 @@
                 <div class="swiper swiper-product-small">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      {{> components/product-item-slide text="1"}}
+                      {{> components/product-item-slide text="product"}}
                     </div>
                     <div class="swiper-slide">
-                      {{> components/product-item-slide text="2"}}
-                    </div>
-                    <div class="swiper-slide">
-                      {{> components/product-item-slide text="3"}}
-                    </div>
-                    <div class="swiper-slide">
-                      {{> components/product-item-slide text="4"}}
-                    </div>
-                    <div class="swiper-slide">
-                      {{> components/product-item-slide text="5"}}
-                    </div>
-                    <div class="swiper-slide">
-                      {{> components/product-item-slide text="6"}}
-                    </div>
-                    <div class="swiper-slide">
-                      {{> components/product-item-slide text="7"}}
+                      {{> components/product-item-slide text="product-alt"}}
                     </div>
                   </div>
                 </div>
@@ -66,25 +59,10 @@
               <div thumbsSlider class="swiper swiper-product-thumbs">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    {{> components/product-item-slide-thumb text="1"}}
+                    {{> components/product-item-slide-thumb text="product"}}
                   </div>
                   <div class="swiper-slide">
-                    {{> components/product-item-slide-thumb text="2"}}
-                  </div>
-                  <div class="swiper-slide">
-                    {{> components/product-item-slide-thumb text="3"}}
-                  </div>
-                  <div class="swiper-slide">
-                    {{> components/product-item-slide-thumb text="4"}}
-                  </div>
-                  <div class="swiper-slide">
-                    {{> components/product-item-slide-thumb text="5"}}
-                  </div>
-                  <div class="swiper-slide">
-                    {{> components/product-item-slide-thumb text="6"}}
-                  </div>
-                  <div class="swiper-slide">
-                    {{> components/product-item-slide-thumb text="7"}}
+                    {{> components/product-item-slide-thumb text="product-alt"}}
                   </div>
                 </div>
               </div>
@@ -94,25 +72,10 @@
                     <div class="swiper swiper-product-large">
                       <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                          {{> components/product-item-slide-large text="1"}}
+                          {{> components/product-item-slide-large text="product"}}
                         </div>
                         <div class="swiper-slide">
-                          {{> components/product-item-slide-large text="2"}}
-                        </div>
-                        <div class="swiper-slide">
-                          {{> components/product-item-slide-large text="3"}}
-                        </div>
-                        <div class="swiper-slide">
-                          {{> components/product-item-slide-large text="4"}}
-                        </div>
-                        <div class="swiper-slide">
-                          {{> components/product-item-slide-large text="5"}}
-                        </div>
-                        <div class="swiper-slide">
-                          {{> components/product-item-slide-large text="6"}}
-                        </div>
-                        <div class="swiper-slide">
-                          {{> components/product-item-slide-large text="7"}}
+                          {{> components/product-item-slide-large text="product-alt"}}
                         </div>
                       </div>
                       <!-- <div class="b inline-flex h-12 items-center justify-center gap-[5px] px-[25px]"> -->
@@ -208,7 +171,7 @@
               <div
                 class="mb-5 border-b border-t border-dashed border-gray-500 py-5"
               >
-                <div class="mb-7.5 flex w-full items-center justify-between">
+                <div class="mb-7.5 flex flex-col md:flex-row w-full md:items-center justify-between">
                   <div class="relative">
                     <div class="flex items-center gap-2.5">
                       <span
@@ -240,7 +203,7 @@
                       TVA non incluse
                     </span>
                   </div>
-                  <div class="flex flex-col items-end gap-2.5">
+                  <div class="flex mt-[10px] md:mt-0 md:flex-col items-center md:items-end  gap-2.5">
                     <span class="text-xs font-normal leading-3 text-blue-800">
                       Disponibilité
                     </span>
@@ -306,7 +269,8 @@
                         d="M12.2155 16.0029C11.5255 16.0029 10.9655 15.4429 10.9655 14.7529C10.9655 14.0629 11.5255 13.5029 12.2155 13.5029C12.9055 13.5029 13.4655 14.0629 13.4655 14.7529C13.4655 15.4429 12.9055 16.0029 12.2155 16.0029ZM6.51548 16.0029C5.82548 16.0029 5.26548 15.4429 5.26548 14.7529C5.26548 14.0629 5.82548 13.5029 6.51548 13.5029C7.20548 13.5029 7.76548 14.0629 7.76548 14.7529C7.76548 15.4429 7.20548 16.0029 6.51548 16.0029ZM12.2055 12.7029H6.55548C5.06548 12.7029 3.78548 11.6429 3.50548 10.1729L3.30548 9.09293L1.94548 2.34293C1.90548 2.14293 1.74548 2.00293 1.54548 2.00293H1.30548C0.755481 2.00293 0.305481 1.55293 0.305481 1.00293C0.305481 0.45293 0.765481 0.00292969 1.31548 0.00292969H1.55548C2.70548 0.00292969 3.70548 0.82293 3.91548 1.96293L5.27548 8.70293C5.27548 8.70293 5.27548 8.70293 5.27548 8.71293L5.47548 9.79293C5.57548 10.3129 6.02548 10.6929 6.55548 10.6929H12.2055C12.6855 10.6929 13.1055 10.3329 13.1755 9.85293L14.1255 4.39293H7.09548C6.54548 4.39293 6.09548 3.94293 6.09548 3.39293C6.09548 2.84293 6.54548 2.39293 7.09548 2.39293H15.3055C15.5955 2.39293 15.8855 2.52293 16.0655 2.75293C16.2555 2.98293 16.3355 3.27293 16.2855 3.56293L15.1355 10.1729C14.9155 11.6229 13.6755 12.6929 12.1855 12.6929L12.2055 12.7029Z"
                       ></path>
                     </svg>
-                    Ajouter au panier
+                    <span class="hidden md:block">Ajouter au panier</span>
+                    <span class="md:hidden">Ajouter </span>
                   </button>
                   <a
                     class="px-3.75 group/btn-fav relative rounded-full border border-red-300 bg-white py-4 text-red-400 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500 hover:text-white"
@@ -330,11 +294,11 @@
                   </a>
                 </div>
 
-                <div class="flex gap-2.5">
-                  <a href="#" class="btn-secondary basis-1/2 text-center">
+                <div class="flex flex-col md:flex-row gap-2.5">
+                  <a href="#" class="btn-secondary md:basis-1/2 text-center">
                     Continuer mes achats
                   </a>
-                  <a href="#" class="btn-secondary basis-1/2 text-center">
+                  <a href="#" class="btn-secondary md:basis-1/2 text-center">
                     Terminer mes achats
                   </a>
                 </div>
@@ -440,7 +404,7 @@
             Description
           </h3>
 
-          <div class="mx-auto w-10/12">
+          <div class="mx-auto lg:w-10/12">
             <p class="mb-7.5 text-lg font-normal leading-7 text-blue-500">
               Les <strong>Long Chips Thaï Sweet Chili</strong> sont des chips
               uniques à base de pommes de terre au bon goût de sauce Thai aigre
@@ -483,10 +447,10 @@
 
             <div class="col-span-2">
               <div class="grid md:grid-cols-2 xl:grid-cols-4">
-                {{> components/cart-product-item}} {{>
-                components/cart-product-item}} {{>
-                components/cart-product-item}} {{>
-                components/cart-product-item}}
+                {{> components/cart-product-item title="Long Chips Sour Cream & Onion" desc="Long Chips Sour Cream & Onion 75 gr x 20 pc" img="img/products/product_15.png" price="36,48"}}
+                {{> components/cart-product-item title="Long Chips Original" desc="Long Chips Original 'Mashed Patato' 75 gr x 20 pc" img="img/products/product_16.png" price="36,48"}}
+                {{> components/cart-product-item title="Long Chips Cheese & Spring Onion" desc="Long Chips Cheese & Spring Onion 75 gr x 20 pc" img="img/products/product_17.png" price="36,48"}}
+                {{> components/cart-product-item title="Long Chips Honey BBQ" desc="Long Chips Honey BBQ 75 gr x 20 pc" img="img/products/product_20.png" price="36,48"}}
               </div>
             </div>
 
@@ -511,8 +475,8 @@
           <div
             class="mx-auto grid gap-0 md:w-fit md:grid-cols-2 lg:place-items-center"
           >
-            {{> components/cart-product-item}} {{>
-            components/cart-product-item}}
+          {{> components/cart-product-item title="Doritos mild salsa" desc="Sauce Doritos mild salsa 280 gr x 6 pc" img="img/products/product_18.png" price="36,48"}}
+          {{> components/cart-product-item title="Doritos sour cream" desc="Sauce Doritos sour cream 280 gr x 6 pc" img="img/products/product_19.png" price="36,48"}}
           </div>
         </div>
       </section>
