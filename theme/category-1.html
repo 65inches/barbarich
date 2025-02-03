@@ -5,11 +5,13 @@
     {{> header}}
 
     <main>
-      <section class="pt-7.5 overflow-x-clip bg-gray-100 pb-[50px]">
+      <section
+        class="pt-7.5 overflow-x-clip bg-gray-100 pb-[15px] lg:pb-[50px]"
+      >
         <div class="container">
           <nav
             aria-label="Breadcrumb"
-            class="mb-[30px] inline-flex items-center gap-y-2 flex-wrap text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
+            class="mb-[30px] inline-flex flex-wrap items-center gap-y-2 text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
           >
             <a class="text-red-400 underline" href="/">Accueil</a>
             <span
@@ -50,28 +52,119 @@
           </div>
         </div>
 
-        <div class="container pt-15">
-          <div
-            class="grid grid-cols-[repeat(auto-fill,160px)] place-content-center gap-[30px] lg:grid-cols-[repeat(auto-fill,190px)]"
-          >
-            {{> components/cta-product title="En promotion"
-            img="img/categories/image_1.png"}} {{> components/cta-product
-            title="Calypso" img="img/categories/image_2.png" }} {{>
-            components/cta-product title="Pop corn sucré"
-            img="img/categories/image_3.png"}} {{> components/cta-product
-            title="Cocktails Le Coq" img="img/categories/image_4.png"}} {{>
-            components/cta-product title="Sauces et condiments"
-            img="img/categories/image_5.png"}} {{> components/cta-product
-            title="Long Chips" img="img/categories/image_6.png"}}
+        <section class="slider lg:mt-15 mb-7 mt-10 overflow-x-clip">
+          <div class="container">
+            <div class="gap-y-7.5 grid grid-cols-[repeat(2,auto)] md:gap-y-10">
+              <div class="col-span-2">
+                <div class="breakout-right">
+                  <div class="swiper md:mb-7.5 mb-5 lg:mb-10">
+                    <div class="swiper-wrapper gap-[30px]">
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Brets"
+                        img="img/categories/image_25.png" link="category.html"}}
+                      </div>
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Long Chips"
+                        img="img/categories/image_26.png" link="category.html"}}
+                      </div>
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Cheetos"
+                        img="img/categories/image_27.png" link="category.html"}}
+                      </div>
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Lay’s"
+                        img="img/categories/image_28.png" link="category.html"}}
+                      </div>
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Pringles"
+                        img="img/categories/image_29.png" link="category.html"}}
+                      </div>
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Crispy"
+                        img="img/categories/image_30.png" link="category.html"}}
+                      </div>
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Brets"
+                        img="img/categories/image_25.png" link="category.html"}}
+                      </div>
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Long Chips"
+                        img="img/categories/image_26.png" link="category.html"}}
+                      </div>
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Cheetos"
+                        img="img/categories/image_27.png" link="category.html"}}
+                      </div>
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Lay’s"
+                        img="img/categories/image_28.png" link="category.html"}}
+                      </div>
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Pringles"
+                        img="img/categories/image_29.png" link="category.html"}}
+                      </div>
+                      <div class="swiper-slide w-[160px] lg:w-[190px]">
+                        {{> components/cta-product title="Crispy"
+                        img="img/categories/image_30.png" link="category.html"}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-center gap-[30px]">
+                  <div class="swiper-scrollbar w-full"></div>
+                  <div
+                    class="gap-3.75 flex items-center max-md:col-span-2 max-md:text-center md:col-start-2 md:row-start-2 md:ml-auto"
+                  >
+                    <div class="gap-1.25 flex">
+                      <button
+                        class="swiper-button-prev px-3.75 shrink-0 rounded-full border border-red-300 py-4 text-red-400"
+                      >
+                        <svg
+                          width="15"
+                          height="16"
+                          viewBox="0 0 15 16"
+                          fill="none"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M8.556 14.367 1.889 8.003m0 0 6.667-6.364M1.889 8.003H15"
+                            stroke="#D01B56"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="swiper-button-next px-3.75 rounded-full border border-red-300 py-4 text-red-400"
+                      >
+                        <svg
+                          class="w-[15px]"
+                          viewBox="0 0 15 16"
+                          fill="none"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="m6.444 1.64 6.667 6.363m0 0-6.667 6.364m6.667-6.364H0"
+                            stroke="#D01B56"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </section>
 
       <div class="bg-gray-100">
         <section
-          class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip pt-10 bg-white rounded-t-3xl"
+          class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip rounded-t-3xl bg-white pt-10"
         >
-          <div class="container">
+          <div class="mb-15 container">
             <div class="mb-10 flex flex-col justify-between gap-5 lg:flex-row">
               <div class="flex items-center gap-[15px]">
                 <span class="text-sm font-normal leading-[14px] text-blue-500">
@@ -115,7 +208,7 @@
                     type="text"
                     id="search"
                     placeholder="Rechercher dans le résultat"
-                    class="xl:w-100 pr-15 w-full rounded-[40px] border border-gray-500 bg-white py-3 pl-5 font-regular text-blue-500 focus:outline-2 focus:outline-red-500 md:grow"
+                    class="xl:w-100 pr-15 font-regular w-full rounded-[40px] border border-gray-500 bg-white py-3 pl-5 text-blue-500 focus:outline-2 focus:outline-red-500 md:grow"
                   />
                   <span
                     class="absolute inset-y-0 end-5 grid place-content-center"
@@ -173,6 +266,8 @@
               img="img/products/product_32.png" price="36,48"}}
             </div>
           </div>
+
+          {{>components/pagination}}
         </section>
       </div>
 

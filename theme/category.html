@@ -9,7 +9,7 @@
         <div class="container">
           <nav
             aria-label="Breadcrumb"
-            class="mb-[30px] inline-flex items-center gap-y-2 flex-wrap text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
+            class="mb-[30px] inline-flex flex-wrap items-center gap-y-2 text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
           >
             <a class="text-red-400 underline" href="/">Accueil</a>
             <span
@@ -56,9 +56,9 @@
 
       <div class="bg-gray-100">
         <section
-          class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip pt-10 bg-white rounded-t-3xl"
+          class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip rounded-t-3xl bg-white pt-10"
         >
-          <div class="container">
+          <div class="mb-15 container">
             <div class="mb-10 flex flex-col justify-between gap-5 lg:flex-row">
               <div class="flex items-center gap-[15px]">
                 <span class="text-sm font-normal leading-[14px] text-blue-500">
@@ -102,7 +102,7 @@
                     type="text"
                     id="search"
                     placeholder="Rechercher dans le résultat"
-                    class="xl:w-100 pr-15 w-full rounded-[40px] border border-gray-500 bg-white py-3 pl-5 font-regular text-blue-500 focus:outline-2 focus:outline-red-500 md:grow"
+                    class="xl:w-100 pr-15 font-regular w-full rounded-[40px] border border-gray-500 bg-white py-3 pl-5 text-blue-500 focus:outline-2 focus:outline-red-500 md:grow"
                   />
                   <span
                     class="absolute inset-y-0 end-5 grid place-content-center"
@@ -161,6 +161,8 @@
               img="img/products/product_24.png" price="36,48"}}
             </div>
           </div>
+
+          {{>components/pagination}}
         </section>
       </div>
 
