@@ -52,7 +52,7 @@
                 </span>
 
                 <a href="category.html" 
-                  class="active [.active]:text-blue-500 cursor-pointer text-gray-500 transition duration-300 hover:text-blue-500"
+                  class="cursor-pointer text-gray-500 transition duration-300 hover:text-blue-500"
                 >
                   <svg
                     class="w-[24px] fill-current"
@@ -66,7 +66,7 @@
                 </a>
 
                 <a href="category-alt.html" 
-                  class="[.active]:text-blue-500 cursor-pointer text-gray-500 transition duration-300 hover:text-blue-500"
+                  class="active [.active]:text-blue-500  cursor-pointer text-gray-500 transition duration-300 hover:text-blue-500"
                 >
                   <svg
                     class="w-[25px] fill-current"
@@ -117,15 +117,15 @@
                 </div>
               </div>
             </div>
-            <div class="grid md:grid-cols-2 xl:grid-cols-4">
-              {{> components/cart-product-item title="Long Chips Bacon" desc="Long Chips Bacon 75 gr x 20 pc" img="img/products/product_21.png" price="36,48"}}
-              {{> components/cart-product-item title="Long Chips Sour Cream & Onion" desc="Long Chips Sour Cream & Onion 75 gr x 20 pc" img="img/products/product_15.png" price="36,48" number=20}}
-              {{> components/cart-product-item title="Long Chips Thaï Sweet Chilli" desc="Long Chips Thaï Sweet Chilli 75 gr x 20 pc" img="img/products/product_22.png" price="36,48"}}
-              {{> components/cart-product-item title="Long Chips Cheese & Spring Onion" desc="Long Chips Cheese & Spring Onion 75 gr x 20 pc" img="img/products/product_17.png" price="36,48" number=20}}
-              {{> components/cart-product-item title="Long Chips Honey BBQ" desc="Long Chips Honey BBQ 75 gr x 20 pc" img="img/products/product_20.png" price="36,48" number=20}}
-              {{> components/cart-product-item title="Long Chips Grilled Paprika" desc="Long Chips Grilled Paprika 75 gr x 20 pc" img="img/products/product_23.png" price="36,48"}}
-              {{> components/cart-product-item title="Long Chips Original" desc="Long Chips Original 'Mashed Patato' 75 gr x 20 pc" img="img/products/product_16.png" price="36,48" number=20}}
-              {{> components/cart-product-item title="Long Chips BBQ" desc="Long Chips Cheese & Spring Onion 75 gr x 20 pc" img="img/products/product_24.png" price="36,48"}}
+            <div class="grid grid-cols-1">
+              {{> components/cart-product-item-alt title="Long Chips Bacon" desc="Long Chips Bacon 75 gr x 20 pc" img="img/products/product_21.png" price="36,48" number=20 new=true cart=true}}
+              {{> components/cart-product-item-alt title="Long Chips Sour Cream & Onion" desc="Long Chips Sour Cream & Onion 75 gr x 20 pc" img="img/products/product_15.png" price="36,48" number=20}}
+              {{> components/cart-product-item-alt title="Long Chips Thaï Sweet Chilli" desc="Long Chips Thaï Sweet Chilli 75 gr x 20 pc" img="img/products/product_22.png" price="36,48"}}
+              {{> components/cart-product-item-alt title="Long Chips Cheese & Spring Onion" desc="Long Chips Cheese & Spring Onion 75 gr x 20 pc" img="img/products/product_17.png" price="36,48" number=20}}
+              {{> components/cart-product-item-alt title="Long Chips Honey BBQ" desc="Long Chips Honey BBQ 75 gr x 20 pc" img="img/products/product_20.png" price="36,48" backInStock=true}}
+              {{> components/cart-product-item-alt title="Long Chips Grilled Paprika" desc="Long Chips Grilled Paprika 75 gr x 20 pc" img="img/products/product_23.png" price="36,48"}}
+              {{> components/cart-product-item-alt title="Long Chips Original" desc="Long Chips Original 'Mashed Patato' 75 gr x 20 pc" img="img/products/product_16.png" price="36,48" number=20}}
+              {{> components/cart-product-item-alt title="Long Chips BBQ" desc="Long Chips Cheese & Spring Onion 75 gr x 20 pc" img="img/products/product_24.png" price="36,48"}}
             </div>
           </div>
 
