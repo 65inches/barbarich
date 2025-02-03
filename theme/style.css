@@ -965,14 +965,14 @@
   .h-\[0px\] {
     height: 0px;
   }
-  .h-\[1px\] {
-    height: 1px;
-  }
   .h-\[46px\] {
     height: 46px;
   }
   .h-\[120px\] {
     height: 120px;
+  }
+  .h-\[1px\] {
+    height: 1px;
   }
   .h-\[236px\] {
     height: 236px;
@@ -1064,8 +1064,8 @@
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
-  .w-\[2px\] {
-    width: 2px;
+  .w-\[630px\] {
+    width: 630px;
   }
   .w-\[6px\] {
     width: 6px;
@@ -1082,14 +1082,26 @@
   .w-\[13px\] {
     width: 13px;
   }
+  .w-\[140px\] {
+    width: 140px;
+  }
   .w-\[14px\] {
     width: 14px;
   }
   .w-\[15px\] {
     width: 15px;
   }
+  .w-\[160px\] {
+    width: 160px;
+  }
+  .w-\[16px\] {
+    width: 16px;
+  }
   .w-\[17px\] {
     width: 17px;
+  }
+  .w-\[18px\] {
+    width: 18px;
   }
   .w-\[19px\] {
     width: 19px;
@@ -1109,14 +1121,8 @@
   .w-\[25px\] {
     width: 25px;
   }
-  .w-\[160px\] {
-    width: 160px;
-  }
-  .w-\[16px\] {
-    width: 16px;
-  }
-  .w-\[18px\] {
-    width: 18px;
+  .w-\[2px\] {
+    width: 2px;
   }
   .w-\[30px\] {
     width: 30px;
@@ -1124,17 +1130,11 @@
   .w-\[82px\] {
     width: 82px;
   }
-  .w-\[140px\] {
-    width: 140px;
-  }
   .w-\[323px\] {
     width: 323px;
   }
   .w-\[390px\] {
     width: 390px;
-  }
-  .w-\[630px\] {
-    width: 630px;
   }
   .w-dvw {
     width: 100dvw;
@@ -1360,23 +1360,23 @@
   .gap-\[0px\] {
     gap: 0px;
   }
-  .gap-\[3px\] {
-    gap: 3px;
-  }
   .gap-\[5px\] {
     gap: 5px;
-  }
-  .gap-\[10px\] {
-    gap: 10px;
   }
   .gap-\[15px\] {
     gap: 15px;
   }
-  .gap-\[20px\] {
-    gap: 20px;
-  }
   .gap-\[30px\] {
     gap: 30px;
+  }
+  .gap-\[3px\] {
+    gap: 3px;
+  }
+  .gap-\[10px\] {
+    gap: 10px;
+  }
+  .gap-\[20px\] {
+    gap: 20px;
   }
   .gap-x-0 {
     column-gap: calc(var(--spacing) * 0);
@@ -1586,6 +1586,9 @@
   }
   .bg-aquamarine-400 {
     background-color: var(--color-aquamarine-400);
+  }
+  .bg-blue-100 {
+    background-color: var(--color-blue-100);
   }
   .bg-blue-300 {
     background-color: var(--color-blue-300);
@@ -2092,6 +2095,9 @@
   }
   .text-red-400 {
     color: var(--color-red-400);
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-white {
     color: var(--color-white);
@@ -3837,6 +3843,12 @@
   .xl\:items-center {
     @media (width >= 1320px) {
       align-items: center;
+    }
+  }
+  .xl\:text-3xl {
+    @media (width >= 1320px) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
   .xl\:text-\[50px\] {
