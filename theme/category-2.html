@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   {{> head}}
+  <script> var theme = 'shop.html';</script>
   <body class="page-product">
     {{> header}}
 
@@ -25,14 +26,14 @@
 
         <div class="container">
           <div class="flex flex-col gap-5 lg:flex-row">
-            <div class="lg:w-4/12">
+            <div class="lg:w-5/12">
               <h1
                 class="text-[40px] font-semibold leading-none text-blue-500 xl:text-[50px]"
               >
                 Epicerie salée
               </h1>
             </div>
-            <div class="lg:w-8/12">
+            <div class="lg:w-7/12">
               <p class="leading-7s mt-5 text-lg font-normal text-blue-500">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint
@@ -141,11 +142,11 @@
             </div>
             <div class="grid md:grid-cols-2 xl:grid-cols-4">
               {{> components/cart-product-item title="Plano 1M Snacks salés"
-              desc="Plano 1M Snacks salé" img="img/products/product_33.png"
-              price="60,75"}} {{> components/cart-product-item title="Colis
+              desc="Plano 1M Snacks salé" img="img/products/product_33.png" notAbsolute=true 
+              }} {{> components/cart-product-item title="Colis
               Crispy snacks 3 + 1 GRATUIT" desc="Colis Crispy snacks 3 + 1
-              GRATUIT" img="img/products/product_34.png" price="60,75" number=64
-              new=true }}
+              GRATUIT" img="img/products/product_34.png"  number=64
+              new=true notAbsolute=true }}
             </div>
           </div>
         </section>

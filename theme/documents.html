@@ -109,7 +109,7 @@
                 </a>
                 <a
                   href=""
-                  class="document-nav-item grow gap-2.5 py-[15px] transition duration-300 hover:text-red-400"
+                  class="active document-nav-item grow gap-2.5 py-[15px] transition duration-300 hover:text-red-400"
                 >
                   <span class="inline-block w-fit">Factures</span>
                 </a>
@@ -125,43 +125,45 @@
         </div>
       </section>
 
-      <section class="lg:mb-15 lg:pt-15 mb-10 w-full overflow-x-hidden pt-10">
-        <div class="container">
-          <div class="mb-7.5 overflow-x-auto lg:mb-10">
-            <table
-              class="w-full table-auto whitespace-nowrap border-b border-gray-300 text-left leading-none text-blue-800"
-            >
-              <thead class="text-semibold text-xs uppercase tracking-[1.2px]">
-                <tr>
-                  <th class="px-5 py-3 pb-5">DATE</th>
-                  <th class="px-5 py-3 pb-5">ÉCHÉANCE</th>
-                  <th class="px-5 py-3 pb-5">N° COMMANDE</th>
-                  <th class="px-5 py-3 pb-5">N° DOCUMENT</th>
-                  <th class="px-5 py-3 pb-5">MA RÉFÉRENCE</th>
-                  <th class="px-5 py-3 pb-5">TOTAL HTVA</th>
-                  <th class="px-5 py-3 pb-5">SOLDE HTVA</th>
-                  <th class="px-5 py-3 pb-5"></th>
-                </tr>
-              </thead>
-              <tbody class="">
-                {{> components/table-row class="bg-gray-300" date="24.11.2024"
-                endDate="25.12.2024" orderNumber="100048645"
-                docNumber="986451000" reference="-" total="519,49" htva="519,49"
-                }} {{> components/table-row date="24.11.2024"
-                endDate="25.12.2024" orderNumber="100048645"
-                docNumber="986451000" reference="-" total="519,49" htva="0" }}
-                {{> components/table-row date="24.11.2024" endDate="25.12.2024"
-                orderNumber="100048645" docNumber="986451000" reference="-"
-                total="519,49" htva="0" }} {{> components/table-row
-                date="24.11.2024" endDate="25.12.2024" orderNumber="100048645"
-                docNumber="986451000" reference="-" total="519,49" htva="0" }}
-              </tbody>
-            </table>
-          </div>
+      <div class="bg-gray-100">
+        <section class="lg:mb-15 lg:pt-15 mb-10 w-full overflow-x-hidden pt-10 rounded-t-3xl bg-white">
+          <div class="container">
+            <div class="mb-7.5 overflow-x-auto lg:mb-10">
+              <table
+                class="w-full table-auto whitespace-nowrap border-b border-gray-300 text-left leading-none text-blue-800"
+              >
+                <thead class="text-semibold text-xs uppercase tracking-[1.2px]">
+                  <tr>
+                    <th class="px-5 py-3 pb-5">DATE</th>
+                    <th class="px-5 py-3 pb-5">ÉCHÉANCE</th>
+                    <th class="px-5 py-3 pb-5">N° COMMANDE</th>
+                    <th class="px-5 py-3 pb-5">N° DOCUMENT</th>
+                    <th class="px-5 py-3 pb-5">MA RÉFÉRENCE</th>
+                    <th class="px-5 py-3 pb-5">TOTAL HTVA</th>
+                    <th class="px-5 py-3 pb-5">SOLDE HTVA</th>
+                    <th class="px-5 py-3 pb-5"></th>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  {{> components/table-row class="bg-gray-300" date="24.11.2024"
+                  endDate="25.12.2024" orderNumber="100048645"
+                  docNumber="986451000" reference="-" total="519,49" htva="519,49"
+                  }} {{> components/table-row date="24.11.2024"
+                  endDate="25.12.2024" orderNumber="100048645"
+                  docNumber="986451000" reference="-" total="519,49" htva="0" }}
+                  {{> components/table-row date="24.11.2024" endDate="25.12.2024"
+                  orderNumber="100048645" docNumber="986451000" reference="-"
+                  total="519,49" htva="0" }} {{> components/table-row
+                  date="24.11.2024" endDate="25.12.2024" orderNumber="100048645"
+                  docNumber="986451000" reference="-" total="519,49" htva="0" }}
+                </tbody>
+              </table>
+            </div>
 
-          {{>components/pagination}}
-        </div>
-      </section>
+            {{>components/pagination}}
+          </div>
+        </section>
+      </div>
 
       {{> components/ctas/reassurance}}
     </main>

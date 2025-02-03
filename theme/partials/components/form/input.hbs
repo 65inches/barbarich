@@ -4,7 +4,7 @@
     class='mb-2.5 block font-medium leading-none text-blue-500'
     for='{{id}}'
   >
-    {{label}}
+    {{label}} {{#if mandatory}}<span class="text-red-400">*</span>{{/if}}
   </label>
 
   <input

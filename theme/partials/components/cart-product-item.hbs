@@ -1,6 +1,8 @@
-<article
-  class='group relative flex flex-col items-center justify-start gap-2.5 border border-gray-100 bg-white p-[25px] transition duration-300 hover:border-gray-500'
->
+{{#if notAbsolute }}
+<article class='group relative flex flex-col items-center justify-start gap-2.5 border border-gray-100 bg-white p-[25px] transition duration-300 hover:translate-y-[-5px]  hover:border-gray-500 '>
+{{else}}
+<article  class='group relative flex flex-col items-center justify-start gap-2.5 border border-gray-100 bg-white p-[25px] transition duration-300 hover:translate-y-[-5px]  hover:border-gray-500  hover:absolute '>
+{{/if}}
   <a href='product.html' class='absolute inset-0 z-[1] block'></a>
   <div class='h-50 relative flex w-full items-center justify-center'>
     {{#if number}}
@@ -42,36 +44,45 @@
       >
         {{title}}
       </h4>
-      <span class='text-sm font-normal leading-[18px] text-blue-800 lg:h-[36px] block'>
+      <span class='text-sm font-normal leading-[18px] text-blue-800 h-[36px] block'>
         {{desc}}
       </span>
     </div>
-    <div class='flex w-full items-center justify-between mb-[-5px]'>
+    <div class='flex w-full items-center justify-between '>
+     
       <div class='relative'>
-        <span class='block text-[22px] font-semibold leading-snug text-red-400'>
-          {{price}} €
+        
+        <span class='block text-[22px] font-semibold leading-snug text-red-400 relative'>
+          {{#if price}}
+            {{price}} €
+            {{#if cart}}
+              <div
+                class='bg-aquamarine-400 absolute top-[5px] ml-2 inline-flex h-5 items-center justify-start gap-[3px] rounded-[40px] px-1.5 py-1 text-blue-800'
+              >
+                <svg class='w-[11px] fill-current' viewBox='0 0 11 10' fill='none'>
+                  <path
+                    d='M6.85931 9.22168C6.85931 9.65293 7.20914 10.0029 7.64018 10.0029C8.07123 10.0029 8.42106 9.65293 8.42106 9.22168C8.42106 8.79043 8.07123 8.44043 7.64018 8.44043C7.20914 8.44043 6.85931 8.79043 6.85931 9.22168ZM3.29852 9.22168C3.29852 9.65293 3.64835 10.0029 4.0794 10.0029C4.51044 10.0029 4.86027 9.65293 4.86027 9.22168C4.86027 8.79043 4.51044 8.44043 4.0794 8.44043C3.64835 8.44043 3.29852 8.79043 3.29852 9.22168ZM4.10438 7.94043H7.63394L7.62769 7.95293C8.55849 7.95293 9.33312 7.28418 9.47055 6.37793L9.73917 4.82793C9.80164 4.48418 9.57051 4.15918 9.23317 4.10293C8.88958 4.04668 8.56474 4.27168 8.50852 4.60918L8.23989 6.17168C8.19617 6.47168 7.93379 6.69668 7.63394 6.69668H4.10438C3.77329 6.69668 3.49218 6.45918 3.42971 6.13418L3.30477 5.45293V5.44043L2.45518 1.22793C2.32399 0.51543 1.69929 0.00292969 0.980887 0.00292969H0.830959C0.487374 0.00292969 0.200012 0.28418 0.200012 0.62793C0.200012 0.97168 0.481127 1.25293 0.824712 1.25293H0.97464C1.09958 1.25293 1.19953 1.34043 1.22452 1.46543L2.07411 5.68418L2.19905 6.35918C2.37397 7.27793 3.17358 7.94043 4.10438 7.94043ZM5.75984 4.34036C5.87853 4.45911 6.03471 4.51536 6.19088 4.51536C6.34706 4.51536 6.50323 4.45911 6.62193 4.34036L10.0078 1.07786C10.2577 0.840361 10.2639 0.446611 10.0265 0.196611C9.78915 -0.0533893 9.39559 -0.0596393 9.14571 0.177861L6.18464 3.02161L5.1164 1.99036C4.87277 1.75286 4.47296 1.75911 4.23557 2.00911C3.99819 2.25286 4.00444 2.65286 4.25431 2.89036L5.75984 4.34036Z'
+                  />
+
+                </svg>
+
+                <div
+                  class="text-Blue-Dark font-['Outfit'] text-[11px] font-bold uppercase leading-3"
+                >3</div>
+              </div>
+            {{/if}}
+          {{ else}}
+          &nbsp;
+          {{/if}}
         </span>
-        <span class='text-xs font-normal leading-3 text-blue-800'>
+        <span class='text-xs block font-normal leading-2 text-blue-800 -mt-[0px]'>
+          {{#if price}}
           TVA non incluse
+          {{ else}}
+          &nbsp;
+          {{/if}}
         </span>
-
-        {{#if cart}}
-        <div
-          class='bg-aquamarine-400 absolute top-[5px] inline-flex h-5 items-center justify-start gap-[3px] rounded-[40px] px-1.5 py-1 text-blue-800'
-        >
-          <svg class='w-[11px] fill-current' viewBox='0 0 11 10' fill='none'>
-            <path
-              d='M6.85931 9.22168C6.85931 9.65293 7.20914 10.0029 7.64018 10.0029C8.07123 10.0029 8.42106 9.65293 8.42106 9.22168C8.42106 8.79043 8.07123 8.44043 7.64018 8.44043C7.20914 8.44043 6.85931 8.79043 6.85931 9.22168ZM3.29852 9.22168C3.29852 9.65293 3.64835 10.0029 4.0794 10.0029C4.51044 10.0029 4.86027 9.65293 4.86027 9.22168C4.86027 8.79043 4.51044 8.44043 4.0794 8.44043C3.64835 8.44043 3.29852 8.79043 3.29852 9.22168ZM4.10438 7.94043H7.63394L7.62769 7.95293C8.55849 7.95293 9.33312 7.28418 9.47055 6.37793L9.73917 4.82793C9.80164 4.48418 9.57051 4.15918 9.23317 4.10293C8.88958 4.04668 8.56474 4.27168 8.50852 4.60918L8.23989 6.17168C8.19617 6.47168 7.93379 6.69668 7.63394 6.69668H4.10438C3.77329 6.69668 3.49218 6.45918 3.42971 6.13418L3.30477 5.45293V5.44043L2.45518 1.22793C2.32399 0.51543 1.69929 0.00292969 0.980887 0.00292969H0.830959C0.487374 0.00292969 0.200012 0.28418 0.200012 0.62793C0.200012 0.97168 0.481127 1.25293 0.824712 1.25293H0.97464C1.09958 1.25293 1.19953 1.34043 1.22452 1.46543L2.07411 5.68418L2.19905 6.35918C2.37397 7.27793 3.17358 7.94043 4.10438 7.94043ZM5.75984 4.34036C5.87853 4.45911 6.03471 4.51536 6.19088 4.51536C6.34706 4.51536 6.50323 4.45911 6.62193 4.34036L10.0078 1.07786C10.2577 0.840361 10.2639 0.446611 10.0265 0.196611C9.78915 -0.0533893 9.39559 -0.0596393 9.14571 0.177861L6.18464 3.02161L5.1164 1.99036C4.87277 1.75286 4.47296 1.75911 4.23557 2.00911C3.99819 2.25286 4.00444 2.65286 4.25431 2.89036L5.75984 4.34036Z'
-            />
-
-          </svg>
-
-          <div
-            class="text-Blue-Dark font-['Outfit'] text-[11px] font-bold uppercase leading-3"
-          >3</div>
-        </div>
-        {{/if}}
-
+        
       </div>
 
       {{#if backInStock}}
@@ -110,24 +121,24 @@
     >
       <div class='flex w-full items-center justify-between'>
         <span class='font-semibold'> Prix unitaire HTVA </span>
-        <span class=''> 1,23 € </span>
+        <span class=''> {{#if price}}1,23{{/if}} € </span>
       </div>
       <div class='flex w-full items-center justify-between'>
         <div class='font-semibold'>Marge</div>
-        <div class=''>5,76 %</div>
+        <div class=''>{{#if price}}5,76{{/if}} %</div>
       </div>
       <div class='flex w-full items-center justify-between'>
         <div class='font-semibold'>Prix de vente conseillé</div>
-        <span class='font-semibold'> 1,39 € </span>
+        <span class='font-semibold'> {{#if price}}1,39{{/if}} € </span>
       </div>
     </div>
   </div>
 
-  <div class='relative z-[2] flex w-full items-center gap-2.5'>
+  <div class='relative z-[2] flex w-full items-center gap-2.5 mt-[5px]'>
     <div
-      class='custom-number-input w-26 {{#if backInStock}} disabled {{/if}} [.disabled]:border-gray-100 group/input-number rounded-[40px] border border-red-300'
+      class='custom-number-input {{#if backInStock}} disabled {{/if}} [.disabled]:border-gray-100 group/input-number rounded-[40px] border border-red-300'
     >
-      <div class='relative flex w-full shrink-0 items-center gap-2.5 px-4 py-3'>
+      <div class='relative flex w-full shrink-0 items-center px-4 py-3'>
         <button
           data-action='decrement'
           class='h-full cursor-pointer text-red-400 outline-none transition-all duration-300 hover:text-blue-500 disabled:text-gray-100' 
@@ -139,9 +150,9 @@
         </button>
         <input
           type='number'
-          class='text-md md:text-basecursor-default flex w-[30px] items-center text-center font-semibold text-red-400 outline-none focus:outline-none group-[.disabled]/input-number:text-gray-100'
+          class='text-md md:text-basecursor-default flex w-[30px] items-center text-center font-semibold text-red-400 outline-none focus:outline-none group-[.disabled]/input-number:text-gray-100 mx-[10px]' 
           name='custom-input-number'
-          value='0'
+          value='1'
         />
         <button
           data-action='increment'

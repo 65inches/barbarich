@@ -3,8 +3,10 @@
     <a href="category-2.html" class='transition duration-150 group-hover/sub-2:translate-x-2.5'>
       {{value}}
     </a>
-
-    <svg viewBox='0 0 17 12' class='w-[17px] stroke-current' aria-hidden='true'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12" class='w-[19px] stroke-current hidden group-hover/sub-2:block'>
+      <path d="M13.103 1.45752L17.8651 6.00298M17.8651 6.00298L13.1031 10.5484M17.8651 6.00298H0.5" stroke-width="2" stroke-linejoin="round"/>
+    </svg>
+    <svg viewBox='0 0 17 12' class='w-[17px] stroke-current block group-hover/sub-2:hidden' aria-hidden='true'>
       <path
         d='M11.103 1.45761L15.8651 6.00308M15.8651 6.00308L11.1031 10.5485M15.8651 6.00308H6.5'
       
@@ -15,17 +17,17 @@
   </span>
 
   <div
-    class='absolute left-full top-0 hidden w-80 flex-col items-start justify-start border-r border-gray-100 py-8 font-medium leading-none text-blue-800 group-hover/sub-2:flex'
+    class='absolute h-full left-full top-0 hidden w-80 flex-col items-start justify-start border-r border-gray-100 py-8 font-medium leading-none text-blue-800 group-hover/sub-2:flex'
   >
     {{> components/nav/sub-submenu-item value="Soda"}}
     <a
-      href='#'
+      href='category-1.html'
       class='px-10 py-[7.5px] transition duration-150 hover:translate-x-2.5 hover:text-red-400'
     >
       Energisants
     </a>
     <a
-      href='#'
+      href='category-1.html'
       class='px-10 py-[7.5px] transition duration-150 hover:translate-x-2.5 hover:text-red-400'
     >Mocktails
     </a>

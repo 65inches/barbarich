@@ -35,9 +35,7 @@ class MenuMobile {
   }
 
   openPanel(target) {
-    console.log(target);
     const submenu = this.el.querySelector(`${target}`);
-    console.log(submenu);
     if (submenu) {
       submenu.classList.add('menu-panel--opened');
       this.currentPanels.push(submenu);
@@ -65,7 +63,6 @@ class MenuMobile {
   }
 
   _initAnchors() {
-    console.log(this.buttons);
     this.buttons.forEach((link) => {
       link.addEventListener('click', (event) => {
         event.preventDefault();

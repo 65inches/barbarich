@@ -1,15 +1,15 @@
-<div class='mb-[25px] w-full'>
+<div class='{{#if small}} mb-[5px] {{else}} mb-[25px] {{/if}} w-full'>
 
   <label class='block font-medium leading-none text-blue-500' for='{{id}}'>
-    {{label}}
+    {{label}} {{#if mandatory}}<span class="text-red-400">*</span>{{/if}}
   </label>
 
   <div data-id='idd' class='select select-form mb-2.5'>
     <input id='idd' type='text' placeholder='Choisissez...' readonly />
     <ul class='options'>
-      <li class='option'>Choice 1</li>
-      <li class='option'>Choice 2</li>
-      <li class='option'>Choice 3</li>
+      <li class='option text-blue-500 hover:text-white'>Choice 1</li>
+      <li class='option text-blue-500 hover:text-white'>Choice 2</li>
+      <li class='option text-blue-500 hover:text-white'>Choice 3</li>
     </ul>
   </div>
 </div>

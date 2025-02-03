@@ -52,10 +52,27 @@
                       Mot de passe
                     </label>
 
-                    <input
-                      placeholder="•••••••••••••••••"
-                      class="w-full rounded-md border border-gray-500 bg-gray-100 px-5 py-4 font-normal leading-none text-blue-500"
-                    />
+                    <div class="relative">
+                      <input
+                        placeholder="•••••••••••••••••" 
+                        type="password" 
+                        class="w-full rounded-md border border-gray-500 bg-gray-100 px-5 py-4 font-normal leading-none text-blue-500"
+                      />
+                      <span
+                        class="absolute inset-y-0 right-4 flex items-center cursor-pointer text-red-500"
+                      >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                        <g clip-path="url(#clip0_3479_17022)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.18 8.87293C0.82 10.3629 3.36 15.2529 9 15.2529V15.2429C14.63 15.2429 17.17 10.3629 17.82 8.86293C18.06 8.30293 18.06 7.69293 17.82 7.13293C17.17 5.63293 14.63 0.75293 9 0.75293C3.37 0.75293 0.83 5.64293 0.18 7.13293C-0.06 7.70293 -0.06 8.31293 0.18 8.87293ZM2.02 7.92293C2.69 6.37293 4.71 2.75293 9 2.75293L9.01 2.76293C13.29 2.76293 15.32 6.37293 15.99 7.93293C16.01 7.98293 16.01 8.03293 15.99 8.08293C15.31 9.63293 13.41 13.2529 9 13.2529C4.59 13.2529 2.54 9.29293 2.02 8.07293C2 8.02293 2 7.97293 2.02 7.92293ZM4.79999 8.01282C4.79999 10.2828 6.67999 12.1328 8.99999 12.1328C11.32 12.1328 13.2 10.2828 13.2 8.01282C13.2 5.74282 11.32 3.89282 8.99999 3.89282C6.67999 3.89282 4.79999 5.74282 4.79999 8.01282ZM6.79999 8.00282C6.79999 6.83282 7.78999 5.88282 8.99999 5.88282C10.21 5.88282 11.2 6.83282 11.2 8.00282C11.2 9.17282 10.21 10.1228 8.99999 10.1228C7.78999 10.1228 6.79999 9.17282 6.79999 8.00282Z" fill="#324E73"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_3479_17022">
+                        <rect width="18" height="16" fill="white" transform="translate(0 0.00292969)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div class="flex gap-3">
@@ -219,7 +236,7 @@
             Vous avez déjà un compte ?
           </a>
 
-          <a href="account-3.html" class="btn-primary max-md:w-full">
+          <a href="account-2.html" class="btn-primary max-md:w-full">
             Suivant
 
             <svg

@@ -3,14 +3,47 @@ import MenuMobile from './menu-mobile';
 import Drawer from './menu-drawer';
 import Select from './select';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const params = new URLSearchParams(window.location.search);
-  const isSigned = params.get('signed'); // "true" ou null
+document.querySelectorAll('.scroll').forEach(function(scrollElement) {
+  scrollElement.addEventListener('click', function(event) {
+    event.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
 
-  if (isSigned) {
+document.addEventListener('DOMContentLoaded', () => {
+
+  var currentUrl;
+  if (typeof theme !== 'undefined' && theme) {
+    currentUrl = theme;
+  } else {
+    currentUrl = window.location.href;
+  }
+  currentUrl = currentUrl.split('/').pop();
+  var menuItems = document.querySelectorAll('nav a');
+ 
+  menuItems.forEach(function(item) {
+    var href = item.href.split('/').pop();
+    if (!item.classList.contains('nav-item')) {
+      item = item.parentElement;
+    }
+    if (href === currentUrl) {
+      item.classList.add('active');
+    }
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const isSigned = params.get('guest'); // "true" ou null
+
+  if (!isSigned) {
     document.getElementById('dropdown-guest').remove();
+    document.getElementById('cart-guest').remove();
   } else {
     document.getElementById('dropdown-signed').remove();
+    document.getElementById('cart-signed').remove();
   }
 
   const menuMobile = new MenuMobile('#nav-mobile');
@@ -164,28 +197,16 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdownButton.setAttribute('aria-expanded', isDropdownOpen);
   }
 
-  dropdownButton.addEventListener('click', toggleDropdown);
+  dropdownButton.addEventListener('mouseenter', () => toggleDropdown(true));
+  dropdownButton.addEventListener('mouseleave', () => toggleDropdown(false));
+  
+  dropdownMenu.addEventListener('mouseenter', () => toggleDropdown(true));
+  dropdownMenu.addEventListener('mouseleave', () => toggleDropdown(false));
 
   dropdownButtonClose?.addEventListener('click', () => {
-    console.log('aezaze');
     dropdownMenu.classList.add('hidden');
     dropdownButton.setAttribute('aria-expanded', 'false');
     isDropdownOpen = false;
-  });
-
-  window.addEventListener('click', (event) => {
-    if (
-      !dropdownButton.contains(event.target) &&
-      !dropdownMenu.contains(event.target)
-    ) {
-      if (isDropdownOpen) {
-        requestAnimationFrame(() => {
-          dropdownMenu.classList.add('hidden');
-          dropdownButton.setAttribute('aria-expanded', 'false');
-          isDropdownOpen = false;
-        });
-      }
-    }
   });
 
   // Mega menu shop

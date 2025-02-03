@@ -182,7 +182,7 @@
         <span class="sr-only">Close menu</span>
       </button>
 
-      <div class="mt-2.5 px-[24px] md:px-10">
+      <div class="mt-2.5 px-[24px] md:px-10 pb-[20px]">
         <span
           class="mb-2.5 block text-xs font-bold uppercase leading-snug tracking-wide text-red-400"
         >
@@ -208,45 +208,46 @@
           </span>
 
           {{> components/form/radio label_a="Un particulier" label_b="Une
-          société" id="je_suis" }}
+          société" id="je_suis" mandatory=true }}
         </div>
         <!-- -->
-        {{>components/form/input label="Nom de la société" id="societe"
+        {{>components/form/input-small-margin label="Nom de la société" id="societe"
         value=""}}
         <!-- -->
-        {{>components/form/input label="N° de TVA" id="tva" value=""}}
+        {{>components/form/input-small-margin label="N° de TVA" id="tva" value="" mandatory=true}}
         <!-- -->
 
-        {{>components/form/select label="Civilité" id="civilite" value=""}}
-        {{>components/form/input label="Prénom" id="prenom" value=""}}
+        {{>components/form/select label="Civilité" id="civilite" value="" small=true mandatory=true }}
+
+        {{>components/form/input-small-margin label="Prénom" id="prenom" value="" mandatory=true}}
         <!-- -->
-        {{>components/form/input label="Nom de famille" id="nom_famille"
-        value=""}}
+        {{>components/form/input-small-margin label="Nom de famille" id="nom_famille"
+        value="" mandatory=true}}
         <!-- -->
-        {{>components/form/input label="Téléphone" id="telephone" value=""
+        {{>components/form/input-small-margin label="Téléphone" id="telephone" value=""
         type="tel"}}
         <!-- -->
         {{>components/form/input label="Mobile" id="mobile" value=""
         type="tel"}}
 
         <h2 class="mb-5 text-3xl font-semibold leading-9 text-blue-500">
-          Mon profil
+          Adresse de livraison
         </h2>
 
-        {{>components/form/input label="Pays" id="pays_facturation" value=""
-        type="select"}}
+        {{>components/form/input-small-margin label="Pays" id="pays_facturation" value=""
+        type="select" mandatory=true}}
 
         <!-- -->
-        {{>components/form/input label="Rue" id="rue_livraison" value=""}}
+        {{>components/form/input-small-margin label="Rue" id="rue_livraison" value="" mandatory=true}}
         <!-- -->
 
-        {{>components/form/input label="N° & Boîte" id="boite_livraison"
-        value=""}}
+        {{>components/form/input-small-margin label="N° & Boîte" id="boite_livraison"
+        value="" mandatory=true}}
         <!-- -->
-        {{>components/form/input label="Code postal" id="code_postal_livraison"
-        value=""}}
+        {{>components/form/input-small-margin label="Code postal" id="code_postal_livraison"
+        value="" mandatory=true}}
         <!-- -->
-        {{>components/form/input label="Localité" id="localite_livraison"
+        {{>components/form/input-small-margin label="Localité" id="localite_livraison" mandatory=true
         value=""}}
         <!-- -->
 
@@ -255,21 +256,21 @@
         </h2>
         <div class="mb-5">
           {{> components/form/radio label_a="Facturation à mon adresse de
-          livraison" label_b="Facturation à une autre adresse" id="facturation"
+          livraison" label_b="Facturation à une autre adresse" id="facturation" mandatory=true 
           }}
         </div>
 
         <!-- -->
-        {{>components/form/input label="Rue" id="rue_facturation" value=""}}
+        {{>components/form/input-small-margin label="Rue" id="rue_facturation" value="" mandatory=true}}
         <!-- -->
 
-        {{>components/form/input label="N° & Boîte" id="boite_facturation"
-        value=""}}
+        {{>components/form/input-small-margin label="N° & Boîte" id="boite_facturation"
+        value="" mandatory=true}}
         <!-- -->
-        {{>components/form/input label="Code postal"
-        id="code_postal_facturation" value=""}}
+        {{>components/form/input-small-margin label="Code postal"
+        id="code_postal_facturation" value="" mandatory=true}}
         <!-- -->
-        {{>components/form/input label="Localité" id="localite_facturation"
+        {{>components/form/input-small-margin label="Localité" id="localite_facturation" mandatory=true 
         value=""}}
 
         <p class="mb-5 text-xs font-normal leading-3 text-blue-800">

@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   {{> head}}
+  <script> var theme = 'shop.html';</script>
   <body class="page-product">
     {{> header}}
 
     <main>
+
+      <section class="pt-7.5 overflow-x-clip bg-gray-100 pb-[50px]">
+        <div class="container">
+          <nav
+            aria-label="Breadcrumb"
+            class="mb-[30px] inline-flex flex-wrap items-center gap-y-2 text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
+          >
+            <a class="text-red-400 underline" href="/">Accueil</a>
+            <span
+              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
+            ></span>
+
+            <div>Boutique</div>
+          </nav>
+        </div>
+
+        <div class="container">
+          <div class="flex flex-col gap-5 lg:flex-row">
+            <div class="lg:w-5/12">
+              <h1
+                class="text-[40px] font-semibold leading-none text-blue-500 xl:text-[50px]"
+              >
+                Long Chips
+              </h1>
+            </div>
+            <div class="lg:w-7/12">
+              <p class="leading-7s mt-5 text-lg font-normal text-blue-500">
+                Nous offrons <strong>une gamme de plus de 1.200 produits</strong> nationaux et d'importation sélectionnés avec soin par notre service achat. Parmi ce large éventail de denrées alimentaires se retrouvent des marques originales comme les chips Bret’s, les glaçons Polaretti ou des articles importés d’enseignes connues, comme Coca-Cola, Fanta, M&M’s, Reese’s… 
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div class="bg-gray-100">
         <section class="py-15 bg-white overflow-x-clip rounded-t-3xl">

@@ -15,7 +15,7 @@
             <span
               class="size-1 mx-2 inline-block rounded-full bg-gray-500"
             ></span>
-            <div>A propos de nous</div>
+            <div>Contact</div>
           </nav>
         </div>
 
@@ -117,7 +117,7 @@
                       <p
                         class="mb-2.5 text-lg font-normal leading-snug text-blue-800"
                       >
-                        <strong>Tél.</strong> Tél. +32 87 33 60 45<br />
+                        <strong>Tél.</strong> +32 87 33 60 45<br />
                         <a
                           class="text-red-400 underline"
                           href="mailto:info@barbarich.be"
@@ -163,111 +163,112 @@
           </div>
         </div>
       </section>
-      <section class="pt-7.5 overflow-x-clip pb-2.5 lg:pb-[50px]">
-        <div class="container">
-          <div class="flex flex-col gap-5 lg:flex-row">
-            <div class="lg:w-4/12">
-              <h1
-                class="mb-5 text-[40px] font-semibold leading-[1.15] text-blue-500 xl:max-w-[10ch]"
-              >
-                Vous préférez nous écrire ?
-              </h1>
-
-              <p class="text-lg leading-7 text-blue-500 xl:max-w-[25ch]">
-                Contactez-nous à tout moment et nous vous répondrons le plus
-                rapidement possible.
-              </p>
-            </div>
-            <div class="lg:w-8/12">
-              <div class="flex flex-col lg:flex-row lg:gap-[30px]">
-                <!-- prettier-ignore -->
-                {{>components/form/input label="Prénom" id="prenom" value=""}}
-                {{>components/form/input label="Nom de famille" id="nom" value=""}}
-              </div>
-
-              <div class="flex flex-col lg:flex-row lg:gap-[30px]">
-                <!-- prettier-ignore -->
-                {{>components/form/input label="Adresse e-mail" id="email" value=""}}
-                {{>components/form/input label="Nom de tel" id="tel" value=""}}
-              </div>
-              <!-- prettier-ignore -->
-              {{>components/form/input label="Objet" id="objet" value=""}}
-
-              <div class="mb-2.5 w-full">
-                <label
-                  class="mb-2.5 block font-medium leading-none text-blue-500"
-                  for="tel"
+      <div class="bg-gray-100">
+        <section class="pt-15 overflow-x-clip pb-2.5 lg:pb-[50px] rounded-t-3xl bg-white">
+          <div class="container">
+            <div class="flex flex-col gap-5 lg:flex-row">
+              <div class="lg:w-4/12">
+                <h1
+                  class="mb-5 text-[40px] font-semibold leading-[1.15] text-blue-500 xl:max-w-[10ch]"
                 >
-                  Nom de tel
-                </label>
+                  Vous préférez nous écrire ?
+                </h1>
 
-                <textarea
-                  id="tel"
-                  class="py-3.25 min-h-40 w-full gap-2.5 rounded-md border border-gray-500 bg-white px-5 font-normal leading-none text-blue-500"
-                  placeholder=""
-                >
-                </textarea>
+                <p class="text-lg leading-7 text-blue-500 xl:max-w-[25ch]">
+                  Contactez-nous à tout moment et nous vous répondrons le plus
+                  rapidement possible.
+                </p>
               </div>
+              <div class="lg:w-8/12">
+                <div class="flex flex-col lg:flex-row lg:gap-[30px]">
+                  <!-- prettier-ignore -->
+                  {{>components/form/input label="Prénom" id="prenom" value="" mandatory=true }}
+                  {{>components/form/input label="Nom de famille" id="nom" value="" mandatory=true }}
+                </div>
 
-              <div class="mb-5 flex gap-3">
-                <div class="flex h-6 shrink-0 items-center">
-                  <div class="size-4 group grid grid-cols-1">
-                    <input
-                      id="legals"
-                      aria-describedby="legals-description"
-                      name="legals"
-                      type="checkbox"
-                      class="forced-colors:appearance-auto focus-visible:outline-aquamarine-400 col-start-1 row-start-1 h-4 w-4 appearance-none rounded-[3px] rounded-sm border border-gray-500 bg-transparent focus-visible:outline-2 focus-visible:outline-offset-2 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100"
-                    />
+                <div class="flex flex-col lg:flex-row lg:gap-[30px]">
+                  <!-- prettier-ignore -->
+                  {{>components/form/input label="Adresse e-mail" id="email" value="" mandatory=true }}
+                  {{>components/form/input label="Numéro de tél." id="tel" value=""}}
+                </div>
+                <!-- prettier-ignore -->
+                {{>components/form/input label="Objet" id="objet" value="" mandatory=true }}
 
-                    <span
-                      class="bg-aquamarine-400 size-2 group-has-checked:scale-100 pointer-events-none col-start-1 row-start-1 scale-0 self-center justify-self-center rounded-[1px] transition duration-300"
-                    ></span>
+                <div class="mb-2.5 w-full">
+                  <label
+                    class="mb-2.5 block font-medium leading-none text-blue-500"
+                    for="tel"
+                  >
+                    Message <span class="text-red-400">*</span>
+                  </label>
+
+                  <textarea
+                    id="tel"
+                    class="py-3.25 min-h-40 w-full gap-2.5 rounded-md border border-gray-500 bg-white px-5 font-normal leading-none text-blue-500"
+                    placeholder=""
+                  >
+                  </textarea>
+                </div>
+
+                <div class="mb-5 flex gap-3">
+                  <div class="flex h-6 shrink-0 items-center">
+                    <div class="size-4 group grid grid-cols-1">
+                      <input
+                        id="legals"
+                        aria-describedby="legals-description"
+                        name="legals"
+                        type="checkbox"
+                        class="forced-colors:appearance-auto focus-visible:outline-aquamarine-400 col-start-1 row-start-1 h-4 w-4 appearance-none rounded-[3px] rounded-sm border border-gray-500 bg-transparent focus-visible:outline-2 focus-visible:outline-offset-2 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100"
+                      />
+
+                      <span
+                        class="bg-aquamarine-400 size-2 group-has-checked:scale-100 pointer-events-none col-start-1 row-start-1 scale-0 self-center justify-self-center rounded-[1px] transition duration-300"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="">
+                    <label
+                      for="legals"
+                      class="text-sm font-normal leading-tight text-blue-500"
+                      >J'ai lu et j'accepte la
+                      <a class="text-red-400 underline"
+                        >politique de confidentialité</a
+                      >
+                    </label>
                   </div>
                 </div>
-                <div class="">
-                  <label
-                    for="legals"
-                    class="text-sm font-normal leading-tight text-blue-500"
-                    >J'ai lu et j'accepte la
-                    <a class="text-red-400 underline"
-                      >politique de confidentialité</a
-                    >
-                  </label>
-                </div>
-              </div>
 
-              <div
-                class="flex w-full flex-col justify-between gap-[15px] md:flex-row lg:items-center"
-              >
-                <p
-                  class="text-xs font-normal leading-3 text-blue-800 lg:order-2"
+                <div
+                  class="flex w-full flex-col justify-between gap-[15px] md:flex-row lg:items-center"
                 >
-                  <span class="text-red-400">*</span>
-                  Champ obligatoire
-                </p>
-                <a href="cart-3.html" class="btn-primary max-md:w-full">
-                  Envoyer
-                  <svg
-                    viewBox="0 0 10 12"
-                    fill="none"
-                    aria-hidden="true"
-                    class="w-[10px]"
+                  <p
+                    class="text-xs font-normal leading-3 text-blue-800 lg:order-2"
                   >
-                    <path
-                      d="M1 3.00293H9M9 3.00293V11.0029M9 3.00293L1 11.0029"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </a>
+                    <span class="text-red-400">*</span>
+                    Champ obligatoire
+                  </p>
+                  <a href="cart-3.html" class="btn-primary max-md:w-full">
+                    Envoyer
+                    <svg
+                      viewBox="0 0 10 12"
+                      fill="none"
+                      aria-hidden="true"
+                      class="w-[10px]"
+                    >
+                      <path
+                        d="M1 3.00293H9M9 3.00293V11.0029M9 3.00293L1 11.0029"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
+        </section>
+      </div>
       {{> components/ctas/reassurance}}
     </main>
 

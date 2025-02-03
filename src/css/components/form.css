@@ -12,6 +12,13 @@ input[type='number']::-webkit-outer-spin-button {
   outline: none !important;
 }
 
+input:focus-visible {
+  outline: none;
+}
+
+input:disabled{
+  @apply bg-gray-300; 
+}
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   color: white;

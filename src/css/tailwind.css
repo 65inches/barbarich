@@ -103,7 +103,11 @@ strong {
     transition: 300ms ease-in;
   }
 
-  &:hover {
+  &:hover,
+  &.active {
+    > span, > a {
+      color: var(--color-red-400) !important;
+    }
     &::after {
       opacity: 1;
       transform: translateY(0);
@@ -181,4 +185,8 @@ strong {
       transform: translateY(0);
     }
   }
+}
+
+.scroll {
+  scroll-behavior: smooth;
 }

@@ -9,7 +9,7 @@
         <div class="container">
           <div class="text-center">
             <h1
-              class="mb-5 text-center text-3xl font-semibold leading-9 text-blue-500"
+              class="mb-7.5 text-center text-3xl font-semibold leading-9 text-blue-500"
             >
               Mon panier
             </h1>
@@ -93,371 +93,245 @@
         </div>
       </section>
 
-      <section class="lg:mb-15 lg:pt-15 mb-10 pt-10">
-        <div class="container">
-          <div class="md:max-xl:mx-[85px]">
-            <div class="mb-5 grid gap-[30px] xl:grid-cols-2">
-              <div
-                class="rounded-[20px] border border-gray-100 p-[25px] md:p-10"
-              >
-                <h2
-                  class="mb-2.5 mb-5 text-2xl font-semibold leading-[30px] text-blue-500"
-                >
-                  Mode de livraison
-                </h2>
-
-                <div class="mb-5">
-                  {{> components/form/radio label_a="Livraison standard"
-                  label_b="Retrait en magasin" id="livraison" }}
-                </div>
-
-                <hr class="mb-5 border-gray-300" />
-
-                <h2
-                  class="mb-2.5 mb-5 text-2xl font-semibold leading-[30px] text-blue-500"
-                >
-                  Adresse de livraison
-                </h2>
-
-                {{>components/form/select label="" id="civilite" value=""}}
-                <div class="mb-5 flex items-end justify-between">
-                  <div class="flex flex-col leading-snug text-blue-800">
-                    <span class="font-semibold">M. Eric Kuzimski</span>
-                    <span class="">24 Rue de Clichy</span>
-                    <span class="">75009 Paris</span>
-                    <span class="">FRANCE</span>
-                  </div>
-
-                  <div class="flex items-center gap-2.5">
-                    <a href="" class="btn-secondary px-[9px] py-[12px]"
-                      >Modifier</a
-                    >
-                    <a href="" class="btn-secondary px-[9px] py-[12px]"
-                      >Ajouter</a
-                    >
-                    <a href="" class="btn-secondary size-[38px] p-0">
-                      <svg
-                        viewBox="0 0 14 14"
-                        aria-hidden="true"
-                        class="w-[14px] fill-current"
-                      >
-                        <path
-                          d="M8.134 14.0031H5.873C4.725 14.0031 4.088 14.0031 3.521 13.7301C3.017 13.4921 2.597 13.1071 2.317 12.6241C1.995 12.0781 1.939 11.4481 1.834 10.3071L1.12 3.85305H0.7C0.315 3.85305 0 3.53805 0 3.15305C0 2.76805 0.315 2.45305 0.7 2.45305H1.743C1.743 2.45305 1.757 2.45305 1.764 2.45305H3.101L3.654 1.48705C3.913 1.02505 4.06 0.773052 4.305 0.549052C4.529 0.346052 4.781 0.199052 5.068 0.108052C5.383 0.00305176 5.677 0.00305176 6.209 0.00305176H7.812C8.344 0.00305176 8.631 0.00305176 8.953 0.108052C9.233 0.199052 9.492 0.346052 9.709 0.549052C9.961 0.773052 10.101 1.02505 10.367 1.48705L10.92 2.45305H12.257C12.257 2.45305 12.264 2.45305 12.278 2.45305H13.321C13.706 2.45305 14.021 2.76805 14.021 3.15305C14.021 3.53805 13.706 3.85305 13.321 3.85305H12.901L12.194 10.3211C12.089 11.4551 12.033 12.0851 11.711 12.6241C11.424 13.1071 11.011 13.4851 10.507 13.7231C9.94 13.9961 9.303 13.9961 8.155 13.9961L8.134 14.0031ZM2.534 3.85305L3.22 10.1741C3.304 11.1261 3.353 11.6441 3.514 11.9171C3.654 12.1551 3.864 12.3511 4.116 12.4701C4.403 12.6031 4.921 12.6031 5.866 12.6031H8.127C9.072 12.6031 9.59 12.6031 9.877 12.4701C10.129 12.3511 10.339 12.1621 10.479 11.9171C10.64 11.6441 10.689 11.1261 10.773 10.1881L11.459 3.86005H2.534V3.85305ZM4.711 2.45305H9.296L9.142 2.18005C8.96 1.85805 8.848 1.66205 8.764 1.58505C8.694 1.52205 8.603 1.46605 8.512 1.43805C8.407 1.40305 8.183 1.40305 7.805 1.40305H6.202C5.831 1.40305 5.6 1.40305 5.495 1.43805C5.404 1.46605 5.313 1.52205 5.243 1.58505C5.159 1.66205 5.047 1.85105 4.865 2.18005L4.711 2.45305ZM8.757 10.2511C8.372 10.2511 8.057 9.93605 8.057 9.55105V6.54805C8.057 6.16305 8.372 5.84805 8.757 5.84805C9.142 5.84805 9.457 6.16305 9.457 6.54805V9.55105C9.457 9.93605 9.142 10.2511 8.757 10.2511ZM5.257 10.2511C4.872 10.2511 4.557 9.93605 4.557 9.55105V6.54805C4.557 6.16305 4.872 5.84805 5.257 5.84805C5.642 5.84805 5.957 6.16305 5.957 6.54805V9.55105C5.957 9.93605 5.642 10.2511 5.257 10.2511Z"
-                        />
-                      </svg>
-                      <span class="sr-only">Supprimer</span>
-                    </a>
-                  </div>
-                </div>
-
-                <hr class="mb-5 border-gray-300" />
-
-                <h2
-                  class="mb-2.5 mb-5 text-2xl font-semibold leading-[30px] text-blue-500"
-                >
-                  Adresse de facturation
-                </h2>
-                <div class="mb-5 flex items-end justify-between">
-                  <div class="flex flex-col leading-snug text-blue-800">
-                    <span class="font-semibold">M. Eric Kuzimski</span>
-                    <span class="">Quai Sur-Meuse 19</span>
-                    <span class="">4000 Liège</span>
-                    <span class="uppercase">Belgique</span>
-                    <span class="">studio@netside.be</span>
-                  </div>
-
-                  <div class="flex items-center gap-2.5">
-                    <a href="" class="btn-secondary px-[9px] py-[12px]"
-                      >Modifier</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="rounded-[20px] bg-gray-100 p-[25px] md:p-10">
-                <h2
-                  class="mb-2.5 mb-5 text-2xl font-semibold leading-[30px] text-blue-500"
-                >
-                  Résumé de la commande
-                </h2>
+      <div class="bg-gray-100">
+        <section class="lg:mb-15 lg:pt-15 mb-10 pt-10 rounded-t-3xl bg-white">
+          <div class="container">
+            <div class="md:max-xl:mx-[85px]">
+              <div class="mb-5 grid gap-[30px] xl:grid-cols-2">
                 <div
-                  class="mb-5 flex items-center justify-center gap-[15px] rounded-[3px] bg-green-300 p-[15px] leading-snug text-blue-500"
+                  class="rounded-[20px] border border-gray-100 p-[25px] md:p-10"
                 >
-                  <svg
-                    viewBox="0 0 17 16"
-                    fill="none"
-                    class="w-[17px] fill-current"
-                    aria-hidden="true"
+                  <h2
+                    class="mb-2.5 mb-5 text-2xl font-medium leading-[30px] text-blue-500"
                   >
-                    <path
-                      d="M8.5 0.00305176C4.09 0.00305176 0.5 3.59305 0.5 8.00305C0.5 12.4131 4.09 16.0031 8.5 16.0031C12.91 16.0031 16.5 12.4131 16.5 8.00305C16.5 3.59305 12.91 0.00305176 8.5 0.00305176ZM14.59 8.00305C14.59 11.3631 11.86 14.0931 8.5 14.0931C5.14 14.0931 2.41 11.3631 2.41 8.00305C2.41 4.64305 5.14 1.91305 8.5 1.91305C11.86 1.91305 14.59 4.64305 14.59 8.00305Z"
-                    />
-                    <path
-                      d="M8.50141 5.99305C9.22141 5.99305 9.81141 5.40305 9.81141 4.68305C9.81141 3.96305 9.22141 3.37305 8.50141 3.37305C7.78141 3.37305 7.19141 3.96305 7.19141 4.68305C7.19141 5.40305 7.78141 5.99305 8.50141 5.99305Z"
-                    />
-                    <path
-                      d="M9.60984 10.4331V7.82307C9.60984 7.21307 9.10984 6.71307 8.50984 6.71307H8.08984C7.47984 6.71307 6.98984 7.21307 6.98984 7.82307C6.98984 8.15307 7.13984 8.46307 7.40984 8.67307V10.4231C6.93984 10.5431 6.58984 10.9831 6.58984 11.4931C6.58984 12.1031 7.08984 12.6031 7.68984 12.6031H9.31984C9.92984 12.6031 10.4198 12.1031 10.4198 11.4931C10.4198 10.9931 10.0798 10.5631 9.60984 10.4331Z"
-                    />
-                  </svg>
-                  Livraison gratuite à partir de 1 .500 € d’achats.
-                </div>
-                <div
-                  class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
-                >
-                  <div class="font-semibold leading-snug text-blue-800">
-                    N° commande
-                  </div>
-                  <div class="font-normal leading-snug text-blue-800">
-                    100048645
-                  </div>
-                </div>
-                <div
-                  class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
-                >
-                  <div class="font-semibold leading-snug text-blue-800">
                     Mode de livraison
+                  </h2>
+
+                  <div class="mb-5">
+                    {{> components/form/radio label_a="Livraison standard"
+                    label_b="Retrait en magasin" id="livraison" }}
                   </div>
-                  <div class="font-normal leading-snug text-blue-800">
-                    Barbarich transport
+
+                  <hr class="mb-5 border-gray-300" />
+
+                  <h2
+                    class="mb-2.5 mb-5 text-2xl font-medium leading-[30px] text-blue-500"
+                  >
+                    Adresse de livraison
+                  </h2>
+
+                  {{>components/form/select label="" id="civilite" value=""}}
+                  <div class="mb-5 flex items-end justify-between">
+                    <div class="flex flex-col leading-snug text-blue-800">
+                      <span class="font-semibold">M. Eric Kuzimski</span>
+                      <span class="">24 Rue de Clichy</span>
+                      <span class="">75009 Paris</span>
+                      <span class="">FRANCE</span>
+                    </div>
+
+                    <div class="flex items-center gap-2.5">
+                      <a href="" class="btn-secondary px-[9px] py-[12px]"
+                        >Modifier</a
+                      >
+                      <a href="" class="btn-secondary px-[9px] py-[12px]"
+                        >Ajouter</a
+                      >
+                      <a href="" class="btn-secondary size-[38px] p-0">
+                        <svg
+                          viewBox="0 0 14 14"
+                          aria-hidden="true"
+                          class="w-[14px] fill-current"
+                        >
+                          <path
+                            d="M8.134 14.0031H5.873C4.725 14.0031 4.088 14.0031 3.521 13.7301C3.017 13.4921 2.597 13.1071 2.317 12.6241C1.995 12.0781 1.939 11.4481 1.834 10.3071L1.12 3.85305H0.7C0.315 3.85305 0 3.53805 0 3.15305C0 2.76805 0.315 2.45305 0.7 2.45305H1.743C1.743 2.45305 1.757 2.45305 1.764 2.45305H3.101L3.654 1.48705C3.913 1.02505 4.06 0.773052 4.305 0.549052C4.529 0.346052 4.781 0.199052 5.068 0.108052C5.383 0.00305176 5.677 0.00305176 6.209 0.00305176H7.812C8.344 0.00305176 8.631 0.00305176 8.953 0.108052C9.233 0.199052 9.492 0.346052 9.709 0.549052C9.961 0.773052 10.101 1.02505 10.367 1.48705L10.92 2.45305H12.257C12.257 2.45305 12.264 2.45305 12.278 2.45305H13.321C13.706 2.45305 14.021 2.76805 14.021 3.15305C14.021 3.53805 13.706 3.85305 13.321 3.85305H12.901L12.194 10.3211C12.089 11.4551 12.033 12.0851 11.711 12.6241C11.424 13.1071 11.011 13.4851 10.507 13.7231C9.94 13.9961 9.303 13.9961 8.155 13.9961L8.134 14.0031ZM2.534 3.85305L3.22 10.1741C3.304 11.1261 3.353 11.6441 3.514 11.9171C3.654 12.1551 3.864 12.3511 4.116 12.4701C4.403 12.6031 4.921 12.6031 5.866 12.6031H8.127C9.072 12.6031 9.59 12.6031 9.877 12.4701C10.129 12.3511 10.339 12.1621 10.479 11.9171C10.64 11.6441 10.689 11.1261 10.773 10.1881L11.459 3.86005H2.534V3.85305ZM4.711 2.45305H9.296L9.142 2.18005C8.96 1.85805 8.848 1.66205 8.764 1.58505C8.694 1.52205 8.603 1.46605 8.512 1.43805C8.407 1.40305 8.183 1.40305 7.805 1.40305H6.202C5.831 1.40305 5.6 1.40305 5.495 1.43805C5.404 1.46605 5.313 1.52205 5.243 1.58505C5.159 1.66205 5.047 1.85105 4.865 2.18005L4.711 2.45305ZM8.757 10.2511C8.372 10.2511 8.057 9.93605 8.057 9.55105V6.54805C8.057 6.16305 8.372 5.84805 8.757 5.84805C9.142 5.84805 9.457 6.16305 9.457 6.54805V9.55105C9.457 9.93605 9.142 10.2511 8.757 10.2511ZM5.257 10.2511C4.872 10.2511 4.557 9.93605 4.557 9.55105V6.54805C4.557 6.16305 4.872 5.84805 5.257 5.84805C5.642 5.84805 5.957 6.16305 5.957 6.54805V9.55105C5.957 9.93605 5.642 10.2511 5.257 10.2511Z"
+                          />
+                        </svg>
+                        <span class="sr-only">Supprimer</span>
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
-                >
-                  <div class="font-semibold leading-snug text-blue-800">
-                    Mode de paiement
-                  </div>
-                  <div class="font-normal leading-snug text-blue-800">
-                    Paiement en ligne
-                  </div>
-                </div>
-                <div
-                  class="flex max-md:flex-col max-md:items-start sitems-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
-                >
-                  <div class="font-semibold leading-snug text-blue-800">
-                    Nombre d'éléments
-                  </div>
-                  <div class="font-normal leading-snug text-blue-800">3</div>
-                </div>
-                <div
-                  class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
-                >
-                  <div class="font-semibold leading-snug text-blue-800">
-                    Total achats
-                  </div>
-                  <div class="font-normal leading-snug text-blue-800">
-                    389,49 €
-                  </div>
-                </div>
-                <div
-                  class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
-                >
-                  <div class="font-semibold leading-snug text-blue-800">
-                    Cotisations & taxes
-                  </div>
-                  <div class="font-normal leading-snug text-blue-800">
-                    0,00 €
-                  </div>
-                </div>
-                <div
-                  class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
-                >
-                  <div class="font-semibold leading-snug text-blue-800">
-                    Frais de port
-                  </div>
-                  <div class="font-bold font-normal leading-snug text-blue-800">
-                    130,00 €
-                  </div>
-                </div>
-                <div
-                  class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 bg-gray-300 px-[15px] py-[7px]"
-                >
-                  <div class="font-semibold leading-snug text-blue-800">
-                    Total HTVA
-                  </div>
-                  <div class="font-normal leading-snug text-blue-800">
-                    519,49 €
-                  </div>
-                </div>
-                <div
-                  class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
-                >
-                  <div class="font-semibold leading-snug text-blue-800">
-                    Total TVA
-                  </div>
-                  <div class="font-normal leading-snug text-blue-800">
-                    0,00 € Intra
+
+                  <hr class="mb-5 border-gray-300" />
+
+                  <h2
+                    class="mb-2.5 mb-5 text-2xl font-medium leading-[30px] text-blue-500"
+                  >
+                    Adresse de facturation
+                  </h2>
+                  <div class="mb-5 flex items-end justify-between">
+                    <div class="flex flex-col leading-snug text-blue-800">
+                      <span class="font-semibold">M. Eric Kuzimski</span>
+                      <span class="">Quai Sur-Meuse 19</span>
+                      <span class="">4000 Liège</span>
+                      <span class="uppercase">Belgique</span>
+                      <span class="">studio@netside.be</span>
+                    </div>
+
+                    <div class="flex items-center gap-2.5">
+                      <a href="" class="btn-secondary px-[9px] py-[12px]"
+                        >Modifier</a
+                      >
+                    </div>
                   </div>
                 </div>
-                <div
-                  class="flex max-md:flex-col max-md:items-start items-center justify-between bg-gray-300 px-[15px] py-[7px]"
-                >
-                  <div class="font-semibold leading-snug text-blue-800">
-                    Montant total
+                <div class="rounded-[20px] bg-gray-100 p-[25px] md:p-10">
+                  <h2
+                    class="mb-2.5 mb-5 text-2xl font-medium leading-[30px] text-blue-500"
+                  >
+                    Résumé de la commande
+                  </h2>
+                  <div
+                    class="mb-5 flex items-center justify-center gap-[15px] rounded-[3px] bg-green-300 p-[15px] leading-snug text-blue-500"
+                  >
+                    <svg
+                      viewBox="0 0 17 16"
+                      fill="none"
+                      class="w-[17px] fill-current"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M8.5 0.00305176C4.09 0.00305176 0.5 3.59305 0.5 8.00305C0.5 12.4131 4.09 16.0031 8.5 16.0031C12.91 16.0031 16.5 12.4131 16.5 8.00305C16.5 3.59305 12.91 0.00305176 8.5 0.00305176ZM14.59 8.00305C14.59 11.3631 11.86 14.0931 8.5 14.0931C5.14 14.0931 2.41 11.3631 2.41 8.00305C2.41 4.64305 5.14 1.91305 8.5 1.91305C11.86 1.91305 14.59 4.64305 14.59 8.00305Z"
+                      />
+                      <path
+                        d="M8.50141 5.99305C9.22141 5.99305 9.81141 5.40305 9.81141 4.68305C9.81141 3.96305 9.22141 3.37305 8.50141 3.37305C7.78141 3.37305 7.19141 3.96305 7.19141 4.68305C7.19141 5.40305 7.78141 5.99305 8.50141 5.99305Z"
+                      />
+                      <path
+                        d="M9.60984 10.4331V7.82307C9.60984 7.21307 9.10984 6.71307 8.50984 6.71307H8.08984C7.47984 6.71307 6.98984 7.21307 6.98984 7.82307C6.98984 8.15307 7.13984 8.46307 7.40984 8.67307V10.4231C6.93984 10.5431 6.58984 10.9831 6.58984 11.4931C6.58984 12.1031 7.08984 12.6031 7.68984 12.6031H9.31984C9.92984 12.6031 10.4198 12.1031 10.4198 11.4931C10.4198 10.9931 10.0798 10.5631 9.60984 10.4331Z"
+                      />
+                    </svg>
+                    Livraison gratuite à partir de 1.500 € d’achats.
                   </div>
-                  <div class="font-bold  leading-snug text-red-400">
-                    519,49 € TTC
+                  <div
+                    class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
+                  >
+                    <div class="font-semibold leading-snug text-blue-800">
+                      N° commande
+                    </div>
+                    <div class="font-normal leading-snug text-blue-800">
+                      100048645
+                    </div>
+                  </div>
+                  <div
+                    class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
+                  >
+                    <div class="font-semibold leading-snug text-blue-800">
+                      Mode de livraison
+                    </div>
+                    <div class="font-normal leading-snug text-blue-800">
+                      Barbarich transport
+                    </div>
+                  </div>
+                  <div
+                    class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
+                  >
+                    <div class="font-semibold leading-snug text-blue-800">
+                      Mode de paiement
+                    </div>
+                    <div class="font-normal leading-snug text-blue-800">
+                      Paiement en ligne
+                    </div>
+                  </div>
+                  <div
+                    class="flex max-md:flex-col max-md:items-start sitems-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
+                  >
+                    <div class="font-semibold leading-snug text-blue-800">
+                      Nombre d'éléments
+                    </div>
+                    <div class="font-normal leading-snug text-blue-800">3</div>
+                  </div>
+                  <div
+                    class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
+                  >
+                    <div class="font-semibold leading-snug text-blue-800">
+                      Total achats
+                    </div>
+                    <div class="font-normal leading-snug text-blue-800">
+                      389,49 €
+                    </div>
+                  </div>
+                  <div
+                    class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
+                  >
+                    <div class="font-semibold leading-snug text-blue-800">
+                      Cotisations & taxes
+                    </div>
+                    <div class="font-normal leading-snug text-blue-800">
+                      0,00 €
+                    </div>
+                  </div>
+                  <div
+                    class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
+                  >
+                    <div class="font-semibold leading-snug text-blue-800">
+                      Frais de port
+                    </div>
+                    <div class="font-bold font-normal leading-snug text-blue-800">
+                      130,00 €
+                    </div>
+                  </div>
+                  <div
+                    class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 bg-gray-300 px-[15px] py-[7px]"
+                  >
+                    <div class="font-semibold leading-snug text-blue-800">
+                      Total HTVA
+                    </div>
+                    <div class="font-normal leading-snug text-blue-800">
+                      519,49 €
+                    </div>
+                  </div>
+                  <div
+                    class="flex max-md:flex-col max-md:items-start items-center justify-between border-b border-gray-300 px-[15px] py-[7px]"
+                  >
+                    <div class="font-semibold leading-snug text-blue-800">
+                      Total TVA
+                    </div>
+                    <div class="font-normal leading-snug text-blue-800">
+                      0,00 € Intra
+                    </div>
+                  </div>
+                  <div
+                    class="flex max-md:flex-col max-md:items-start items-center justify-between bg-gray-300 px-[15px] py-[7px]"
+                  >
+                    <div class="font-semibold leading-snug text-blue-800">
+                      Montant total
+                    </div>
+                    <div class="font-bold  leading-snug text-red-400">
+                      519,49 € TTC
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex w-full flex-col items-center justify-between gap-[15px] md:flex-row"
-            >
-              <a
-                href="cart.html"
-                class="btn-secondary text-center max-md:order-2 max-md:w-full"
+              <div
+                class="flex w-full flex-col items-center justify-between gap-[15px] md:flex-row"
               >
-                Précédent
-              </a>
-              <a href="cart-3.html" class="btn-primary max-md:w-full">
-                Valider mes données
-                <svg
-                  viewBox="0 0 10 12"
-                  fill="none"
-                  aria-hidden="true"
-                  class="w-[10px]"
+                <a
+                  href="cart.html"
+                  class="btn-secondary text-center max-md:order-2 max-md:w-full"
                 >
-                  <path
-                    d="M1 3.00293H9M9 3.00293V11.0029M9 3.00293L1 11.0029"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="slider lg:mb-15 lg:pt-15 mb-10 overflow-x-clip">
-        <div class="container">
-          <div class="gap-y-7.5 grid grid-cols-[repeat(2,auto)] md:gap-y-10">
-            <div class="flex items-center justify-between">
-              <h2
-                class="text-[40px] font-semibold leading-[46px] text-blue-500"
-              >
-                À la une
-              </h2>
-            </div>
-
-            <div class="col-span-2">
-              <div class="breakout-right">
-                <div class="swiper md:mb-7.5 lg:mb-10">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Faxe Royal Export
-                      (5,6%)" desc="Bière Faxe Royal Export (5,6%) 500 ml x 24
-                      pc" img="img/products/product_1.png" price="36,48"
-                      number="24" }}
-                    </div>
-                    <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="SoS Limonade
-                      Pastèque" desc="SoS Limonade Pastèque 1 L x 12 pc"
-                      img="img/products/product_2.png" price="27,26" number="12"
-                      }}
-                    </div>
-                    <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Long Chips Shish
-                      Kebab" desc="Long Chips Shish Kebab 75 gr x 20 pc"
-                      img="img/products/product_3.png" price="24,43"
-                      number="20"}}
-                    </div>
-                    <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Pokemon Pikachu
-                      Ramune ..." desc="Pokemon Pikachu Ramune Lychee 200 ml x
-                      30 pc" img="img/products/product_4.png" price="24,43"
-                      number="30" }}
-                    </div>
-                    <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Snickers Fruit &
-                      Nut" desc="Snickers Fruit & Nut 40 gr x 18 pc"
-                      img="img/products/product_5.png" price="27,89"
-                      number="18"}}
-                    </div>
-                    <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Faxe Royal Export
-                      (5,6%)" desc="Bière Faxe Royal Export (5,6%) 500 ml x 24
-                      pc" img="img/products/product_1.png" price="36,48"
-                      number="24" }}
-                    </div>
-                    <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="SoS Limonade
-                      Pastèque" desc="SoS Limonade Pastèque 1 L x 12 pc"
-                      img="img/products/product_2.png" price="27,26" number="12"
-                      }}
-                    </div>
-                    <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Long Chips Shish
-                      Kebab" desc="Long Chips Shish Kebab 75 gr x 20 pc"
-                      img="img/products/product_3.png" price="24,43"
-                      number="20"}}
-                    </div>
-                    <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Pokemon Pikachu
-                      Ramune ..." desc="Pokemon Pikachu Ramune Lychee 200 ml x
-                      30 pc" img="img/products/product_4.png" price="24,43"
-                      number="30" }}
-                    </div>
-                    <div class="swiper-slide w-[323px]">
-                      {{> components/cart-product-item title="Snickers Fruit &
-                      Nut" desc="Snickers Fruit & Nut 40 gr x 18 pc"
-                      img="img/products/product_5.png" price="27,89"
-                      number="18"}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination mx-auto max-md:hidden"></div>
-            </div>
-
-            <div
-              class="gap-3.75 flex items-center max-md:col-span-2 max-md:text-center md:col-start-2 md:row-start-1 md:ml-auto"
-            >
-              <a href="#" class="btn-secondary max-md:mx-auto">
-                Voir toute la boutique
-              </a>
-              <div class="gap-1.25 hidden md:flex">
-                <button
-                  class="swiper-button-prev px-3.75 shrink-0 rounded-full border border-red-300 py-4 text-red-400"
-                >
+                  Précédent
+                </a>
+                <a href="cart-3.html" class="btn-primary max-md:w-full">
+                  Valider mes données
                   <svg
-                    width="15"
-                    height="16"
-                    viewBox="0 0 15 16"
+                    viewBox="0 0 10 12"
                     fill="none"
                     aria-hidden="true"
+                    class="w-[10px]"
                   >
                     <path
-                      d="M8.556 14.367 1.889 8.003m0 0 6.667-6.364M1.889 8.003H15"
-                      stroke="#D01B56"
+                      d="M1 3.00293H9M9 3.00293V11.0029M9 3.00293L1 11.0029"
+                      stroke="white"
                       stroke-width="2"
                       stroke-linejoin="round"
-                    />
+                    ></path>
                   </svg>
-                </button>
-                <button
-                  class="swiper-button-next px-3.75 rounded-full border border-red-300 py-4 text-red-400"
-                >
-                  <svg
-                    class="w-[15px]"
-                    viewBox="0 0 15 16"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="m6.444 1.64 6.667 6.363m0 0-6.667 6.364m6.667-6.364H0"
-                      stroke="#D01B56"
-                      stroke-width="2"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
 
       {{> components/ctas/reassurance}}
     </main>

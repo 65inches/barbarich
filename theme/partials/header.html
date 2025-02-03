@@ -113,15 +113,33 @@
           <div
             class="flex h-full items-center justify-start gap-2.5 px-5 lg:border-none lg:pr-0"
           >
-            <a href="cart.html" class="flex gap-2.5">
+            <a href="cart.html" class="flex gap-2.5" id="cart-guest">
+              <svg viewBox="0 0 18 19" class="w-[18px]" aria-hidden="true">
+                <path
+                  d="M13.4046 18.503C12.6284 18.503 11.9984 17.873 11.9984 17.0968C11.9984 16.3205 12.6284 15.6905 13.4046 15.6905C14.1809 15.6905 14.8109 16.3205 14.8109 17.0968C14.8109 17.873 14.1809 18.503 13.4046 18.503ZM6.99211 18.503C6.21586 18.503 5.58586 17.873 5.58586 17.0968C5.58586 16.3205 6.21586 15.6905 6.99211 15.6905C7.76836 15.6905 8.39836 16.3205 8.39836 17.0968C8.39836 17.873 7.76836 18.503 6.99211 18.503ZM13.3934 14.7905H7.03711C5.36086 14.7905 3.92086 13.598 3.60586 11.9443L3.38086 10.7293L1.85086 3.13554C1.80586 2.91054 1.62586 2.75304 1.40086 2.75304H1.13086C0.512109 2.75304 0.00585938 2.24679 0.00585938 1.62804C0.00585938 1.00929 0.523359 0.503036 1.14211 0.503036H1.41211C2.70586 0.503036 3.83086 1.42554 4.06711 2.70804L5.59711 10.2905C5.59711 10.2905 5.59711 10.2905 5.59711 10.3018L5.82211 11.5168C5.93461 12.1018 6.44086 12.5293 7.03711 12.5293H13.3934C13.9334 12.5293 14.4059 12.1243 14.4846 11.5843L15.5534 5.44179H7.64461C7.02586 5.44179 6.51961 4.93554 6.51961 4.31679C6.51961 3.69804 7.02586 3.19179 7.64461 3.19179H16.8809C17.2071 3.19179 17.5334 3.33804 17.7359 3.59679C17.9496 3.85554 18.0396 4.18179 17.9834 4.50804L16.6896 11.9443C16.4421 13.5755 15.0471 14.7793 13.3709 14.7793L13.3934 14.7905Z"
+                  fill="#c6d4e6"
+                />
+              </svg>
+              <span class="flex flex-col gap-[5px]" >
+                <span class="text-base font-semibold leading-none text-white">
+                  <span>0</span>
+                  <span class="hidden lg:inline">Produit(s)</span>
+                </span>
+                <span
+                  class="hidden text-xs font-semibold leading-3 text-white lg:block"
+                >
+                  0 € HTVA
+                </span>
+              </span>
+            </a>
+            <a href="cart.html" class="flex gap-2.5" id="cart-signed">
               <svg viewBox="0 0 18 19" class="w-[18px]" aria-hidden="true">
                 <path
                   d="M13.4046 18.503C12.6284 18.503 11.9984 17.873 11.9984 17.0968C11.9984 16.3205 12.6284 15.6905 13.4046 15.6905C14.1809 15.6905 14.8109 16.3205 14.8109 17.0968C14.8109 17.873 14.1809 18.503 13.4046 18.503ZM6.99211 18.503C6.21586 18.503 5.58586 17.873 5.58586 17.0968C5.58586 16.3205 6.21586 15.6905 6.99211 15.6905C7.76836 15.6905 8.39836 16.3205 8.39836 17.0968C8.39836 17.873 7.76836 18.503 6.99211 18.503ZM13.3934 14.7905H7.03711C5.36086 14.7905 3.92086 13.598 3.60586 11.9443L3.38086 10.7293L1.85086 3.13554C1.80586 2.91054 1.62586 2.75304 1.40086 2.75304H1.13086C0.512109 2.75304 0.00585938 2.24679 0.00585938 1.62804C0.00585938 1.00929 0.523359 0.503036 1.14211 0.503036H1.41211C2.70586 0.503036 3.83086 1.42554 4.06711 2.70804L5.59711 10.2905C5.59711 10.2905 5.59711 10.2905 5.59711 10.3018L5.82211 11.5168C5.93461 12.1018 6.44086 12.5293 7.03711 12.5293H13.3934C13.9334 12.5293 14.4059 12.1243 14.4846 11.5843L15.5534 5.44179H7.64461C7.02586 5.44179 6.51961 4.93554 6.51961 4.31679C6.51961 3.69804 7.02586 3.19179 7.64461 3.19179H16.8809C17.2071 3.19179 17.5334 3.33804 17.7359 3.59679C17.9496 3.85554 18.0396 4.18179 17.9834 4.50804L16.6896 11.9443C16.4421 13.5755 15.0471 14.7793 13.3709 14.7793L13.3934 14.7905Z"
                   fill="#25E9B2"
                 />
               </svg>
-
-              <span class="flex flex-col gap-[5px]">
+              <span class="flex flex-col gap-[5px]" >
                 <span class="text-base font-semibold leading-none text-white">
                   <span>2</span>
                   <span class="hidden lg:inline">Produit(s)</span>
@@ -191,7 +209,7 @@
   <div class="hidden bg-gray-300 lg:block">
     <div class="container">
       <nav class="main-nav divide-2 flex justify-between">
-        <a href="#" class="nav-item flex h-14 items-center justify-center">
+        <a href="/" class="nav-item flex h-14 items-center justify-center">
           <span
             class="font-medium leading-none text-blue-800 transition duration-300 hover:text-red-400"
           >
@@ -258,7 +276,7 @@
           <span
             class="inline-flex items-center gap-2.5 font-medium leading-none text-blue-800 transition duration-300 hover:text-red-400 group-hover:text-red-400"
           >
-            Favoris
+            Mes favoris
 
             <svg
               class="w-[12px] fill-red-400 transition-all group-hover:rotate-180"
@@ -605,7 +623,7 @@
                 >
                   <path
                     d="M4.43209 1.00305L8.5 5.00306M8.5 5.00306L4.43211 9.00305M8.5 5.00306H0.5"
-                    stroke="#D01B56"
+                    stroke="CurrentColor"
                     stroke-width="2"
                     stroke-linejoin="round"
                   ></path>
@@ -717,7 +735,7 @@
                 >
                   <path
                     d="M4.43209 1.00305L8.5 5.00306M8.5 5.00306L4.43211 9.00305M8.5 5.00306H0.5"
-                    stroke="#D01B56"
+                    stroke="CurrentColor"
                     stroke-width="2"
                     stroke-linejoin="round"
                   ></path>
@@ -807,7 +825,7 @@
                 >
                   <path
                     d="M4.43209 1.00305L8.5 5.00306M8.5 5.00306L4.43211 9.00305M8.5 5.00306H0.5"
-                    stroke="#D01B56"
+                    stroke="CurrentColor"
                     stroke-width="2"
                     stroke-linejoin="round"
                   ></path>
