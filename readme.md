@@ -15,7 +15,7 @@
 | Account           | ✅      | ✅     | ✅     |
 | Contact           | ❌      | ❌     | ❌     |
 | FAQs              | ✅      | ✅     | ✅     |
-| A propos          | ❌      | ❌     | ❌     |
+| A propos          | ✅      | ✅     | ✅     |
 | Legal             | ❌      | ❌     | ❌     |
 | Mes documents     | ✅      | ✅     | ✅     |
 | 404               | ❌      | ❌     | ❌     |

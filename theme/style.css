@@ -826,6 +826,9 @@
   .mb-\[30px\] {
     margin-bottom: 30px;
   }
+  .mb-\[60px\] {
+    margin-bottom: 60px;
+  }
   .ml-6 {
     margin-left: calc(var(--spacing) * 6);
   }
@@ -902,6 +905,18 @@
     width: 30px;
     height: 30px;
   }
+  .size-\[34px\] {
+    width: 34px;
+    height: 34px;
+  }
+  .size-\[38px\] {
+    width: 38px;
+    height: 38px;
+  }
+  .size-\[42px\] {
+    width: 42px;
+    height: 42px;
+  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -914,6 +929,9 @@
   .h-6\.5 {
     height: calc(var(--spacing) * 6.5);
   }
+  .h-50 {
+    height: calc(var(--spacing) * 50);
+  }
   .h-100 {
     height: calc(var(--spacing) * 100);
   }
@@ -925,9 +943,6 @@
   }
   .h-14\.5 {
     height: calc(var(--spacing) * 14.5);
-  }
-  .h-50 {
-    height: calc(var(--spacing) * 50);
   }
   .h-\[0px\] {
     height: 0px;
@@ -1033,6 +1048,9 @@
   }
   .w-\[13px\] {
     width: 13px;
+  }
+  .w-\[14px\] {
+    width: 14px;
   }
   .w-\[15px\] {
     width: 15px;
@@ -1201,6 +1219,9 @@
   .items-center {
     align-items: center;
   }
+  .items-end {
+    align-items: flex-end;
+  }
   .items-start {
     align-items: flex-start;
   }
@@ -1255,6 +1276,9 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-\[3px\] {
+    gap: 3px;
+  }
   .gap-\[5px\] {
     gap: 5px;
   }
@@ -1263,9 +1287,6 @@
   }
   .gap-\[30px\] {
     gap: 30px;
-  }
-  .gap-\[3px\] {
-    gap: 3px;
   }
   .gap-y-2 {
     row-gap: calc(var(--spacing) * 2);
@@ -1350,12 +1371,6 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .rounded-\[15px\] {
-    border-radius: 15px;
-  }
-  .rounded-\[1px\] {
-    border-radius: 1px;
-  }
   .rounded-\[3px\] {
     border-radius: 3px;
   }
@@ -1368,8 +1383,11 @@
   .rounded-\[10px\] {
     border-radius: 10px;
   }
-  .rounded-\[40px\] {
-    border-radius: 40px;
+  .rounded-\[15px\] {
+    border-radius: 15px;
+  }
+  .rounded-\[1px\] {
+    border-radius: 1px;
   }
   .rounded-\[200px\] {
     border-radius: 200px;
@@ -1377,11 +1395,14 @@
   .rounded-\[20px\] {
     border-radius: 20px;
   }
-  .rounded-\[60px\] {
-    border-radius: 60px;
-  }
   .rounded-\[400px\] {
     border-radius: 400px;
+  }
+  .rounded-\[40px\] {
+    border-radius: 40px;
+  }
+  .rounded-\[60px\] {
+    border-radius: 60px;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -1563,6 +1584,9 @@
   .p-12\.5 {
     padding: calc(var(--spacing) * 12.5);
   }
+  .p-\[15px\] {
+    padding: 15px;
+  }
   .p-\[25px\] {
     padding: 25px;
   }
@@ -1602,8 +1626,14 @@
   .px-7\.5 {
     padding-inline: calc(var(--spacing) * 7.5);
   }
+  .px-9 {
+    padding-inline: calc(var(--spacing) * 9);
+  }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
+  }
+  .px-\[9px\] {
+    padding-inline: 9px;
   }
   .px-\[15px\] {
     padding-inline: 15px;
@@ -1653,6 +1683,9 @@
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
+  }
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
   }
@@ -1664,6 +1697,9 @@
   }
   .py-\[7px\] {
     padding-block: 7px;
+  }
+  .py-\[12px\] {
+    padding-block: 12px;
   }
   .py-\[15px\] {
     padding-block: 15px;
@@ -1718,6 +1754,12 @@
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
+  }
+  .pb-7 {
+    padding-bottom: calc(var(--spacing) * 7);
+  }
+  .pb-7\.5 {
+    padding-bottom: calc(var(--spacing) * 7.5);
   }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
@@ -1823,14 +1865,6 @@
     --tw-leading: 0.5em;
     line-height: 0.5em;
   }
-  .leading-\[0\.48\] {
-    --tw-leading: 0.48;
-    line-height: 0.48;
-  }
-  .leading-\[0\.64\] {
-    --tw-leading: 0.64;
-    line-height: 0.64;
-  }
   .leading-\[1\.5\] {
     --tw-leading: 1.5;
     line-height: 1.5;
@@ -1842,10 +1876,6 @@
   .leading-\[1\.33\] {
     --tw-leading: 1.33;
     line-height: 1.33;
-  }
-  .leading-\[2\.3\] {
-    --tw-leading: 2.3;
-    line-height: 2.3;
   }
   .leading-\[11px\] {
     --tw-leading: 11px;
@@ -2255,6 +2285,16 @@
       color: var(--color-aquamarine-400);
     }
   }
+  .group-\[\.active\]\:block {
+    &:is(:where(.group):is(.active) *) {
+      display: block;
+    }
+  }
+  .group-\[\.active\]\:text-red-400 {
+    &:is(:where(.group):is(.active) *) {
+      color: var(--color-red-400);
+    }
+  }
   .group-\[\.disabled\]\/input-number\:text-gray-100 {
     &:is(:where(.group\/input-number):is(.disabled) *) {
       color: var(--color-gray-100);
@@ -2608,6 +2648,21 @@
       text-align: center;
     }
   }
+  .max-md\:absolute {
+    @media (width < 768px) {
+      position: absolute;
+    }
+  }
+  .max-md\:-bottom-8 {
+    @media (width < 768px) {
+      bottom: calc(var(--spacing) * -8);
+    }
+  }
+  .max-md\:order-2 {
+    @media (width < 768px) {
+      order: 2;
+    }
+  }
   .max-md\:col-span-2 {
     @media (width < 768px) {
       grid-column: span 2 / span 2;
@@ -2616,6 +2671,11 @@
   .max-md\:mx-auto {
     @media (width < 768px) {
       margin-inline: auto;
+    }
+  }
+  .max-md\:mb-7\.5 {
+    @media (width < 768px) {
+      margin-bottom: calc(var(--spacing) * 7.5);
     }
   }
   .max-md\:hidden {
@@ -2805,10 +2865,32 @@
       }
     }
   }
+  .md\:max-lg\:w-\[34px\] {
+    @media (width >= 768px) {
+      @media (width < 1024px) {
+        width: 34px;
+      }
+    }
+  }
+  .md\:max-lg\:-translate-y-\[24px\] {
+    @media (width >= 768px) {
+      @media (width < 1024px) {
+        --tw-translate-y: calc(24px * -1);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
   .md\:max-lg\:px-16 {
     @media (width >= 768px) {
       @media (width < 1024px) {
         padding-inline: calc(var(--spacing) * 16);
+      }
+    }
+  }
+  .md\:max-lg\:px-\[48px\] {
+    @media (width >= 768px) {
+      @media (width < 1024px) {
+        padding-inline: 48px;
       }
     }
   }
@@ -3143,6 +3225,11 @@
   .lg\:pr-0 {
     @media (width >= 1024px) {
       padding-right: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:pb-10 {
+    @media (width >= 1024px) {
+      padding-bottom: calc(var(--spacing) * 10);
     }
   }
   .lg\:pb-\[50px\] {
@@ -4089,6 +4176,9 @@ input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-o
     --select-option-color: var(--color-blue-500);
     height: 48px;
     background: var(--select-bg);
+  }
+  .select.select-form.opened input {
+    color: var(--color-red-400);
   }
   .select.select-form input::placeholder {
   }

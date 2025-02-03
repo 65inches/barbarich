@@ -5,161 +5,193 @@
     {{> header}}
 
     <main>
-      <section class="pt-7.5 overflow-x-clip bg-gray-100 pb-10 lg:pb-[50px]">
+      <section class="pt-7.5 pb-7.5 overflow-x-clip bg-gray-100 lg:pb-10">
         <div class="container">
-          <nav
-            aria-label="Breadcrumb"
-            class="mb-[30px] inline-flex items-center text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
-          >
-            <a class="text-red-400 underline" href="/">Accueil</a>
-            <span
-              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
-            ></span>
-            <div>Mon compte</div>
-          </nav>
-        </div>
-
-        <div class="container">
-          <!-- <div
-            class="mb-5 flex flex-col gap-2.5 md:flex-row md:items-center md:justify-between lg:mb-[50px]"
-          ></div> -->
-
-          <div
-            class="grid w-full gap-y-5 md:gap-y-10 lg:grid-cols-[repeat(2,auto)]"
-          >
-            <h1
-              class="text-[40px] font-semibold leading-none text-blue-500 xl:text-[50px]"
+          <div class="text-center">
+            <svg
+              viewBox="0 0 42 42"
+              fill="none"
+              class="size-[42px] mb-2.5 inline"
+              aria-hidden="true"
             >
-              Mes documents
+              <path
+                d="M8.20312 17.0655H32.7994C36.4088 17.0655 39.5063 14.6243 40.4119 11.2118L38.85 21.5937C38.5613 23.523 36.9075 24.9405 34.9519 24.9405H9.68625L8.20312 17.0655Z"
+                fill="#25E9B2"
+              />
+              <path
+                d="M34.7812 42.003C33.5213 42.003 32.4844 40.9793 32.4844 39.7062C32.4844 38.433 33.5213 37.4093 34.7812 37.4093C36.0412 37.4093 37.0781 38.433 37.0781 39.7062C37.0781 40.9793 36.0412 42.003 34.7812 42.003ZM13.125 42.003C11.865 42.003 10.8281 40.9793 10.8281 39.7062C10.8281 38.433 11.865 37.4093 13.125 37.4093C14.385 37.4093 15.4219 38.433 15.4219 39.7062C15.4219 40.9793 14.385 42.003 13.125 42.003ZM36.75 34.128H16.065C12.6 34.128 9.6075 31.6474 8.96437 28.2349L8.4 25.203C8.4 25.203 8.4 25.1768 8.4 25.1505L4.5675 4.76741C4.33125 3.52054 3.255 2.62804 1.98187 2.62804H1.3125C0.590625 2.62804 0 2.03741 0 1.31554C0 0.593661 0.590625 0.0030365 1.3125 0.0030365H1.98187C4.50187 0.0030365 6.68062 1.80116 7.14 4.28179L10.7625 23.628H34.8206C36.1463 23.628 37.275 22.6305 37.4325 21.318L39.375 5.09554C39.4669 4.37366 40.11 3.86179 40.8319 3.95366C41.5537 4.04554 42.0656 4.68866 41.9738 5.41054L40.0312 21.633C39.7163 24.2712 37.4719 26.253 34.8206 26.253H11.2612L11.5369 27.7493C11.9438 29.9149 13.8469 31.503 16.0519 31.503H36.7369C37.4587 31.503 38.0494 32.0937 38.0494 32.8155C38.0494 33.5374 37.4587 34.128 36.7369 34.128H36.75Z"
+                fill="#324E73"
+              />
+              <path
+                d="M21.9054 17.3937C21.5773 17.3937 21.2492 17.2755 20.9998 17.0262L16.4585 12.6555C15.9335 12.1568 15.9204 11.3168 16.4192 10.8049C16.9179 10.2799 17.7579 10.2668 18.2698 10.7655L21.9054 14.2699L31.2242 5.30554C31.7492 4.80679 32.576 4.81992 33.0748 5.34492C33.5735 5.86992 33.5604 6.69679 33.0354 7.19554L22.811 17.0393C22.5617 17.2887 22.2335 17.4068 21.9054 17.4068V17.3937Z"
+                fill="#324E73"
+              />
+            </svg>
+
+            <h1
+              class="mb-2.5 text-center text-3xl font-semibold leading-9 text-blue-500"
+            >
+              Confirmation de commande
             </h1>
 
-            <div
-              class="gap-3.75 flex items-center max-md:text-center md:col-start-2 md:row-start-1 md:ml-auto"
-            >
-              <a
-                href="/account.html"
-                class="btn-primary w-fit w-full justify-center lg:mx-auto"
-              >
-                Rechercher
+            <div class="mx-auto lg:w-8/12">
+              <div class="prose text-lg leading-[1.5] text-blue-500">
+                <p>
+                  Nous vous remercions de votre commande.Nous vous tiendrons
+                  informé par e-mail lorsque les articles de votre commande
+                  auront été expédiés.Nous espérons vous revoir bientôt. .
+                </p>
+              </div>
+
+              <a href="/account.html" class="btn-primary">
+                Se connecter
+
                 <svg
-                  viewBox="0 0 16 16"
-                  class="w-4 fill-current"
+                  width="10"
+                  height="12"
+                  viewBox="0 0 10 12"
+                  fill="none"
                   aria-hidden="true"
                 >
                   <path
-                    d="M0.802 16.0031C0.594 16.0031 0.394 15.9231 0.234 15.7711C-0.078 15.4591 -0.078 14.9551 0.234 14.6431L3.178 11.6991C2.194 10.4671 1.602 8.90705 1.602 7.20305C1.602 3.23505 4.834 0.00305176 8.802 0.00305176C12.77 0.00305176 16.002 3.23505 16.002 7.20305C16.002 11.1711 12.77 14.4031 8.802 14.4031C7.106 14.4031 5.546 13.8111 4.306 12.8271L1.362 15.7711C1.202 15.9311 1.002 16.0031 0.794 16.0031H0.802ZM8.802 1.60305C5.714 1.60305 3.202 4.11505 3.202 7.20305C3.202 10.2911 5.714 12.8031 8.802 12.8031C11.89 12.8031 14.402 10.2911 14.402 7.20305C14.402 4.11505 11.89 1.60305 8.802 1.60305Z"
-                  />
+                    d="M1 3.00293H9M9 3.00293V11.0029M9 3.00293L1 11.0029"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  ></path>
                 </svg>
               </a>
-            </div>
-
-            <div class="lg:col-span-2">
-              <div class="w-full lg:hidden">
-                <label
-                  class="block font-medium leading-none text-blue-500"
-                  for="{{id}}"
-                >
-                  {{label}}
-                </label>
-
-                <div data-id="idd" class="select select-form">
-                  <input
-                    id="idd"
-                    type="text"
-                    placeholder="Choisissez..."
-                    readonly
-                  />
-                  <ul class="options">
-                    <li class="option">Offres</li>
-                    <li class="option">Commandes</li>
-                    <li class="option">Préparations</li>
-                    <li class="option">Factures</li>
-                    <li class="option">Notes d'envoi</li>
-                    <li class="option">Notes de crédit</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div
-                class="hidden items-center divide-x divide-gray-500 border-b border-t border-gray-500 text-center font-medium leading-none text-blue-800 lg:flex"
-              >
-                <a
-                  href=""
-                  class="document-nav-item grow gap-2.5 py-[15px] transition duration-300 hover:text-red-400"
-                >
-                  <span class="inline-block w-fit">Offres</span>
-                </a>
-                <a
-                  href=""
-                  class="document-nav-item grow gap-2.5 py-[15px] transition duration-300 hover:text-red-400"
-                >
-                  <span class="inline-block w-fit">Commandes</span>
-                </a>
-                <a
-                  href=""
-                  class="document-nav-item grow gap-2.5 py-[15px] transition duration-300 hover:text-red-400"
-                >
-                  <span class="inline-block w-fit">Préparations</span>
-                </a>
-                <a
-                  href=""
-                  class="document-nav-item grow gap-2.5 py-[15px] transition duration-300 hover:text-red-400"
-                >
-                  <span class="inline-block w-fit">Notes d'envoi</span>
-                </a>
-                <a
-                  href=""
-                  class="document-nav-item grow gap-2.5 py-[15px] transition duration-300 hover:text-red-400"
-                >
-                  <span class="inline-block w-fit">Factures</span>
-                </a>
-                <a
-                  href=""
-                  class="document-nav-item grow gap-2.5 py-[15px] transition duration-300 hover:text-red-400"
-                >
-                  <span class="inline-block w-fit">Notes de crédit</span>
-                </a>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="lg:mb-15 lg:pt-15 mb-10 w-full overflow-x-hidden pt-10">
+      <section class="slider lg:mb-15 lg:pt-15 mb-10 overflow-x-clip pt-10">
         <div class="container">
-          <div class="mb-7.5 overflow-x-auto lg:mb-10">
-            <table
-              class="w-full table-auto whitespace-nowrap border-b border-gray-300 text-left leading-none text-blue-800"
-            >
-              <thead class="text-semibold text-xs uppercase tracking-[1.2px]">
-                <tr>
-                  <th class="px-5 py-3 pb-5">DATE</th>
-                  <th class="px-5 py-3 pb-5">ÉCHÉANCE</th>
-                  <th class="px-5 py-3 pb-5">N° COMMANDE</th>
-                  <th class="px-5 py-3 pb-5">N° DOCUMENT</th>
-                  <th class="px-5 py-3 pb-5">MA RÉFÉRENCE</th>
-                  <th class="px-5 py-3 pb-5">TOTAL HTVA</th>
-                  <th class="px-5 py-3 pb-5">SOLDE HTVA</th>
-                  <th class="px-5 py-3 pb-5"></th>
-                </tr>
-              </thead>
-              <tbody class="">
-                {{> components/table-row class="bg-gray-300" date="24.11.2024"
-                endDate="25.12.2024" orderNumber="100048645"
-                docNumber="986451000" reference="-" total="519,49" htva="519,49"
-                }} {{> components/table-row date="24.11.2024"
-                endDate="25.12.2024" orderNumber="100048645"
-                docNumber="986451000" reference="-" total="519,49" htva="0" }}
-                {{> components/table-row date="24.11.2024" endDate="25.12.2024"
-                orderNumber="100048645" docNumber="986451000" reference="-"
-                total="519,49" htva="0" }} {{> components/table-row
-                date="24.11.2024" endDate="25.12.2024" orderNumber="100048645"
-                docNumber="986451000" reference="-" total="519,49" htva="0" }}
-              </tbody>
-            </table>
-          </div>
+          <div class="gap-y-7.5 grid grid-cols-[repeat(2,auto)] md:gap-y-10">
+            <div class="flex items-center justify-between">
+              <h2
+                class="text-[40px] font-semibold leading-[46px] text-blue-500"
+              >
+                À la une
+              </h2>
+            </div>
 
-          {{>components/pagination}}
+            <div class="col-span-2">
+              <div class="breakout-right">
+                <div class="swiper md:mb-7.5 lg:mb-10">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item title="Faxe Royal Export
+                      (5,6%)" desc="Bière Faxe Royal Export (5,6%) 500 ml x 24
+                      pc" img="img/products/product_1.png" price="36,48"
+                      number="24" }}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item title="SoS Limonade
+                      Pastèque" desc="SoS Limonade Pastèque 1 L x 12 pc"
+                      img="img/products/product_2.png" price="27,26" number="12"
+                      }}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item title="Long Chips Shish
+                      Kebab" desc="Long Chips Shish Kebab 75 gr x 20 pc"
+                      img="img/products/product_3.png" price="24,43"
+                      number="20"}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item title="Pokemon Pikachu
+                      Ramune ..." desc="Pokemon Pikachu Ramune Lychee 200 ml x
+                      30 pc" img="img/products/product_4.png" price="24,43"
+                      number="30" }}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item title="Snickers Fruit &
+                      Nut" desc="Snickers Fruit & Nut 40 gr x 18 pc"
+                      img="img/products/product_5.png" price="27,89"
+                      number="18"}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item title="Faxe Royal Export
+                      (5,6%)" desc="Bière Faxe Royal Export (5,6%) 500 ml x 24
+                      pc" img="img/products/product_1.png" price="36,48"
+                      number="24" }}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item title="SoS Limonade
+                      Pastèque" desc="SoS Limonade Pastèque 1 L x 12 pc"
+                      img="img/products/product_2.png" price="27,26" number="12"
+                      }}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item title="Long Chips Shish
+                      Kebab" desc="Long Chips Shish Kebab 75 gr x 20 pc"
+                      img="img/products/product_3.png" price="24,43"
+                      number="20"}}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item title="Pokemon Pikachu
+                      Ramune ..." desc="Pokemon Pikachu Ramune Lychee 200 ml x
+                      30 pc" img="img/products/product_4.png" price="24,43"
+                      number="30" }}
+                    </div>
+                    <div class="swiper-slide w-[323px]">
+                      {{> components/cart-product-item title="Snickers Fruit &
+                      Nut" desc="Snickers Fruit & Nut 40 gr x 18 pc"
+                      img="img/products/product_5.png" price="27,89"
+                      number="18"}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination mx-auto max-md:hidden"></div>
+            </div>
+
+            <div
+              class="gap-3.75 flex items-center max-md:col-span-2 max-md:text-center md:col-start-2 md:row-start-1 md:ml-auto"
+            >
+              <a href="#" class="btn-secondary max-md:mx-auto">
+                Voir toute la boutique
+              </a>
+              <div class="gap-1.25 hidden md:flex">
+                <button
+                  class="swiper-button-prev px-3.75 shrink-0 rounded-full border border-red-300 py-4 text-red-400"
+                >
+                  <svg
+                    width="15"
+                    height="16"
+                    viewBox="0 0 15 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M8.556 14.367 1.889 8.003m0 0 6.667-6.364M1.889 8.003H15"
+                      stroke="#D01B56"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="swiper-button-next px-3.75 rounded-full border border-red-300 py-4 text-red-400"
+                >
+                  <svg
+                    class="w-[15px]"
+                    viewBox="0 0 15 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="m6.444 1.64 6.667 6.363m0 0-6.667 6.364m6.667-6.364H0"
+                      stroke="#D01B56"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -183,7 +215,7 @@
                 <h2
                   class="mb-7.5 text-[35px] font-semibold leading-[1.14] -tracking-[0.7px] text-blue-500 lg:mb-10 lg:text-[40px]"
                 >
-                  Barbarich Import c’est...
+                  Barbarich Import c'est...
                 </h2>
                 <div class="grid gap-5 md:grid-cols-2 md:gap-[60px]">
                   <div
@@ -205,7 +237,9 @@
                       >
                         Un service client réactif
                       </h3>
-                      <p class="font-normal leading-snug text-blue-800">
+                      <p
+                        class="text-base font-normal leading-snug text-blue-800"
+                      >
                         Contactez-nous au +32 87 33 60 45 ou sur
                         <a
                           href="mailto:info@barbarich.be"
@@ -235,7 +269,9 @@
                       >
                         La livraison gratuite
                       </h3>
-                      <p class="font-normal leading-snug text-blue-800">
+                      <p
+                        class="text-base font-normal leading-snug text-blue-800"
+                      >
                         Livraison gratuite BE à partir de 350 € dans les 3 à 5
                         jours ouvrés
                       </p>
@@ -265,8 +301,10 @@
                       >
                         Un large assortiment
                       </h3>
-                      <p class="font-normal leading-snug text-blue-800">
-                        Plus de 1.200 produits nationaux et d’importation
+                      <p
+                        class="text-base font-normal leading-snug text-blue-800"
+                      >
+                        Plus de 1.200 produits nationaux et d'importation
                         sélectionnés avec soin
                       </p>
                     </div>
@@ -295,7 +333,9 @@
                       >
                         Le paiement sécurisé
                       </h3>
-                      <p class="font-normal leading-snug text-blue-800">
+                      <p
+                        class="text-base font-normal leading-snug text-blue-800"
+                      >
                         Payez en toute sécurité par cartes Maestro, Mastercard,
                         Bancontact, Visa
                       </p>

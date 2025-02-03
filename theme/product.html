@@ -12,15 +12,29 @@
             class="mb-[30px] inline-flex items-center gap-y-2 flex-wrap text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
           >
             <a class="text-red-400 underline" href="/">Accueil</a>
-            <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
+            <span
+              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
+            ></span>
             <a class="text-red-400 underline" href="shop.html">Boutique</a>
-            <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
-            <a class="text-red-400 underline" href="category-2.html">Epicerie salée</a>
-            <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
+            <span
+              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
+            ></span>
+            <a class="text-red-400 underline" href="category-2.html"
+              >Epicerie salée</a
+            >
+            <span
+              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
+            ></span>
             <a class="text-red-400 underline" href="category-1.html">Chips</a>
-            <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
-            <a class="text-red-400 underline" href="category.html">Long Chips</a>
-            <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
+            <span
+              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
+            ></span>
+            <a class="text-red-400 underline" href="category.html"
+              >Long Chips</a
+            >
+            <span
+              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
+            ></span>
             <div>Long Chips Thaï Sweet Chilli</div>
           </nav>
           <div
@@ -72,10 +86,12 @@
                     <div class="swiper swiper-product-large">
                       <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                          {{> components/product-item-slide-large text="product"}}
+                          {{> components/product-item-slide-large
+                          text="product"}}
                         </div>
                         <div class="swiper-slide">
-                          {{> components/product-item-slide-large text="product-alt"}}
+                          {{> components/product-item-slide-large
+                          text="product-alt"}}
                         </div>
                       </div>
                       <!-- <div class="b inline-flex h-12 items-center justify-center gap-[5px] px-[25px]"> -->
@@ -171,7 +187,9 @@
               <div
                 class="mb-5 border-b border-t border-dashed border-gray-500 py-5"
               >
-                <div class="mb-7.5 flex flex-col md:flex-row w-full md:items-center justify-between">
+                <div
+                  class="mb-7.5 flex flex-col md:flex-row w-full md:items-center justify-between"
+                >
                   <div class="relative">
                     <div class="flex items-center gap-2.5">
                       <span
@@ -203,7 +221,9 @@
                       TVA non incluse
                     </span>
                   </div>
-                  <div class="flex mt-[10px] md:mt-0 md:flex-col items-center md:items-end  gap-2.5">
+                  <div
+                    class="flex mt-[10px] md:mt-0 md:flex-col items-center md:items-end gap-2.5"
+                  >
                     <span class="text-xs font-normal leading-3 text-blue-800">
                       Disponibilité
                     </span>
@@ -447,10 +467,18 @@
 
             <div class="col-span-2">
               <div class="grid md:grid-cols-2 xl:grid-cols-4">
-                {{> components/cart-product-item title="Long Chips Sour Cream & Onion" desc="Long Chips Sour Cream & Onion 75 gr x 20 pc" img="img/products/product_15.png" price="36,48"}}
-                {{> components/cart-product-item title="Long Chips Original" desc="Long Chips Original 'Mashed Patato' 75 gr x 20 pc" img="img/products/product_16.png" price="36,48"}}
-                {{> components/cart-product-item title="Long Chips Cheese & Spring Onion" desc="Long Chips Cheese & Spring Onion 75 gr x 20 pc" img="img/products/product_17.png" price="36,48"}}
-                {{> components/cart-product-item title="Long Chips Honey BBQ" desc="Long Chips Honey BBQ 75 gr x 20 pc" img="img/products/product_20.png" price="36,48"}}
+                {{> components/cart-product-item title="Long Chips Sour Cream &
+                Onion" desc="Long Chips Sour Cream & Onion 75 gr x 20 pc"
+                img="img/products/product_15.png" price="36,48"}} {{>
+                components/cart-product-item title="Long Chips Original"
+                desc="Long Chips Original 'Mashed Patato' 75 gr x 20 pc"
+                img="img/products/product_16.png" price="36,48"}} {{>
+                components/cart-product-item title="Long Chips Cheese & Spring
+                Onion" desc="Long Chips Cheese & Spring Onion 75 gr x 20 pc"
+                img="img/products/product_17.png" price="36,48"}} {{>
+                components/cart-product-item title="Long Chips Honey BBQ"
+                desc="Long Chips Honey BBQ 75 gr x 20 pc"
+                img="img/products/product_20.png" price="36,48"}}
               </div>
             </div>
 
@@ -475,8 +503,12 @@
           <div
             class="mx-auto grid gap-0 md:w-fit md:grid-cols-2 lg:place-items-center"
           >
-          {{> components/cart-product-item title="Doritos mild salsa" desc="Sauce Doritos mild salsa 280 gr x 6 pc" img="img/products/product_18.png" price="36,48"}}
-          {{> components/cart-product-item title="Doritos sour cream" desc="Sauce Doritos sour cream 280 gr x 6 pc" img="img/products/product_19.png" price="36,48"}}
+            {{> components/cart-product-item title="Doritos mild salsa"
+            desc="Sauce Doritos mild salsa 280 gr x 6 pc"
+            img="img/products/product_18.png" price="36,48"}} {{>
+            components/cart-product-item title="Doritos sour cream" desc="Sauce
+            Doritos sour cream 280 gr x 6 pc" img="img/products/product_19.png"
+            price="36,48"}}
           </div>
         </div>
       </section>
