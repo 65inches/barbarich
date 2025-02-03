@@ -11,11 +11,15 @@
             aria-label="Breadcrumb"
             class="mb-[30px] inline-flex items-center gap-y-2 flex-wrap text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
           >
-          <a class="text-red-400 underline" href="/">Accueil</a>
-          <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
-          <a class="text-red-400 underline" href="shop.html">Boutique</a>
-          <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
-          <div>Epicerie salée</div>
+            <a class="text-red-400 underline" href="/">Accueil</a>
+            <span
+              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
+            ></span>
+            <a class="text-red-400 underline" href="shop.html">Boutique</a>
+            <span
+              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
+            ></span>
+            <div>Epicerie salée</div>
           </nav>
         </div>
 
@@ -25,30 +29,40 @@
               <h1
                 class="text-[40px] font-semibold leading-none text-blue-500 xl:text-[50px]"
               >
-              Epicerie salée  
+                Epicerie salée
               </h1>
             </div>
-            <div
-              class="lg:w-8/12"
-            >
-             <p class="leading-7s mt-5 text-lg font-normal text-blue-500">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <strong>occaecat cupidatat non proident</strong>, sunt in culpa qui officia deserunt mollit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+            <div class="lg:w-8/12">
+              <p class="leading-7s mt-5 text-lg font-normal text-blue-500">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                <strong>occaecat cupidatat non proident</strong>, sunt in culpa
+                qui officia deserunt mollit. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex.
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="container pt-15 ">
+        <div class="container pt-15">
           <div
             class="grid grid-cols-[repeat(auto-fill,160px)] place-content-center gap-[30px] lg:grid-cols-[repeat(auto-fill,190px)]"
           >
-            {{> components/cta-product title="Chips" img="img/categories/image_22.png" link="category-1.html"}} 
-            {{> components/cta-product title="Nachos et sauces" img="img/categories/image_23.png"  link="category-1.html"}} 
-            {{> components/cta-product title="Autres"img="img/categories/image_24.png"  link="category-1.html"}} 
+            {{> components/cta-product title="Chips"
+            img="img/categories/image_22.png" link="category-1.html"}} {{>
+            components/cta-product title="Nachos et sauces"
+            img="img/categories/image_23.png" link="category-1.html"}} {{>
+            components/cta-product
+            title="Autres"img="img/categories/image_24.png"
+            link="category-1.html"}}
           </div>
         </div>
       </section>
 
       <div class="bg-gray-100">
-        <section class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip pt-10 bg-white rounded-t-3xl">
+        <section
+          class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip pt-10 bg-white rounded-t-3xl"
+        >
           <div class="container">
             <div class="mb-10 flex flex-col justify-between gap-5 lg:flex-row">
               <div class="flex items-center gap-[15px]">
@@ -114,24 +128,30 @@
                 </div>
                 <div class="flex items-center gap-[15px]">
                   <div class="grow">
-                    {{> components/form/select-filter label="Trier par" id="price" placeholder="Prix croissant" value="" class="w-full md:w-[180px]"}}
+                    {{> components/form/select-filter label="Trier par"
+                    id="price" placeholder="Prix croissant" value=""
+                    class="w-full md:w-[180px]"}}
                   </div>
                   <div>
-                    {{>components/form/select-filter-small label="Par page" id="page" placeholder="8" value="" class="w-[82px]"}}
+                    {{>components/form/select-filter-small label="Par page"
+                    id="page" placeholder="8" value="" class="w-[82px]"}}
                   </div>
                 </div>
               </div>
             </div>
             <div class="grid md:grid-cols-2 xl:grid-cols-4">
-              {{> components/cart-product-item title="Plano 1M Snacks salés" desc="Plano 1M Snacks salé" img="img/products/product_33.png" price="60,75"}}
-              {{> components/cart-product-item title="Colis Crispy snacks 3 + 1 GRATUIT" desc="Colis Crispy snacks 3 + 1 GRATUIT" img="img/products/product_34.png" price="60,75" number=64 new=true }}
+              {{> components/cart-product-item title="Plano 1M Snacks salés"
+              desc="Plano 1M Snacks salé" img="img/products/product_33.png"
+              price="60,75"}} {{> components/cart-product-item title="Colis
+              Crispy snacks 3 + 1 GRATUIT" desc="Colis Crispy snacks 3 + 1
+              GRATUIT" img="img/products/product_34.png" price="60,75" number=64
+              new=true }}
             </div>
           </div>
         </section>
       </div>
 
       {{> components/ctas/reassurance}}
-
     </main>
 
     {{> footer}}

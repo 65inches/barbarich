@@ -149,6 +149,10 @@
     background: var(--select-bg);
   }
 
+  .select.select-form.opened input {
+    color: var(--color-red-400);
+  }
+
   .select.select-form input::placeholder {
     /* color: color-mix(in oklab, currentColor 50%, transparent); */
   }

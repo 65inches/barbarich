@@ -5,19 +5,29 @@
     {{> header}}
 
     <main>
-      <section class="pt-7.5 overflow-x-clip bg-gray-100 pb-[15px] lg:pb-[50px]">
+      <section
+        class="pt-7.5 overflow-x-clip bg-gray-100 pb-[15px] lg:pb-[50px]"
+      >
         <div class="container">
           <nav
             aria-label="Breadcrumb"
-            class="mb-[30px] inline-flex items-center gap-y-2 flex-wrap text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
+            class="mb-[30px] inline-flex flex-wrap items-center gap-y-2 text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
           >
-          <a class="text-red-400 underline" href="/">Accueil</a>
-          <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
-          <a class="text-red-400 underline" href="shop.html">Boutique</a>
-          <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
-          <a class="text-red-400 underline" href="category-2.html">Epicerie salée</a>
-          <i class="size-1 mx-2 inline-block rounded-full bg-gray-500"></i>
-          <div>Chips</div>
+            <a class="text-red-400 underline" href="/">Accueil</a>
+            <span
+              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
+            ></span>
+            <a class="text-red-400 underline" href="shop.html">Boutique</a>
+            <span
+              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
+            ></span>
+            <a class="text-red-400 underline" href="category-2.html"
+              >Epicerie salée</a
+            >
+            <span
+              class="size-1 mx-2 inline-block rounded-full bg-gray-500"
+            ></span>
+            <div>Chips</div>
           </nav>
         </div>
 
@@ -27,13 +37,17 @@
               <h1
                 class="text-[40px] font-semibold leading-none text-blue-500 xl:text-[50px]"
               >
-              Chips  
+                Chips
               </h1>
             </div>
-            <div
-              class="lg:w-8/12"
-            >
-             <p class="leading-7s mt-5 text-lg font-normal text-blue-500">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <strong>occaecat cupidatat non proident</strong>, sunt in culpa qui officia deserunt mollit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+            <div class="lg:w-8/12">
+              <p class="leading-7s mt-5 text-lg font-normal text-blue-500">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                <strong>occaecat cupidatat non proident</strong>, sunt in culpa
+                qui officia deserunt mollit. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex.
+              </p>
             </div>
           </div>
         </div>
@@ -43,43 +57,55 @@
             <div class="gap-y-7.5 grid grid-cols-[repeat(2,auto)] md:gap-y-10">
               <div class="col-span-2">
                 <div class="breakout-right">
-                  <div class="swiper mb-5 md:mb-7.5 lg:mb-10">
+                  <div class="swiper md:mb-7.5 mb-5 lg:mb-10">
                     <div class="swiper-wrapper gap-[30px]">
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Brets" img="img/categories/image_25.png" link="category.html"}}
+                        {{> components/cta-product title="Brets"
+                        img="img/categories/image_25.png" link="category.html"}}
                       </div>
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Long Chips" img="img/categories/image_26.png" link="category.html"}}
+                        {{> components/cta-product title="Long Chips"
+                        img="img/categories/image_26.png" link="category.html"}}
                       </div>
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Cheetos" img="img/categories/image_27.png" link="category.html"}}
+                        {{> components/cta-product title="Cheetos"
+                        img="img/categories/image_27.png" link="category.html"}}
                       </div>
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Lay’s" img="img/categories/image_28.png" link="category.html"}}
+                        {{> components/cta-product title="Lay’s"
+                        img="img/categories/image_28.png" link="category.html"}}
                       </div>
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Pringles" img="img/categories/image_29.png" link="category.html"}}
+                        {{> components/cta-product title="Pringles"
+                        img="img/categories/image_29.png" link="category.html"}}
                       </div>
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Crispy" img="img/categories/image_30.png" link="category.html"}}
+                        {{> components/cta-product title="Crispy"
+                        img="img/categories/image_30.png" link="category.html"}}
                       </div>
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Brets" img="img/categories/image_25.png" link="category.html"}}
+                        {{> components/cta-product title="Brets"
+                        img="img/categories/image_25.png" link="category.html"}}
                       </div>
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Long Chips" img="img/categories/image_26.png" link="category.html"}}
+                        {{> components/cta-product title="Long Chips"
+                        img="img/categories/image_26.png" link="category.html"}}
                       </div>
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Cheetos" img="img/categories/image_27.png" link="category.html"}}
+                        {{> components/cta-product title="Cheetos"
+                        img="img/categories/image_27.png" link="category.html"}}
                       </div>
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Lay’s" img="img/categories/image_28.png" link="category.html"}}
+                        {{> components/cta-product title="Lay’s"
+                        img="img/categories/image_28.png" link="category.html"}}
                       </div>
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Pringles" img="img/categories/image_29.png" link="category.html"}}
+                        {{> components/cta-product title="Pringles"
+                        img="img/categories/image_29.png" link="category.html"}}
                       </div>
                       <div class="swiper-slide w-[160px] lg:w-[190px]">
-                        {{> components/cta-product title="Crispy" img="img/categories/image_30.png" link="category.html"}}
+                        {{> components/cta-product title="Crispy"
+                        img="img/categories/image_30.png" link="category.html"}}
                       </div>
                     </div>
                   </div>
@@ -127,22 +153,18 @@
                       </button>
                     </div>
                   </div>
-                  
                 </div>
-                
-                
               </div>
-  
-             
             </div>
           </div>
         </section>
-
       </section>
 
       <div class="bg-gray-100">
-        <section class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip pt-10 bg-white rounded-t-3xl">
-          <div class="container mb-15">
+        <section
+          class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip rounded-t-3xl bg-white pt-10"
+        >
+          <div class="mb-15 container">
             <div class="mb-10 flex flex-col justify-between gap-5 lg:flex-row">
               <div class="flex items-center gap-[15px]">
                 <span class="text-sm font-normal leading-[14px] text-blue-500">
@@ -186,7 +208,7 @@
                     type="text"
                     id="search"
                     placeholder="Rechercher dans le résultat"
-                    class="xl:w-100 pr-15 w-full rounded-[40px] border border-gray-500 bg-white py-3 pl-5 font-regular text-blue-500 focus:outline-2 focus:outline-red-500 md:grow"
+                    class="xl:w-100 pr-15 font-regular w-full rounded-[40px] border border-gray-500 bg-white py-3 pl-5 text-blue-500 focus:outline-2 focus:outline-red-500 md:grow"
                   />
                   <span
                     class="absolute inset-y-0 end-5 grid place-content-center"
@@ -207,33 +229,49 @@
                 </div>
                 <div class="flex items-center gap-[15px]">
                   <div class="grow">
-                    {{> components/form/select-filter label="Trier par" id="price" placeholder="Prix croissant" value="" class="w-full md:w-[180px]"}}
+                    {{> components/form/select-filter label="Trier par"
+                    id="price" placeholder="Prix croissant" value=""
+                    class="w-full md:w-[180px]"}}
                   </div>
                   <div>
-                    {{>components/form/select-filter-small label="Par page" id="page" placeholder="8" value="" class="w-[82px]"}}
+                    {{>components/form/select-filter-small label="Par page"
+                    id="page" placeholder="8" value="" class="w-[82px]"}}
                   </div>
                 </div>
               </div>
             </div>
             <div class="grid md:grid-cols-2 xl:grid-cols-4">
-              {{> components/cart-product-item title="Big Bag paprika" desc="Chips Big Bag paprika 330 gr x 16 pc" img="img/products/product_25.png" price="60,75"}}
-              {{> components/cart-product-item title="Big Bag bacon" desc="Chips Big Bag bacon 350 gr x 16 pc" img="img/products/product_26.png" price="60,75" }}
-              {{> components/cart-product-item title="Brets pizza" desc="Chips Brets saveur pizza 125 gr x 10 pc" img="img/products/product_27.png" price="36,48"}}
-              {{> components/cart-product-item title="Brets chèvre & piment d'espelette" desc="Chips Brets saveur chèvre & piment d'espelette 125 gr x 10 pc" img="img/products/product_28.png" price="36,48" }}
-              {{> components/cart-product-item title="Brets côte de boeuf" desc="Chips Brets saveur côte de boeuf grillée 125 gr x 10 pc" img="img/products/product_29.png" price="36,48" }}
-              {{> components/cart-product-item title="Brets barbecue" desc="Chips Brets saveur barbecue 125 gr x 10 pc" img="img/products/product_30.png" price="36,48"}}
-              {{> components/cart-product-item title="Brets frites mayonnaise" desc="Chips Brets saveur frites mayonnaise 125 gr x 10 pc" img="img/products/product_31.png" price="36,48" backInStock=true}}
-              {{> components/cart-product-item title="Brets à l'ancienne" desc="Chips Brets à l'ancienne 125 gr x 10 pc" img="img/products/product_32.png" price="36,48"}}
+              {{> components/cart-product-item title="Big Bag paprika"
+              desc="Chips Big Bag paprika 330 gr x 16 pc"
+              img="img/products/product_25.png" price="60,75"}} {{>
+              components/cart-product-item title="Big Bag bacon" desc="Chips Big
+              Bag bacon 350 gr x 16 pc" img="img/products/product_26.png"
+              price="60,75" }} {{> components/cart-product-item title="Brets
+              pizza" desc="Chips Brets saveur pizza 125 gr x 10 pc"
+              img="img/products/product_27.png" price="36,48"}} {{>
+              components/cart-product-item title="Brets chèvre & piment
+              d'espelette" desc="Chips Brets saveur chèvre & piment d'espelette
+              125 gr x 10 pc" img="img/products/product_28.png" price="36,48" }}
+              {{> components/cart-product-item title="Brets côte de boeuf"
+              desc="Chips Brets saveur côte de boeuf grillée 125 gr x 10 pc"
+              img="img/products/product_29.png" price="36,48" }} {{>
+              components/cart-product-item title="Brets barbecue" desc="Chips
+              Brets saveur barbecue 125 gr x 10 pc"
+              img="img/products/product_30.png" price="36,48"}} {{>
+              components/cart-product-item title="Brets frites mayonnaise"
+              desc="Chips Brets saveur frites mayonnaise 125 gr x 10 pc"
+              img="img/products/product_31.png" price="36,48" backInStock=true}}
+              {{> components/cart-product-item title="Brets à l'ancienne"
+              desc="Chips Brets à l'ancienne 125 gr x 10 pc"
+              img="img/products/product_32.png" price="36,48"}}
             </div>
           </div>
 
           {{>components/pagination}}
-
         </section>
       </div>
 
       {{> components/ctas/reassurance}}
-
     </main>
 
     {{> footer}}
