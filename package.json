@@ -11,7 +11,9 @@
     "watch:vite": "vite",
     "OLDwatch": "run-p \"watch:**\"",
     "watch": "bun run watch.js",
-    "build": "vite build"
+    "build:handlebars": "vite build",
+    "build:tailwind": "npx tailwindcss -i ./src/css/tailwind.css -o ./dist/style.css --content './dist/**/*.html'",
+    "build": "npm run build:handlebars && npm run build:tailwind"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.1",
