@@ -9,14 +9,14 @@
 | Menu              | ✅      | ✅     | ✅     |
 | Boutique - list   | ❌      | ❌     | ❌     |
 | Boutique - detail | ✅      | ✅     | ✅     |
-| Panier            | ❌      | ❌     | ❌     |
+| Panier            | ✅      | ✅     | ✅     |
 | Login             | ❌      | ❌     | ❌     |
 | Create account    | ❌      | ❌     | ❌     |
 | Account           | ✅      | ✅     | ✅     |
 | Contact           | ❌      | ❌     | ❌     |
 | FAQs              | ✅      | ✅     | ✅     |
 | A propos          | ✅      | ✅     | ✅     |
-| Legal             | ❌      | ❌     | ❌     |
+| Legal             | ✅      | ✅     | ✅     |
 | Mes documents     | ✅      | ✅     | ✅     |
 | 404               | ❌      | ❌     | ❌     |
 
