@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const isSigned = params.get('signed'); // "true" ou null
 
   if (isSigned) {
-    document.getElementById('dropdown-signed').classList.remove('hidden');
+    document.getElementById('dropdown-guest').remove();
   } else {
-    document.getElementById('dropdown-guest').classList.remove('hidden');
+    document.getElementById('dropdown-signed').remove();
   }
 
   const menuMobile = new MenuMobile('#nav-mobile');
