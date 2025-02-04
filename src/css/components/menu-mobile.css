@@ -6,7 +6,8 @@ body.menu-opened {
 #nav-mobile {
   --transition: cubic-bezier(0.19, 1, 0.22, 1);
   --drawer-padding: 24px;
-  @apply block xl:hidden;
+  @apply block xl:hidden max-md:pb-[60px];
+
 }
 
 .drawer {
@@ -67,6 +68,11 @@ body.menu-opened {
   width: 8px;
   height: 14px;
   background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.999817 1L6.99998 7.00001L0.999845 13' stroke='%23D01B56' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.menu-listitem__btn__lang::after {
+  right: inherit;
+  margin-left: 15px;
 }
 
 .menu-panel-sub .menu-listitem__btn::after {

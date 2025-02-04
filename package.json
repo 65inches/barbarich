@@ -12,7 +12,7 @@
     "OLDwatch": "run-p \"watch:**\"",
     "watch": "bun run watch.js",
     "build:handlebars": "vite build",
-    "build:tailwind": "npx tailwindcss -i ./src/css/tailwind.css -o ./dist/style.css --content './dist/**/*.html'",
+    "build:tailwind": "npx tailwindcss -i ./src/css/tailwind.css -o ./dist/style.css --content './theme/**/*.html'",
     "build": "npm run build:tailwind && npm run build:handlebars"
   },
   "devDependencies": {

@@ -1,10 +1,10 @@
-<div class='@container h-full'>
+<div class='@container md:h-full'>
   <a href='#'
-    class='block group/cta h-100 p-5 @min-[480px]:p-7.5 xl:h-full relative overflow-hidden rounded-[20px] transition duration-300 hover:translate-y-[-5px] cursor-pointer
+    class='block group/cta h-full lg:h-100 xl:h-full  p-5 @min-[480px]:p-7.5 relative overflow-hidden rounded-[20px] transition duration-300 hover:translate-y-[-5px] cursor-pointer
       {{class}}'
   >
     <div
-      class='xl:group-[.cta-two]/cta:max-w-65 xl:group-[.cta-three]/cta:max-w-65 max-lg:h-100 relative z-[2] flex flex-col items-start justify-start gap-2.5'
+      class='xl:group-[.cta-two]/cta:max-w-65 xl:group-[.cta-three]/cta:max-w-65 lg:h-100  relative z-[2] flex flex-col items-start justify-start gap-2.5'
     >
       <h2
         class='text-[30px] font-semibold leading-none text-blue-800 lg:text-[32px] xl:group-[.cta-one]/cta:text-[50px]'
@@ -19,6 +19,7 @@
       <span class='btn-primary relative z-[1] whitespace-nowrap group-hover/cta:text-white group-hover/cta:bg-blue-800'>
         Commander
         <svg
+          class="max-lg:hidden"
           width='10'
           height='12'
           viewBox='0 0 10 12'
@@ -35,10 +36,10 @@
       </span>
     </div>
 
-    <div class='absolute bottom-2.5 right-2.5 z-[1]'>
+    <div class='lg:absolute bottom-2.5 right-2.5 z-[1] '>
 
       <img
-        class='object-fit relative z-[1] h-[236px] md:max-lg:group-[.cta-four]/cta:h-auto md:max-lg:group-[.cta-four]/cta:w-[185px] xl:h-[260px] xl:group-[.cta-one]/cta:h-auto'
+        class='object-fit relative z-[1] h-[236px] md:max-lg:group-[.cta-four]/cta:h-auto md:max-lg:group-[.cta-four]/cta:w-[185px] xl:h-[260px] xl:group-[.cta-one]/cta:h-auto max-md:ml-auto max-lg:ml-auto max-lg:mt-[-50px] max-lg:max-w-[55%] max-lg:h-auto {{imgClass}}'
         src='{{img}}'
         alt=''
       />
