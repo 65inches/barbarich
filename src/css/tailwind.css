@@ -190,3 +190,7 @@ strong {
 .scroll {
   scroll-behavior: smooth;
 }
+
+.swiper-product-thumbs .swiper-slide-thumb-active > div{
+  @apply border-2 border-gray-500;
+}
