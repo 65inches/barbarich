@@ -163,7 +163,6 @@ strong {
 .document-nav-item {
   span {
     position: relative;
-
     &::after {
       position: absolute;
       width: 100%;
@@ -179,7 +178,9 @@ strong {
     }
   }
 
-  &:hover {
+  &:hover,
+  &.active {
+    color: var(--color-red-400);
     span::after {
       opacity: 1;
       transform: translateY(0);

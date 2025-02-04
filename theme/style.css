@@ -1214,9 +1214,6 @@
   .table-auto {
     table-layout: auto;
   }
-  .table-fixed {
-    table-layout: fixed;
-  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -1413,6 +1410,13 @@
       --tw-space-x-reverse: 0;
       margin-inline-start: calc(calc(var(--spacing) * 3) * var(--tw-space-x-reverse));
       margin-inline-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
+  .space-x-\[30px\] {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(30px * var(--tw-space-x-reverse));
+      margin-inline-end: calc(30px * calc(1 - var(--tw-space-x-reverse)));
     }
   }
   .divide-x {
@@ -4420,8 +4424,20 @@ body {
     position: relative;
     right: 50%;
     left: 0;
-    width: 100vw;
     margin-right: -50vw;
+    width: calc(100vw - 20px);
+    @media (width >= 480px) {
+      width: calc(100vw - ((100vw - 480px) / 2));
+    }
+    @media (width >= 768px) {
+      width: calc(100vw - ((100vw - 768px) / 2));
+    }
+    @media (width >= 1024px) {
+      width: calc(100vw - ((100vw - 1024px) / 2));
+    }
+    @media (width >= 1320px) {
+      width: calc(100vw - ((100vw - 1320px) / 2));
+    }
   }
 }
 @layer base {
@@ -5026,7 +5042,8 @@ strong {
       transition: 300ms ease-in;
     }
   }
-  &:hover {
+  &:hover, &.active {
+    color: var(--color-red-400);
     span::after {
       opacity: 1;
       transform: translateY(0);

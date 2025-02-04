@@ -72,9 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       new Swiper(swiper, {
         slidesPerView: 'auto',
+        centeredSlidesBounds: true,
         spaceBetween: 0,
         pagination: {
           el: pagination,
+          clickable: true
         },
         scrollbar: {
           el: scrollbar,
