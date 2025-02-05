@@ -3,6 +3,12 @@ import MenuMobile from './menu-mobile';
 import Drawer from './menu-drawer';
 import Select from './select';
 
+document.querySelectorAll(".option").forEach(item => {
+  item.addEventListener("click", function () {
+      window.location.href = this.getAttribute("data-url");
+  });
+});
+
 document.querySelectorAll('.scroll').forEach(function(scrollElement) {
   scrollElement.addEventListener('click', function(event) {
     event.preventDefault();

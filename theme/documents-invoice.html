@@ -20,6 +20,10 @@
         </div>
 
         <div class="container">
+          <!-- <div
+            class="mb-5 flex flex-col gap-2.5 md:flex-row md:items-center md:justify-between lg:mb-[50px]"
+          ></div> -->
+
           <div class="max-md:flex max-md:flex-col md:grid w-full gap-y-5 lg:gap-y-10 lg:grid-cols-[repeat(2,auto)]">
             <h1 class="text-[40px] font-semibold leading-none text-blue-500 xl:text-[50px]">
               Mes documents
@@ -114,17 +118,39 @@
       <div class="bg-gray-100">
         <section class="lg:mb-15 lg:pt-15 mb-10 w-full overflow-x-hidden pt-10 rounded-t-3xl bg-white">
           <div class="container">
-            <div class=" flex items-center justify-center gap-[15px] rounded-[3px] bg-green-300 p-[15px] leading-snug text-blue-800">
-              <svg viewBox="0 0 17 16" fill="none" class="w-[17px] shrink-0 fill-current" aria-hidden="true">
-                <path d="M8.5 0.00305176C4.09 0.00305176 0.5 3.59305 0.5 8.00305C0.5 12.4131 4.09 16.0031 8.5 16.0031C12.91 16.0031 16.5 12.4131 16.5 8.00305C16.5 3.59305 12.91 0.00305176 8.5 0.00305176ZM14.59 8.00305C14.59 11.3631 11.86 14.0931 8.5 14.0931C5.14 14.0931 2.41 11.3631 2.41 8.00305C2.41 4.64305 5.14 1.91305 8.5 1.91305C11.86 1.91305 14.59 4.64305 14.59 8.00305Z"></path>
-                <path d="M8.50141 5.99305C9.22141 5.99305 9.81141 5.40305 9.81141 4.68305C9.81141 3.96305 9.22141 3.37305 8.50141 3.37305C7.78141 3.37305 7.19141 3.96305 7.19141 4.68305C7.19141 5.40305 7.78141 5.99305 8.50141 5.99305Z"></path>
-                <path d="M9.60984 10.4331V7.82307C9.60984 7.21307 9.10984 6.71307 8.50984 6.71307H8.08984C7.47984 6.71307 6.98984 7.21307 6.98984 7.82307C6.98984 8.15307 7.13984 8.46307 7.40984 8.67307V10.4231C6.93984 10.5431 6.58984 10.9831 6.58984 11.4931C6.58984 12.1031 7.08984 12.6031 7.68984 12.6031H9.31984C9.92984 12.6031 10.4198 12.1031 10.4198 11.4931C10.4198 10.9931 10.0798 10.5631 9.60984 10.4331Z"></path>
-              </svg>
-              <p>
-                Choisissez un type de document ci-dessus pour afficher la liste.
-              </p>
+            <div class="mb-7.5 overflow-x-scroll max-w-[100%] relative lg:mb-10">
+              <table
+                class="w-full table-auto border-b border-gray-300 text-left leading-none text-blue-800"
+              >
+                <thead class="text-semibold text-xs uppercase tracking-[1.2px] whitespace-nowrap">
+                  <tr>
+                    <th class="px-5 py-3 pb-5">DATE</th>
+                    <th class="px-5 py-3 pb-5">ÉCHÉANCE</th>
+                    <th class="px-5 py-3 pb-5">N° COMMANDE</th>
+                    <th class="px-5 py-3 pb-5">N° DOCUMENT</th>
+                    <th class="px-5 py-3 pb-5">MA RÉFÉRENCE</th>
+                    <th class="px-5 py-3 pb-5">TOTAL HTVA</th>
+                    <th class="px-5 py-3 pb-5">SOLDE HTVA</th>
+                    <th class="px-5 py-3 pb-5"></th>
+                  </tr>
+                </thead>
+                <tbody class="whitespace-nowrap">
+                  {{> components/table-row class="bg-gray-300" date="24.11.2024"
+                  endDate="25.12.2024" orderNumber="100048645"
+                  docNumber="986451000" reference="-" total="519,49" htva="519,49"
+                  }} {{> components/table-row date="24.11.2024"
+                  endDate="25.12.2024" orderNumber="100048645"
+                  docNumber="986451000" reference="-" total="519,49" htva="0" }}
+                  {{> components/table-row date="24.11.2024" endDate="25.12.2024"
+                  orderNumber="100048645" docNumber="986451000" reference="-"
+                  total="519,49" htva="0" }} {{> components/table-row
+                  date="24.11.2024" endDate="25.12.2024" orderNumber="100048645"
+                  docNumber="986451000" reference="-" total="519,49" htva="0" }}
+                </tbody>
+              </table>
             </div>
 
+            {{>components/pagination}}
           </div>
         </section>
       </div>
