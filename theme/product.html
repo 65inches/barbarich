@@ -458,8 +458,8 @@
       <div class="bg-gray-100">
         <section class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip pt-10 bg-white rounded-t-3xl">
           <div class="container">
-            <div class="gap-y-7.5 grid grid-cols-[repeat(2,auto)] md:gap-y-10">
-              <div class="flex items-center justify-between">
+            <div class="gap-y-7.5 grid grid-cols-[repeat(1,auto)] md:grid-cols-[repeat(2,auto)] md:gap-y-10">
+              <div class="flex items-center max-md:mx-auto justify-between">
                 <h2
                   class="text-[40px] font-semibold leading-[46px] text-blue-500 max-md:text-center"
                 >
@@ -467,7 +467,7 @@
                 </h2>
               </div>
 
-              <div class="col-span-2">
+              <div class="md:col-span-2">
                 <div class="grid md:grid-cols-2 xl:grid-cols-4">
                   {{> components/cart-product-item title="Long Chips Sour Cream & Onion" desc="Long Chips Sour Cream & Onion 75 gr x 20 pc" img="img/products/product_15.png" price="36,48" notAbsolute=true }} 
                   {{> components/cart-product-item title="Long Chips Original" desc="Long Chips Original 'Mashed Patato' 75 gr x 20 pc" img="img/products/product_16.png" price="36,48" notAbsolute=true }} 
@@ -477,7 +477,7 @@
               </div>
 
               <div
-                class="gap-3.75 flex items-center max-md:col-span-2 max-md:text-center md:col-start-2 md:row-start-1 md:ml-auto"
+                class="gap-3.75 flex items-center max-md:text-center md:col-start-2 md:row-start-1 md:ml-auto"
               >
                 <a href="shop.html" class="btn-secondary max-md:mx-auto">
                   Retour à la boutique
