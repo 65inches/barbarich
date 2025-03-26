@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   {{> head}}
-  <script> var theme = 'shop.html';</script>
+  <script>
+    var theme = 'shop.html';
+  </script>
   <body class="page-product">
     {{> header}}
 
@@ -10,7 +12,7 @@
         <div class="container">
           <nav
             aria-label="Breadcrumb"
-            class="mb-[30px] inline-flex items-center gap-y-2 flex-wrap text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
+            class="mb-[30px] inline-flex flex-wrap items-center gap-y-2 text-[13px] font-normal leading-[13px] text-blue-500 lg:mb-[50px]"
           >
             <a class="text-red-400 underline" href="/">Accueil</a>
             <span
@@ -39,7 +41,7 @@
             <div>Long Chips Thaï Sweet Chilli</div>
           </nav>
           <div
-            class="mb-[30px] lg:mb-[50px] flex flex-col gap-[15px] md:max-lg:px-[60px] lg:flex-row"
+            class="mb-[30px] flex flex-col gap-[15px] md:max-lg:px-[60px] lg:mb-[50px] lg:flex-row"
           >
             <div class="lg:w-5/12">
               <div
@@ -102,7 +104,7 @@
                     class="swiper-actions absolute bottom-0 mx-auto mb-[30px] flex w-fit items-center gap-2.5 rounded-[40px] border border-gray-500"
                   >
                     <button
-                      class="swiper-button-prev hover:bg-blue-500 hover:text-white  px-5.25 shrink-0 py-4 pl-[25px] text-red-400 hover:text-blue-500"
+                      class="swiper-button-prev px-5.25 shrink-0 py-4 pl-[25px] text-red-400 hover:bg-blue-500 hover:text-blue-500 hover:text-white"
                     >
                       <svg
                         class="w-2 stroke-current"
@@ -122,7 +124,7 @@
                       class="swiper-pagination font-medium text-blue-500"
                     ></div>
                     <button
-                      class="swiper-button-next hover:bg-blue-500 hover:text-white px-5.25 py-4 pr-[25px] text-red-400 hover:text-blue-500"
+                      class="swiper-button-next px-5.25 py-4 pr-[25px] text-red-400 hover:bg-blue-500 hover:text-blue-500 hover:text-white"
                     >
                       <svg
                         viewBox="0 0 8 14"
@@ -170,7 +172,8 @@
                 >
                   Long Chips Thaï Sweet Chilli 75 gr x 20 pc
                 </p>
-                <a href="#desc" 
+                <a
+                  href="#desc"
                   class="scroll inline-flex items-center gap-1 text-sm font-medium leading-[18px] text-red-400"
                 >
                   <svg width="11" height="10" viewBox="0 0 11 10" fill="none">
@@ -189,7 +192,7 @@
                 class="mb-5 border-b border-t border-dashed border-gray-500 py-5"
               >
                 <div
-                  class="mb-7.5 flex flex-col md:flex-row w-full md:items-center justify-between"
+                  class="mb-7.5 flex w-full flex-col justify-between md:flex-row md:items-center"
                 >
                   <div class="relative">
                     <div class="flex items-center gap-2.5">
@@ -223,7 +226,7 @@
                     </span>
                   </div>
                   <div
-                    class="flex mt-[10px] md:mt-0 md:flex-col items-center md:items-end gap-2.5"
+                    class="mt-[10px] flex items-center gap-2.5 md:mt-0 md:flex-col md:items-end"
                   >
                     <span class="text-xs font-normal leading-3 text-blue-800">
                       Disponibilité
@@ -315,11 +318,14 @@
                   </a>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-2.5">
-                  <a href="shop.html" class="btn-secondary md:basis-1/2 text-center">
+                <div class="flex flex-col gap-2.5 md:flex-row">
+                  <a
+                    href="shop.html"
+                    class="btn-secondary text-center md:basis-1/2"
+                  >
                     Continuer mes achats
                   </a>
-                  <a href="#" class="btn-secondary md:basis-1/2 text-center">
+                  <a href="#" class="btn-secondary text-center md:basis-1/2">
                     Terminer mes achats
                   </a>
                 </div>
@@ -419,47 +425,55 @@
               </div>
             </div>
           </div>
-          <h3 id="desc" 
+          <h3
+            id="desc"
             class="title-section mb-7.5 flex items-center gap-5 text-center text-3xl font-semibold leading-9 text-blue-500"
           >
             Description
           </h3>
 
           <div class="mx-auto lg:w-10/12">
-            <p class="mb-7.5 text-lg font-normal leading-7 text-blue-500">
-              Les <strong>Long Chips Thaï Sweet Chili</strong> sont des chips
-              uniques à base de pommes de terre au bon goût de sauce Thai aigre
-              douce légèrement épicée. Frits dans de l'huile de colza de haute
-              qualité pendant seulement 10 secondes, ils sont incroyablement
-              croustillants et moins gras que les chips classiques. Ils ont une
-              forme originale : ils sont longs de 19cm, plats et très fins. Ils
-              sont placés dans une barquette afin de ne pas s'abîmer. En plus,
-              ils ne contiennent aucuns additifs artificiels! Liste des
-              ingrédients : flocons de pommes de terre (48%), huile de colza,
-              semoule de blé, fécule de pomme de terre, mélange d'épices [sel,
-              dextrose, épices (oignon, piment, paprika, ail), extrait de
-              levure, extrait d'épices (poivre, piment, romarin), huile
-              végétale, arôme artificiel (paprika), arôme naturel de fumée],
-              sel, antioxydant (extrait de romarin).
-            </p>
+            <div class="prose prose-lg">
+              <p>
+                Les <strong>Long Chips Thaï Sweet Chili</strong> sont des chips
+                uniques à base de pommes de terre au bon goût de sauce Thai
+                aigre douce légèrement épicée. Frits dans de l'huile de colza de
+                haute qualité pendant seulement 10 secondes, ils sont
+                incroyablement croustillants et moins gras que les chips
+                classiques. Ils ont une forme originale : ils sont longs de
+                19cm, plats et très fins. Ils sont placés dans une barquette
+                afin de ne pas s'abîmer. En plus, ils ne contiennent aucuns
+                additifs artificiels! Liste des ingrédients : flocons de pommes
+                de terre (48%), huile de colza, semoule de blé, fécule de pomme
+                de terre, mélange d'épices [sel, dextrose, épices (oignon,
+                piment, paprika, ail), extrait de levure, extrait d'épices
+                (poivre, piment, romarin), huile végétale, arôme artificiel
+                (paprika), arôme naturel de fumée], sel, antioxydant (extrait de
+                romarin).
+              </p>
 
-            <p class="text-lg font-normal leading-7 text-blue-500">
-              <strong>Liste des ingrédients :</strong> flocons de pommes de
-              terre (48%), huile de colza, semoule de blé, fécule de pomme de
-              terre, mélange d'épices [sel, dextrose, épices (oignon, piment,
-              paprika, ail), extrait de levure, extrait d'épices (poivre,
-              piment, romarin), huile végétale, arôme artificiel (paprika),
-              arôme naturel de fumée], sel, antioxydant (extrait de romarin).
-            </p>
+              <p>
+                <strong>Liste des ingrédients :</strong> flocons de pommes de
+                terre (48%), huile de colza, semoule de blé, fécule de pomme de
+                terre, mélange d'épices [sel, dextrose, épices (oignon, piment,
+                paprika, ail), extrait de levure, extrait d'épices (poivre,
+                piment, romarin), huile végétale, arôme artificiel (paprika),
+                arôme naturel de fumée], sel, antioxydant (extrait de romarin).
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <div class="bg-gray-100">
-        <section class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip pt-10 bg-white rounded-t-3xl">
+        <section
+          class="lg:mb-15 lg:pt-15 mb-10 overflow-x-clip rounded-t-3xl bg-white pt-10"
+        >
           <div class="container">
-            <div class="gap-y-7.5 grid grid-cols-[repeat(1,auto)] md:grid-cols-[repeat(2,auto)] md:gap-y-10">
-              <div class="flex items-center max-md:mx-auto justify-between">
+            <div
+              class="gap-y-7.5 grid grid-cols-[repeat(1,auto)] md:grid-cols-[repeat(2,auto)] md:gap-y-10"
+            >
+              <div class="flex items-center justify-between max-md:mx-auto">
                 <h2
                   class="text-[40px] font-semibold leading-[46px] text-blue-500 max-md:text-center"
                 >
@@ -469,10 +483,20 @@
 
               <div class="md:col-span-2">
                 <div class="grid md:grid-cols-2 xl:grid-cols-4">
-                  {{> components/cart-product-item title="Long Chips Sour Cream & Onion" desc="Long Chips Sour Cream & Onion 75 gr x 20 pc" img="img/products/product_15.png" price="36,48" notAbsolute=true }} 
-                  {{> components/cart-product-item title="Long Chips Original" desc="Long Chips Original 'Mashed Patato' 75 gr x 20 pc" img="img/products/product_16.png" price="36,48" notAbsolute=true }} 
-                  {{> components/cart-product-item title="Long Chips Cheese & Spring Onion" desc="Long Chips Cheese & Spring Onion 75 gr x 20 pc" img="img/products/product_17.png" price="36,48" notAbsolute=true }} 
-                  {{> components/cart-product-item title="Long Chips Honey BBQ" desc="Long Chips Honey BBQ 75 gr x 20 pc" img="img/products/product_20.png" price="36,48" notAbsolute=true }}
+                  {{> components/cart-product-item title="Long Chips Sour Cream
+                  & Onion" desc="Long Chips Sour Cream & Onion 75 gr x 20 pc"
+                  img="img/products/product_15.png" price="36,48"
+                  notAbsolute=true }} {{> components/cart-product-item
+                  title="Long Chips Original" desc="Long Chips Original 'Mashed
+                  Patato' 75 gr x 20 pc" img="img/products/product_16.png"
+                  price="36,48" notAbsolute=true }} {{>
+                  components/cart-product-item title="Long Chips Cheese & Spring
+                  Onion" desc="Long Chips Cheese & Spring Onion 75 gr x 20 pc"
+                  img="img/products/product_17.png" price="36,48"
+                  notAbsolute=true }} {{> components/cart-product-item
+                  title="Long Chips Honey BBQ" desc="Long Chips Honey BBQ 75 gr
+                  x 20 pc" img="img/products/product_20.png" price="36,48"
+                  notAbsolute=true }}
                 </div>
               </div>
 
@@ -500,14 +524,13 @@
           >
             {{> components/cart-product-item title="Doritos mild salsa"
             desc="Sauce Doritos mild salsa 280 gr x 6 pc"
-            img="img/products/product_18.png" price="36,48" notAbsolute=true }} {{>
-            components/cart-product-item title="Doritos sour cream" desc="Sauce
-            Doritos sour cream 280 gr x 6 pc" img="img/products/product_19.png"
-            price="36,48" notAbsolute=true }}
+            img="img/products/product_18.png" price="36,48" notAbsolute=true }}
+            {{> components/cart-product-item title="Doritos sour cream"
+            desc="Sauce Doritos sour cream 280 gr x 6 pc"
+            img="img/products/product_19.png" price="36,48" notAbsolute=true }}
           </div>
         </div>
       </section>
-     
     </main>
 
     {{> footer}}
