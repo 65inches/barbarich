@@ -4685,7 +4685,7 @@ body {
     line-height: 1;
     color: var(--prose-heading-color);
     font-weight: var(--font-weight-semibold);
-    margin-top: calc(var(--spacing) * 20);
+    margin-top: calc(var(--spacing) * 7);
   }
   h3:where(:not(.not-prose, .not-prose *)) {
     font-size: 24px;
