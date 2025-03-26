@@ -1,13 +1,9 @@
-{{#if notAbsolute }}
-<article class='group relative flex flex-col items-center justify-start gap-2.5 border border-gray-100 bg-white p-[25px] transition duration-300 hover:translate-y-[-5px]  hover:border-gray-500 '>
-{{else}}
-<article  class='group relative flex flex-col items-center justify-start gap-2.5 border border-gray-100 bg-white p-[25px] transition duration-300 hover:translate-y-[-5px]  hover:border-gray-500  hover:absolute '>
-{{/if}}
+<article class='group relative isolate z-[4] flex flex-col items-center justify-start gap-2.5 border border-gray-100 bg-white p-[25px] transition duration-300 hover:z-[5] hover:translate-y-[-5px] hover:border-gray-500'>
   <a href='product.html' class='absolute inset-0 z-[1] block'></a>
   <div class='h-50 relative flex w-full items-center justify-center'>
     {{#if number}}
     <span
-      class='h-6.5 absolute left-0 top-0 block flex items-center justify-center rounded-[40px] bg-purple-400 px-2.5 py-[5px] font-bold leading-none text-white'
+      class='h-6.5 absolute left-0 top-0 flex items-center justify-center rounded-[40px] bg-purple-400 px-2.5 py-[5px] font-bold leading-none text-white'
     >
       x{{number}}
     </span>
@@ -31,21 +27,21 @@
       </span>
     </a>
   </div>
-  <div class='flex flex-col items-start justify-center gap-[15px] w-full'>
-    <div class="flex flex-col  w-full">
+  <div class='flex w-full flex-col items-start justify-center gap-[15px]'>
+    <div class="flex w-full flex-col">
       <h4
-        class='truncate flex-1 min-w-0 max-w-[100%] mb-1.25 text-xl font-semibold leading-snug text-blue-500 transition duration-300 group-hover:text-red-400 group-hover:underline max-md:me-[-40px]'>
+        class='mb-1.25 min-w-0 max-w-[100%] flex-1 truncate text-xl font-semibold leading-snug text-blue-500 transition duration-300 group-hover:text-red-400 group-hover:underline max-md:me-[-40px]'>
         {{title}}
       </h4>
-      <span class='text-sm font-normal leading-[18px] text-blue-800 h-[36px] block'>
+      <span class='block h-[36px] text-sm font-normal leading-[18px] text-blue-800'>
         {{desc}}
       </span>
     </div>
-    <div class='flex w-full items-center justify-between '>
+    <div class='flex w-full items-center justify-between'>
      
       <div class='relative'>
         
-        <span class='block text-[22px] font-semibold leading-snug text-red-400 relative'>
+        <span class='relative block text-[22px] font-semibold leading-snug text-red-400'>
           {{#if price}}
             {{price}} €
             {{#if cart}}
@@ -68,7 +64,7 @@
           &nbsp;
           {{/if}}
         </span>
-        <span class='text-xs block font-normal leading-2 text-blue-800 -mt-[0px]'>
+        <span class='leading-2 -mt-[0px] block text-xs font-normal text-blue-800'>
           {{#if price}}
           TVA non incluse
           {{ else}}
@@ -127,7 +123,7 @@
     </div>
   </div>
 
-  <div class='relative z-[2] flex w-full items-center gap-2.5 mt-[5px]'>
+  <div class='relative z-[2] mt-[5px] flex w-full items-center gap-2.5'>
     <div
       class='custom-number-input {{#if backInStock}} disabled {{/if}} [.disabled]:border-gray-100 group/input-number rounded-[40px] border border-red-300'
     >
@@ -143,7 +139,7 @@
         </button>
         <input
           type='text'
-          class='text-md md:text-basecursor-default flex w-[30px] items-center text-center font-semibold text-red-400 outline-none focus:outline-none group-[.disabled]/input-number:text-gray-100 mx-[10px]' 
+          class='text-md md:text-basecursor-default mx-[10px] flex w-[30px] items-center text-center font-semibold text-red-400 outline-none focus:outline-none group-[.disabled]/input-number:text-gray-100' 
           name='custom-input-number'
           value='1'
         />
