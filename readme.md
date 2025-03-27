@@ -7,18 +7,18 @@
 | ----------------- | ------- | ------ | ------ |
 | Home              | ✅      | ✅     | ✅     |
 | Menu              | ✅      | ✅     | ✅     |
-| Boutique - list   | ❌      | ❌     | ❌     |
+| Boutique - list   | ✅      | ✅     | ✅     |
 | Boutique - detail | ✅      | ✅     | ✅     |
 | Panier            | ✅      | ✅     | ✅     |
-| Login             | ❌      | ❌     | ❌     |
-| Create account    | ❌      | ❌     | ❌     |
+| Login             | ✅      | ✅     | ✅     |
+| Create account    | ✅      | ✅     | ✅     |
 | Account           | ✅      | ✅     | ✅     |
-| Contact           | ❌      | ❌     | ❌     |
+| Contact           | ✅      | ✅     | ✅     |
 | FAQs              | ✅      | ✅     | ✅     |
 | A propos          | ✅      | ✅     | ✅     |
 | Legal             | ✅      | ✅     | ✅     |
 | Mes documents     | ✅      | ✅     | ✅     |
-| 404               | ❌      | ❌     | ❌     |
+| 404               | ✅      | ✅     | ✅     |
 
 # Usage
 
